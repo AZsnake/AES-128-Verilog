@@ -1,0 +1,653 @@
+
+*** Running vivado
+    with args -log aes_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source aes_wrapper.tcl
+
+
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Tue Apr  7 14:29:50 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source aes_wrapper.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental D:/Projects/AES-128-Verilog/AES-128-Vivado/AES-128-Vivado.srcs/utils_1/imports/synth_1/aes_top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from D:/Projects/AES-128-Verilog/AES-128-Vivado/AES-128-Vivado.srcs/utils_1/imports/synth_1/aes_top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top aes_wrapper -part xc7a35tfgg484-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 17744
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 775.773 ; gain = 471.543
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'aes_wrapper' [D:/Projects/AES-128-Verilog/src/aes_wrapper.v:1]
+INFO: [Synth 8-6157] synthesizing module 'aes_top' [D:/Projects/AES-128-Verilog/src/aes_top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'aes_round' [D:/Projects/AES-128-Verilog/src/aes_round.v:3]
+	Parameter FINAL bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'aes_sbox' [D:/Projects/AES-128-Verilog/src/aes_sbox.v:3]
+INFO: [Synth 8-226] default block is never used [D:/Projects/AES-128-Verilog/src/aes_sbox.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'aes_sbox' (0#1) [D:/Projects/AES-128-Verilog/src/aes_sbox.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'aes_round' (0#1) [D:/Projects/AES-128-Verilog/src/aes_round.v:3]
+INFO: [Synth 8-6157] synthesizing module 'aes_key_expand' [D:/Projects/AES-128-Verilog/src/aes_key_expand.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'aes_key_expand' (0#1) [D:/Projects/AES-128-Verilog/src/aes_key_expand.v:1]
+INFO: [Synth 8-6157] synthesizing module 'aes_round__parameterized0' [D:/Projects/AES-128-Verilog/src/aes_round.v:3]
+	Parameter FINAL bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'aes_round__parameterized0' (0#1) [D:/Projects/AES-128-Verilog/src/aes_round.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'aes_top' (0#1) [D:/Projects/AES-128-Verilog/src/aes_top.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Projects/AES-128-Verilog/src/aes_wrapper.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'aes_wrapper' (0#1) [D:/Projects/AES-128-Verilog/src/aes_wrapper.v:1]
+WARNING: [Synth 8-6014] Unused sequential element start_reg_reg was removed.  [D:/Projects/AES-128-Verilog/src/aes_wrapper.v:33]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 888.824 ; gain = 584.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 888.824 ; gain = 584.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tfgg484-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 888.824 ; gain = 584.594
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tfgg484-2
+---------------------------------------------------------------------------------
+Start Preparing Guide Design
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6895] The reference checkpoint D:/Projects/AES-128-Verilog/AES-128-Vivado/AES-128-Vivado.srcs/utils_1/imports/synth_1/aes_top.dcp is not suitable for use with incremental synthesis for this design. Please regenerate the checkpoint for this design with -incremental_synth switch in the same Vivado session that synth_design has been run. Synthesis will continue with the default flow
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 888.824 ; gain = 584.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 888.824 ; gain = 584.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 888.824 ; gain = 584.594
+---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: no
+
+   Reason for not running incremental synthesis : 
+
+
+INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    128 Bit         XORs := 11    
+	  12 Input     32 Bit         XORs := 1     
+	  11 Input     32 Bit         XORs := 1     
+	  10 Input     32 Bit         XORs := 1     
+	   9 Input     32 Bit         XORs := 1     
+	   8 Input     32 Bit         XORs := 1     
+	   7 Input     32 Bit         XORs := 1     
+	   6 Input     32 Bit         XORs := 1     
+	   5 Input     32 Bit         XORs := 1     
+	   4 Input     32 Bit         XORs := 1     
+	   3 Input     32 Bit         XORs := 1     
+	   2 Input     32 Bit         XORs := 30    
+	   2 Input      8 Bit         XORs := 189   
+	   4 Input      8 Bit         XORs := 117   
+	   3 Input      8 Bit         XORs := 18    
+	   5 Input      8 Bit         XORs := 18    
++---Registers : 
+	              128 Bit    Registers := 13    
+	               11 Bit    Registers := 1     
++---Muxes : 
+	  11 Input  128 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:14 ; elapsed = 00:01:28 . Memory (MB): peak = 1565.250 ; gain = 1261.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++---------------+----------------------+---------------+----------------+
+|Module Name    | RTL Object           | Depth x Width | Implemented As | 
++---------------+----------------------+---------------+----------------+
+|aes_sbox       | out                  | 256x8         | LUT            | 
+|aes_round      | sb[0].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[1].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[2].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[3].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[4].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[5].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[6].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[7].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[8].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[9].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[10].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[11].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[12].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[13].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[14].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[15].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[0].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[1].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[2].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[3].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[4].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[5].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[6].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[7].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[8].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[9].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[10].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[11].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[12].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[13].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[14].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[15].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[5].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[7].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[9].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[10].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[11].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[12].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[13].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[14].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[15].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[0].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[1].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[2].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[3].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[4].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[5].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[7].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[9].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[10].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[11].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[12].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[13].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[14].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[15].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[0].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[2].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[3].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[4].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[5].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[6].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[7].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[8].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[9].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[10].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[11].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[12].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[13].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[14].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[15].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[3].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[4].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[6].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[7].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[8].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[9].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[11].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[12].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[13].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[14].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[15].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[0].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[2].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[3].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[4].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[6].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[7].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[8].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[9].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[10].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[11].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[12].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[13].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[14].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[15].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[1].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[2].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[3].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[4].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[5].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[6].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[7].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[8].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[9].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[10].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[11].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[12].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[13].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[14].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[15].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[5].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[6].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[7].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[9].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[11].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[12].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[13].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[14].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[15].sbox_inst/out | 256x8         | LUT            | 
+|aes_key_expand | key_gen[1].sb3/out   | 256x8         | LUT            | 
+|aes_key_expand | key_gen[1].sb2/out   | 256x8         | LUT            | 
+|aes_key_expand | key_gen[1].sb1/out   | 256x8         | LUT            | 
+|aes_key_expand | key_gen[1].sb0/out   | 256x8         | LUT            | 
+|aes_key_expand | key_gen[2].sb3/out   | 256x8         | LUT            | 
+|aes_key_expand | key_gen[2].sb2/out   | 256x8         | LUT            | 
+|aes_key_expand | key_gen[2].sb1/out   | 256x8         | LUT            | 
+|aes_key_expand | key_gen[2].sb0/out   | 256x8         | LUT            | 
+|aes_key_expand | key_gen[3].sb3/out   | 256x8         | LUT            | 
+|aes_key_expand | key_gen[3].sb2/out   | 256x8         | LUT            | 
+|aes_key_expand | key_gen[3].sb1/out   | 256x8         | LUT            | 
+|aes_key_expand | key_gen[3].sb0/out   | 256x8         | LUT            | 
+|aes_key_expand | key_gen[4].sb3/out   | 256x8         | LUT            | 
+|aes_key_expand | key_gen[4].sb2/out   | 256x8         | LUT            | 
+|aes_key_expand | key_gen[4].sb1/out   | 256x8         | LUT            | 
+|aes_key_expand | key_gen[4].sb0/out   | 256x8         | LUT            | 
+|aes_key_expand | key_gen[5].sb3/out   | 256x8         | LUT            | 
+|aes_key_expand | key_gen[5].sb2/out   | 256x8         | LUT            | 
+|aes_key_expand | key_gen[5].sb1/out   | 256x8         | LUT            | 
+|aes_key_expand | key_gen[5].sb0/out   | 256x8         | LUT            | 
+|aes_key_expand | key_gen[6].sb3/out   | 256x8         | LUT            | 
+|aes_key_expand | key_gen[6].sb2/out   | 256x8         | LUT            | 
+|aes_key_expand | key_gen[6].sb1/out   | 256x8         | LUT            | 
+|aes_key_expand | key_gen[6].sb0/out   | 256x8         | LUT            | 
+|aes_key_expand | key_gen[7].sb3/out   | 256x8         | LUT            | 
+|aes_key_expand | key_gen[7].sb2/out   | 256x8         | LUT            | 
+|aes_key_expand | key_gen[7].sb1/out   | 256x8         | LUT            | 
+|aes_key_expand | key_gen[7].sb0/out   | 256x8         | LUT            | 
+|aes_key_expand | key_gen[8].sb3/out   | 256x8         | LUT            | 
+|aes_key_expand | key_gen[8].sb2/out   | 256x8         | LUT            | 
+|aes_key_expand | key_gen[8].sb1/out   | 256x8         | LUT            | 
+|aes_key_expand | key_gen[8].sb0/out   | 256x8         | LUT            | 
+|aes_key_expand | key_gen[9].sb3/out   | 256x8         | LUT            | 
+|aes_key_expand | key_gen[9].sb2/out   | 256x8         | LUT            | 
+|aes_key_expand | key_gen[9].sb1/out   | 256x8         | LUT            | 
+|aes_key_expand | key_gen[9].sb0/out   | 256x8         | LUT            | 
+|aes_key_expand | key_gen[10].sb3/out  | 256x8         | LUT            | 
+|aes_key_expand | key_gen[10].sb2/out  | 256x8         | LUT            | 
+|aes_key_expand | key_gen[10].sb1/out  | 256x8         | LUT            | 
+|aes_key_expand | key_gen[10].sb0/out  | 256x8         | LUT            | 
+|aes_round      | sb[4].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[9].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[14].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[3].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[8].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[13].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[2].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[7].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[12].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[1].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[6].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[11].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[0].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[5].sbox_inst/out  | 256x8         | LUT            | 
+|aes_round      | sb[10].sbox_inst/out | 256x8         | LUT            | 
+|aes_round      | sb[15].sbox_inst/out | 256x8         | LUT            | 
++---------------+----------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:14 ; elapsed = 00:01:29 . Memory (MB): peak = 1565.250 ; gain = 1261.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:16 ; elapsed = 00:01:30 . Memory (MB): peak = 1565.250 ; gain = 1261.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:18 ; elapsed = 00:01:33 . Memory (MB): peak = 1565.250 ; gain = 1261.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:18 ; elapsed = 00:01:33 . Memory (MB): peak = 1565.250 ; gain = 1261.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:18 ; elapsed = 00:01:33 . Memory (MB): peak = 1565.250 ; gain = 1261.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:18 ; elapsed = 00:01:33 . Memory (MB): peak = 1565.250 ; gain = 1261.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:19 ; elapsed = 00:01:33 . Memory (MB): peak = 1565.250 ; gain = 1261.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:19 ; elapsed = 00:01:34 . Memory (MB): peak = 1565.250 ; gain = 1261.020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |BUFG  |     1|
+|2     |LUT1  |     1|
+|3     |LUT2  |  1157|
+|4     |LUT3  |   148|
+|5     |LUT4  |   302|
+|6     |LUT5  |   301|
+|7     |LUT6  |  8237|
+|8     |MUXF7 |  3036|
+|9     |MUXF8 |  1452|
+|10    |FDCE  |   395|
+|11    |FDRE  |  1280|
+|12    |IBUF  |    40|
+|13    |OBUF  |    32|
++------+------+------+
+
+Report Instance Areas: 
++------+---------------------------+--------------------------+------+
+|      |Instance                   |Module                    |Cells |
++------+---------------------------+--------------------------+------+
+|1     |top                        |                          | 16382|
+|2     |  aes_inst                 |aes_top                   | 16045|
+|3     |    \round_stages[1].inst  |aes_round                 |   384|
+|4     |      \sb[0].sbox_inst     |aes_sbox_135              |    24|
+|5     |      \sb[10].sbox_inst    |aes_sbox_136              |    24|
+|6     |      \sb[11].sbox_inst    |aes_sbox_137              |    24|
+|7     |      \sb[12].sbox_inst    |aes_sbox_138              |    24|
+|8     |      \sb[13].sbox_inst    |aes_sbox_139              |    24|
+|9     |      \sb[14].sbox_inst    |aes_sbox_140              |    24|
+|10    |      \sb[15].sbox_inst    |aes_sbox_141              |    24|
+|11    |      \sb[1].sbox_inst     |aes_sbox_142              |    24|
+|12    |      \sb[2].sbox_inst     |aes_sbox_143              |    24|
+|13    |      \sb[3].sbox_inst     |aes_sbox_144              |    24|
+|14    |      \sb[4].sbox_inst     |aes_sbox_145              |    24|
+|15    |      \sb[5].sbox_inst     |aes_sbox_146              |    24|
+|16    |      \sb[6].sbox_inst     |aes_sbox_147              |    24|
+|17    |      \sb[7].sbox_inst     |aes_sbox_148              |    24|
+|18    |      \sb[8].sbox_inst     |aes_sbox_149              |    24|
+|19    |      \sb[9].sbox_inst     |aes_sbox_150              |    24|
+|20    |    \round_stages[2].inst  |aes_round_0               |   384|
+|21    |      \sb[0].sbox_inst     |aes_sbox_119              |    24|
+|22    |      \sb[10].sbox_inst    |aes_sbox_120              |    24|
+|23    |      \sb[11].sbox_inst    |aes_sbox_121              |    24|
+|24    |      \sb[12].sbox_inst    |aes_sbox_122              |    24|
+|25    |      \sb[13].sbox_inst    |aes_sbox_123              |    24|
+|26    |      \sb[14].sbox_inst    |aes_sbox_124              |    24|
+|27    |      \sb[15].sbox_inst    |aes_sbox_125              |    24|
+|28    |      \sb[1].sbox_inst     |aes_sbox_126              |    24|
+|29    |      \sb[2].sbox_inst     |aes_sbox_127              |    24|
+|30    |      \sb[3].sbox_inst     |aes_sbox_128              |    24|
+|31    |      \sb[4].sbox_inst     |aes_sbox_129              |    24|
+|32    |      \sb[5].sbox_inst     |aes_sbox_130              |    24|
+|33    |      \sb[6].sbox_inst     |aes_sbox_131              |    24|
+|34    |      \sb[7].sbox_inst     |aes_sbox_132              |    24|
+|35    |      \sb[8].sbox_inst     |aes_sbox_133              |    24|
+|36    |      \sb[9].sbox_inst     |aes_sbox_134              |    24|
+|37    |    \round_stages[3].inst  |aes_round_1               |   384|
+|38    |      \sb[0].sbox_inst     |aes_sbox_103              |    24|
+|39    |      \sb[10].sbox_inst    |aes_sbox_104              |    24|
+|40    |      \sb[11].sbox_inst    |aes_sbox_105              |    24|
+|41    |      \sb[12].sbox_inst    |aes_sbox_106              |    24|
+|42    |      \sb[13].sbox_inst    |aes_sbox_107              |    24|
+|43    |      \sb[14].sbox_inst    |aes_sbox_108              |    24|
+|44    |      \sb[15].sbox_inst    |aes_sbox_109              |    24|
+|45    |      \sb[1].sbox_inst     |aes_sbox_110              |    24|
+|46    |      \sb[2].sbox_inst     |aes_sbox_111              |    24|
+|47    |      \sb[3].sbox_inst     |aes_sbox_112              |    24|
+|48    |      \sb[4].sbox_inst     |aes_sbox_113              |    24|
+|49    |      \sb[5].sbox_inst     |aes_sbox_114              |    24|
+|50    |      \sb[6].sbox_inst     |aes_sbox_115              |    24|
+|51    |      \sb[7].sbox_inst     |aes_sbox_116              |    24|
+|52    |      \sb[8].sbox_inst     |aes_sbox_117              |    24|
+|53    |      \sb[9].sbox_inst     |aes_sbox_118              |    24|
+|54    |    \round_stages[4].inst  |aes_round_2               |   384|
+|55    |      \sb[0].sbox_inst     |aes_sbox_87               |    24|
+|56    |      \sb[10].sbox_inst    |aes_sbox_88               |    24|
+|57    |      \sb[11].sbox_inst    |aes_sbox_89               |    24|
+|58    |      \sb[12].sbox_inst    |aes_sbox_90               |    24|
+|59    |      \sb[13].sbox_inst    |aes_sbox_91               |    24|
+|60    |      \sb[14].sbox_inst    |aes_sbox_92               |    24|
+|61    |      \sb[15].sbox_inst    |aes_sbox_93               |    24|
+|62    |      \sb[1].sbox_inst     |aes_sbox_94               |    24|
+|63    |      \sb[2].sbox_inst     |aes_sbox_95               |    24|
+|64    |      \sb[3].sbox_inst     |aes_sbox_96               |    24|
+|65    |      \sb[4].sbox_inst     |aes_sbox_97               |    24|
+|66    |      \sb[5].sbox_inst     |aes_sbox_98               |    24|
+|67    |      \sb[6].sbox_inst     |aes_sbox_99               |    24|
+|68    |      \sb[7].sbox_inst     |aes_sbox_100              |    24|
+|69    |      \sb[8].sbox_inst     |aes_sbox_101              |    24|
+|70    |      \sb[9].sbox_inst     |aes_sbox_102              |    24|
+|71    |    \round_stages[5].inst  |aes_round_3               |   384|
+|72    |      \sb[0].sbox_inst     |aes_sbox_71               |    24|
+|73    |      \sb[10].sbox_inst    |aes_sbox_72               |    24|
+|74    |      \sb[11].sbox_inst    |aes_sbox_73               |    24|
+|75    |      \sb[12].sbox_inst    |aes_sbox_74               |    24|
+|76    |      \sb[13].sbox_inst    |aes_sbox_75               |    24|
+|77    |      \sb[14].sbox_inst    |aes_sbox_76               |    24|
+|78    |      \sb[15].sbox_inst    |aes_sbox_77               |    24|
+|79    |      \sb[1].sbox_inst     |aes_sbox_78               |    24|
+|80    |      \sb[2].sbox_inst     |aes_sbox_79               |    24|
+|81    |      \sb[3].sbox_inst     |aes_sbox_80               |    24|
+|82    |      \sb[4].sbox_inst     |aes_sbox_81               |    24|
+|83    |      \sb[5].sbox_inst     |aes_sbox_82               |    24|
+|84    |      \sb[6].sbox_inst     |aes_sbox_83               |    24|
+|85    |      \sb[7].sbox_inst     |aes_sbox_84               |    24|
+|86    |      \sb[8].sbox_inst     |aes_sbox_85               |    24|
+|87    |      \sb[9].sbox_inst     |aes_sbox_86               |    24|
+|88    |    \round_stages[6].inst  |aes_round_4               |   384|
+|89    |      \sb[0].sbox_inst     |aes_sbox_55               |    24|
+|90    |      \sb[10].sbox_inst    |aes_sbox_56               |    24|
+|91    |      \sb[11].sbox_inst    |aes_sbox_57               |    24|
+|92    |      \sb[12].sbox_inst    |aes_sbox_58               |    24|
+|93    |      \sb[13].sbox_inst    |aes_sbox_59               |    24|
+|94    |      \sb[14].sbox_inst    |aes_sbox_60               |    24|
+|95    |      \sb[15].sbox_inst    |aes_sbox_61               |    24|
+|96    |      \sb[1].sbox_inst     |aes_sbox_62               |    24|
+|97    |      \sb[2].sbox_inst     |aes_sbox_63               |    24|
+|98    |      \sb[3].sbox_inst     |aes_sbox_64               |    24|
+|99    |      \sb[4].sbox_inst     |aes_sbox_65               |    24|
+|100   |      \sb[5].sbox_inst     |aes_sbox_66               |    24|
+|101   |      \sb[6].sbox_inst     |aes_sbox_67               |    24|
+|102   |      \sb[7].sbox_inst     |aes_sbox_68               |    24|
+|103   |      \sb[8].sbox_inst     |aes_sbox_69               |    24|
+|104   |      \sb[9].sbox_inst     |aes_sbox_70               |    24|
+|105   |    \round_stages[7].inst  |aes_round_5               |   384|
+|106   |      \sb[0].sbox_inst     |aes_sbox_39               |    24|
+|107   |      \sb[10].sbox_inst    |aes_sbox_40               |    24|
+|108   |      \sb[11].sbox_inst    |aes_sbox_41               |    24|
+|109   |      \sb[12].sbox_inst    |aes_sbox_42               |    24|
+|110   |      \sb[13].sbox_inst    |aes_sbox_43               |    24|
+|111   |      \sb[14].sbox_inst    |aes_sbox_44               |    24|
+|112   |      \sb[15].sbox_inst    |aes_sbox_45               |    24|
+|113   |      \sb[1].sbox_inst     |aes_sbox_46               |    24|
+|114   |      \sb[2].sbox_inst     |aes_sbox_47               |    24|
+|115   |      \sb[3].sbox_inst     |aes_sbox_48               |    24|
+|116   |      \sb[4].sbox_inst     |aes_sbox_49               |    24|
+|117   |      \sb[5].sbox_inst     |aes_sbox_50               |    24|
+|118   |      \sb[6].sbox_inst     |aes_sbox_51               |    24|
+|119   |      \sb[7].sbox_inst     |aes_sbox_52               |    24|
+|120   |      \sb[8].sbox_inst     |aes_sbox_53               |    24|
+|121   |      \sb[9].sbox_inst     |aes_sbox_54               |    24|
+|122   |    \round_stages[8].inst  |aes_round_6               |   384|
+|123   |      \sb[0].sbox_inst     |aes_sbox_23               |    24|
+|124   |      \sb[10].sbox_inst    |aes_sbox_24               |    24|
+|125   |      \sb[11].sbox_inst    |aes_sbox_25               |    24|
+|126   |      \sb[12].sbox_inst    |aes_sbox_26               |    24|
+|127   |      \sb[13].sbox_inst    |aes_sbox_27               |    24|
+|128   |      \sb[14].sbox_inst    |aes_sbox_28               |    24|
+|129   |      \sb[15].sbox_inst    |aes_sbox_29               |    24|
+|130   |      \sb[1].sbox_inst     |aes_sbox_30               |    24|
+|131   |      \sb[2].sbox_inst     |aes_sbox_31               |    24|
+|132   |      \sb[3].sbox_inst     |aes_sbox_32               |    24|
+|133   |      \sb[4].sbox_inst     |aes_sbox_33               |    24|
+|134   |      \sb[5].sbox_inst     |aes_sbox_34               |    24|
+|135   |      \sb[6].sbox_inst     |aes_sbox_35               |    24|
+|136   |      \sb[7].sbox_inst     |aes_sbox_36               |    24|
+|137   |      \sb[8].sbox_inst     |aes_sbox_37               |    24|
+|138   |      \sb[9].sbox_inst     |aes_sbox_38               |    24|
+|139   |    \round_stages[9].inst  |aes_round_7               |   384|
+|140   |      \sb[0].sbox_inst     |aes_sbox                  |    24|
+|141   |      \sb[10].sbox_inst    |aes_sbox_8                |    24|
+|142   |      \sb[11].sbox_inst    |aes_sbox_9                |    24|
+|143   |      \sb[12].sbox_inst    |aes_sbox_10               |    24|
+|144   |      \sb[13].sbox_inst    |aes_sbox_11               |    24|
+|145   |      \sb[14].sbox_inst    |aes_sbox_12               |    24|
+|146   |      \sb[15].sbox_inst    |aes_sbox_13               |    24|
+|147   |      \sb[1].sbox_inst     |aes_sbox_14               |    24|
+|148   |      \sb[2].sbox_inst     |aes_sbox_15               |    24|
+|149   |      \sb[3].sbox_inst     |aes_sbox_16               |    24|
+|150   |      \sb[4].sbox_inst     |aes_sbox_17               |    24|
+|151   |      \sb[5].sbox_inst     |aes_sbox_18               |    24|
+|152   |      \sb[6].sbox_inst     |aes_sbox_19               |    24|
+|153   |      \sb[7].sbox_inst     |aes_sbox_20               |    24|
+|154   |      \sb[8].sbox_inst     |aes_sbox_21               |    24|
+|155   |      \sb[9].sbox_inst     |aes_sbox_22               |    24|
+|156   |    final_inst             |aes_round__parameterized0 |   512|
+|157   |      \sb[0].sbox_inst     |aes_sbox_191              |    24|
+|158   |      \sb[10].sbox_inst    |aes_sbox_192              |    24|
+|159   |      \sb[11].sbox_inst    |aes_sbox_193              |    24|
+|160   |      \sb[12].sbox_inst    |aes_sbox_194              |    24|
+|161   |      \sb[13].sbox_inst    |aes_sbox_195              |    24|
+|162   |      \sb[14].sbox_inst    |aes_sbox_196              |    24|
+|163   |      \sb[15].sbox_inst    |aes_sbox_197              |    24|
+|164   |      \sb[1].sbox_inst     |aes_sbox_198              |    24|
+|165   |      \sb[2].sbox_inst     |aes_sbox_199              |    24|
+|166   |      \sb[3].sbox_inst     |aes_sbox_200              |    24|
+|167   |      \sb[4].sbox_inst     |aes_sbox_201              |    24|
+|168   |      \sb[5].sbox_inst     |aes_sbox_202              |    24|
+|169   |      \sb[6].sbox_inst     |aes_sbox_203              |    24|
+|170   |      \sb[7].sbox_inst     |aes_sbox_204              |    24|
+|171   |      \sb[8].sbox_inst     |aes_sbox_205              |    24|
+|172   |      \sb[9].sbox_inst     |aes_sbox_206              |    24|
+|173   |    key_inst               |aes_key_expand            |  4668|
+|174   |      \key_gen[10].sb3     |aes_sbox_154              |    16|
+|175   |      \key_gen[10].sb2     |aes_sbox_153              |    16|
+|176   |      \key_gen[10].sb1     |aes_sbox_152              |    16|
+|177   |      \key_gen[10].sb0     |aes_sbox_151              |    16|
+|178   |      \key_gen[1].sb0      |aes_sbox_155              |   986|
+|179   |      \key_gen[1].sb1      |aes_sbox_156              |   986|
+|180   |      \key_gen[1].sb2      |aes_sbox_157              |   986|
+|181   |      \key_gen[1].sb3      |aes_sbox_158              |   986|
+|182   |      \key_gen[2].sb0      |aes_sbox_159              |    22|
+|183   |      \key_gen[2].sb1      |aes_sbox_160              |    22|
+|184   |      \key_gen[2].sb2      |aes_sbox_161              |    22|
+|185   |      \key_gen[2].sb3      |aes_sbox_162              |    22|
+|186   |      \key_gen[3].sb0      |aes_sbox_163              |    23|
+|187   |      \key_gen[3].sb1      |aes_sbox_164              |    23|
+|188   |      \key_gen[3].sb2      |aes_sbox_165              |    23|
+|189   |      \key_gen[3].sb3      |aes_sbox_166              |    23|
+|190   |      \key_gen[4].sb0      |aes_sbox_167              |    24|
+|191   |      \key_gen[4].sb1      |aes_sbox_168              |    24|
+|192   |      \key_gen[4].sb2      |aes_sbox_169              |    24|
+|193   |      \key_gen[4].sb3      |aes_sbox_170              |    24|
+|194   |      \key_gen[5].sb0      |aes_sbox_171              |    24|
+|195   |      \key_gen[5].sb1      |aes_sbox_172              |    24|
+|196   |      \key_gen[5].sb2      |aes_sbox_173              |    24|
+|197   |      \key_gen[5].sb3      |aes_sbox_174              |    24|
+|198   |      \key_gen[6].sb0      |aes_sbox_175              |    24|
+|199   |      \key_gen[6].sb1      |aes_sbox_176              |    24|
+|200   |      \key_gen[6].sb2      |aes_sbox_177              |    24|
+|201   |      \key_gen[6].sb3      |aes_sbox_178              |    24|
+|202   |      \key_gen[7].sb0      |aes_sbox_179              |    24|
+|203   |      \key_gen[7].sb1      |aes_sbox_180              |    24|
+|204   |      \key_gen[7].sb2      |aes_sbox_181              |    24|
+|205   |      \key_gen[7].sb3      |aes_sbox_182              |    24|
+|206   |      \key_gen[8].sb0      |aes_sbox_183              |    12|
+|207   |      \key_gen[8].sb1      |aes_sbox_184              |    12|
+|208   |      \key_gen[8].sb2      |aes_sbox_185              |    12|
+|209   |      \key_gen[8].sb3      |aes_sbox_186              |    12|
+|210   |      \key_gen[9].sb0      |aes_sbox_187              |    12|
+|211   |      \key_gen[9].sb1      |aes_sbox_188              |    12|
+|212   |      \key_gen[9].sb2      |aes_sbox_189              |    12|
+|213   |      \key_gen[9].sb3      |aes_sbox_190              |    12|
++------+---------------------------+--------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:19 ; elapsed = 00:01:34 . Memory (MB): peak = 1565.250 ; gain = 1261.020
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 1 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:19 ; elapsed = 00:01:34 . Memory (MB): peak = 1565.250 ; gain = 1261.020
+Synthesis Optimization Complete : Time (s): cpu = 00:01:19 ; elapsed = 00:01:34 . Memory (MB): peak = 1565.250 ; gain = 1261.020
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.118 . Memory (MB): peak = 1565.250 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 4488 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1565.250 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: d1b571ba
+INFO: [Common 17-83] Releasing license: Synthesis
+29 Infos, 2 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:21 ; elapsed = 00:01:37 . Memory (MB): peak = 1565.250 ; gain = 1266.730
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 1565.250 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Projects/AES-128-Verilog/AES-128-Vivado/AES-128-Vivado.runs/synth_1/aes_wrapper.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file aes_wrapper_utilization_synth.rpt -pb aes_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Apr  7 14:31:31 2026...

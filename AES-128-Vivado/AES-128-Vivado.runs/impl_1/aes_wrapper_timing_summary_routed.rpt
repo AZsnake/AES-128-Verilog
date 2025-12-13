@@ -1,0 +1,1608 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Tue Apr  7 14:33:03 2026
+| Host         : AZ-Snake running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -report_unconstrained -file aes_wrapper_timing_summary_routed.rpt -pb aes_wrapper_timing_summary_routed.pb -rpx aes_wrapper_timing_summary_routed.rpx -warn_on_violation
+| Design       : aes_wrapper
+| Device       : 7a35t-fgg484
+| Speed File   : -2  PRODUCTION 1.23 2018-06-13
+| Design State : Routed
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule       Severity          Description                  Violations  
+---------  ----------------  ---------------------------  ----------  
+TIMING-17  Critical Warning  Non-clocked sequential cell  1000        
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (1675)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (2325)
+5. checking no_input_delay (39)
+6. checking no_output_delay (32)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (1675)
+---------------------------
+ There are 1675 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (2325)
+---------------------------------------------------
+ There are 2325 pins that are not constrained for maximum delay. (HIGH)
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (39)
+-------------------------------
+ There are 39 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (32)
+--------------------------------
+ There are 32 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+        inf        0.000                      0                 2357          inf        0.000                      0                 2357           NA           NA                      NA                    NA  
+
+
+There are no user specified timing constraints.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                                    
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  
+
+Max Delay          2357 Endpoints
+Min Delay          2357 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 key_reg_reg[20]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            aes_inst/pipe_state_reg[10][69]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        56.468ns  (logic 8.340ns (14.770%)  route 48.128ns (85.230%))
+  Logic Levels:           52  (FDCE=1 LUT2=15 LUT3=2 LUT4=1 LUT5=1 LUT6=20 MUXF7=6 MUXF8=6)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y81          FDCE                         0.000     0.000 r  key_reg_reg[20]/C
+    SLICE_X0Y81          FDCE (Prop_fdce_C_Q)         0.379     0.379 r  key_reg_reg[20]/Q
+                         net (fo=36, routed)          2.924     3.303    aes_inst/Q[20]
+    SLICE_X6Y58          LUT6 (Prop_lut6_I4_O)        0.105     3.408 r  aes_inst/g1_b4__146/O
+                         net (fo=1, routed)           0.000     3.408    aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_11_1
+    SLICE_X6Y58          MUXF7 (Prop_muxf7_I1_O)      0.206     3.614 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_21/O
+                         net (fo=1, routed)           0.000     3.614    aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_21_n_0
+    SLICE_X6Y58          MUXF8 (Prop_muxf8_I0_O)      0.082     3.696 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_11/O
+                         net (fo=19, routed)          1.012     4.708    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[23]_3
+    SLICE_X5Y68          LUT5 (Prop_lut5_I2_O)        0.259     4.967 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_5/O
+                         net (fo=33, routed)          1.548     6.515    aes_inst/key_inst/key_gen[1].sb0/full_keys[156]
+    SLICE_X10Y65         LUT6 (Prop_lut6_I4_O)        0.105     6.620 r  aes_inst/key_inst/key_gen[1].sb0/g2_b7__147/O
+                         net (fo=2, routed)           0.717     7.337    aes_inst/key_inst/key_gen[2].sb3/round_stages[2].pipe_state[2][39]_i_2_0
+    SLICE_X11Y65         LUT6 (Prop_lut6_I1_O)        0.105     7.442 r  aes_inst/key_inst/key_gen[2].sb3/round_stages[7].pipe_state[7][103]_i_7/O
+                         net (fo=7, routed)           1.313     8.755    aes_inst/key_inst/key_gen[1].sb0/key_gen[2].sub_word[7]
+    SLICE_X28Y63         LUT3 (Prop_lut3_I0_O)        0.105     8.860 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[2].pipe_state[2][7]_i_2/O
+                         net (fo=11, routed)          0.819     9.679    aes_inst/key_inst/key_gen[3].sb2/round_stages[3].pipe_state[3][47]_i_2[1]
+    SLICE_X14Y61         MUXF8 (Prop_muxf8_S_O)       0.232     9.911 r  aes_inst/key_inst/key_gen[3].sb2/g0_b0__157_i_14/O
+                         net (fo=9, routed)           1.084    10.995    aes_inst/key_inst/key_gen[1].sb0/key_gen[3].sub_word[9]
+    SLICE_X29Y60         LUT4 (Prop_lut4_I0_O)        0.259    11.254 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__157_i_8/O
+                         net (fo=3, routed)           0.801    12.055    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][23]
+    SLICE_X32Y70         LUT2 (Prop_lut2_I0_O)        0.105    12.160 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__157_i_2/O
+                         net (fo=34, routed)          1.600    13.760    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][15]
+    SLICE_X32Y72         LUT6 (Prop_lut6_I1_O)        0.105    13.865 r  aes_inst/key_inst/key_gen[1].sb0/g0_b5__157/O
+                         net (fo=1, routed)           0.000    13.865    aes_inst/key_inst/key_gen[4].sb1/pipe_state_reg[10][117]_i_8_0
+    SLICE_X32Y72         MUXF7 (Prop_muxf7_I0_O)      0.199    14.064 r  aes_inst/key_inst/key_gen[4].sb1/pipe_state_reg[10][117]_i_16/O
+                         net (fo=1, routed)           0.000    14.064    aes_inst/key_inst/key_gen[4].sb1/pipe_state_reg[10][117]_i_16_n_0
+    SLICE_X32Y72         MUXF8 (Prop_muxf8_I0_O)      0.085    14.149 r  aes_inst/key_inst/key_gen[4].sb1/pipe_state_reg[10][117]_i_8/O
+                         net (fo=5, routed)           1.237    15.386    aes_inst/key_inst/key_gen[1].sb0/key_gen[4].sub_word[14]
+    SLICE_X30Y59         LUT3 (Prop_lut3_I0_O)        0.285    15.671 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[4].pipe_state[4][85]_i_2/O
+                         net (fo=3, routed)           1.348    17.019    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][52]
+    SLICE_X41Y63         LUT2 (Prop_lut2_I0_O)        0.283    17.302 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__162_i_12/O
+                         net (fo=3, routed)           0.719    18.020    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][45]
+    SLICE_X45Y67         LUT2 (Prop_lut2_I0_O)        0.105    18.125 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__162_i_6/O
+                         net (fo=34, routed)          2.390    20.516    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][37]
+    SLICE_X38Y59         LUT6 (Prop_lut6_I5_O)        0.105    20.621 r  aes_inst/key_inst/key_gen[1].sb0/g0_b2__162/O
+                         net (fo=1, routed)           0.000    20.621    aes_inst/key_inst/key_gen[5].sb0/pipe_state_reg[10][122]_i_9_0
+    SLICE_X38Y59         MUXF7 (Prop_muxf7_I0_O)      0.201    20.822 r  aes_inst/key_inst/key_gen[5].sb0/pipe_state_reg[10][122]_i_18/O
+                         net (fo=1, routed)           0.000    20.822    aes_inst/key_inst/key_gen[5].sb0/pipe_state_reg[10][122]_i_18_n_0
+    SLICE_X38Y59         MUXF8 (Prop_muxf8_I0_O)      0.082    20.904 r  aes_inst/key_inst/key_gen[5].sb0/pipe_state_reg[10][122]_i_9/O
+                         net (fo=4, routed)           0.615    21.519    aes_inst/key_inst/key_gen[1].sb0/key_gen[5].sub_word[16]
+    SLICE_X35Y60         LUT6 (Prop_lut6_I2_O)        0.259    21.778 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[5].pipe_state[5][122]_i_2/O
+                         net (fo=2, routed)           0.929    22.707    aes_inst/key_inst/key_gen[1].sb0/full_keys[762]
+    SLICE_X41Y60         LUT2 (Prop_lut2_I0_O)        0.105    22.812 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[5].pipe_state[5][90]_i_2/O
+                         net (fo=3, routed)           0.893    23.704    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][74]
+    SLICE_X48Y60         LUT2 (Prop_lut2_I0_O)        0.105    23.809 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__163_i_9/O
+                         net (fo=3, routed)           0.990    24.799    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][66]
+    SLICE_X50Y55         LUT2 (Prop_lut2_I0_O)        0.119    24.918 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__163_i_3/O
+                         net (fo=34, routed)          2.290    27.209    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][58]
+    SLICE_X36Y48         LUT6 (Prop_lut6_I2_O)        0.268    27.477 r  aes_inst/key_inst/key_gen[1].sb0/g1_b0__163/O
+                         net (fo=1, routed)           0.000    27.477    aes_inst/key_inst/key_gen[6].sb3/pipe_state_reg[10][96]_i_7_3
+    SLICE_X36Y48         MUXF7 (Prop_muxf7_I1_O)      0.206    27.683 r  aes_inst/key_inst/key_gen[6].sb3/pipe_state_reg[10][96]_i_14/O
+                         net (fo=1, routed)           0.000    27.683    aes_inst/key_inst/key_gen[6].sb3/pipe_state_reg[10][96]_i_14_n_0
+    SLICE_X36Y48         MUXF8 (Prop_muxf8_I0_O)      0.085    27.768 r  aes_inst/key_inst/key_gen[6].sb3/pipe_state_reg[10][96]_i_7/O
+                         net (fo=4, routed)           0.492    28.260    aes_inst/key_inst/key_gen[1].sb0/key_gen[6].sub_word[0]
+    SLICE_X34Y50         LUT6 (Prop_lut6_I3_O)        0.264    28.524 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[6].pipe_state[6][96]_i_2/O
+                         net (fo=2, routed)           0.805    29.329    aes_inst/key_inst/key_gen[1].sb0/full_keys[864]
+    SLICE_X43Y50         LUT2 (Prop_lut2_I0_O)        0.105    29.434 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[6].pipe_state[6][64]_i_2/O
+                         net (fo=3, routed)           0.450    29.884    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][97]
+    SLICE_X43Y49         LUT2 (Prop_lut2_I0_O)        0.105    29.989 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__168_i_7/O
+                         net (fo=3, routed)           0.537    30.526    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][89]
+    SLICE_X43Y49         LUT2 (Prop_lut2_I0_O)        0.105    30.631 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__168_i_1/O
+                         net (fo=35, routed)          2.246    32.877    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][81]
+    SLICE_X28Y54         LUT6 (Prop_lut6_I0_O)        0.105    32.982 r  aes_inst/key_inst/key_gen[1].sb0/g1_b0__168/O
+                         net (fo=1, routed)           0.000    32.982    aes_inst/key_inst/key_gen[7].sb2/g0_b0__181_i_22_3
+    SLICE_X28Y54         MUXF7 (Prop_muxf7_I1_O)      0.206    33.188 r  aes_inst/key_inst/key_gen[7].sb2/g0_b0__181_i_49/O
+                         net (fo=1, routed)           0.000    33.188    aes_inst/key_inst/key_gen[7].sb2/g0_b0__181_i_49_n_0
+    SLICE_X28Y54         MUXF8 (Prop_muxf8_I0_O)      0.085    33.273 r  aes_inst/key_inst/key_gen[7].sb2/g0_b0__181_i_22/O
+                         net (fo=4, routed)           0.701    33.974    aes_inst/key_inst/key_gen[1].sb0/key_gen[7].sub_word[8]
+    SLICE_X28Y55         LUT6 (Prop_lut6_I3_O)        0.264    34.238 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[7].pipe_state[7][104]_i_2/O
+                         net (fo=2, routed)           0.981    35.219    aes_inst/key_inst/key_gen[1].sb0/full_keys[1000]
+    SLICE_X41Y46         LUT2 (Prop_lut2_I0_O)        0.127    35.346 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[7].pipe_state[7][72]_i_2/O
+                         net (fo=3, routed)           0.583    35.929    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][115]
+    SLICE_X41Y46         LUT2 (Prop_lut2_I0_O)        0.268    36.197 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__173_i_7/O
+                         net (fo=5, routed)           0.762    36.959    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][108]
+    SLICE_X37Y40         LUT2 (Prop_lut2_I0_O)        0.105    37.064 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__173_i_1/O
+                         net (fo=35, routed)          3.330    40.393    aes_inst/key_inst/key_gen[1].sb0/g0_b0__169_i_1
+    SLICE_X5Y29          LUT6 (Prop_lut6_I0_O)        0.105    40.498 r  aes_inst/key_inst/key_gen[1].sb0/g2_b1__173/O
+                         net (fo=1, routed)           0.346    40.844    aes_inst/key_inst/key_gen[8].sb1/pipe_state[10][17]_i_4_0
+    SLICE_X5Y29          LUT6 (Prop_lut6_I1_O)        0.105    40.949 r  aes_inst/key_inst/key_gen[8].sb1/g0_b0__182_i_28/O
+                         net (fo=5, routed)           1.420    42.369    aes_inst/key_inst/key_gen[1].sb2/key_gen[8].sub_word[9]
+    SLICE_X28Y53         LUT6 (Prop_lut6_I3_O)        0.105    42.474 r  aes_inst/key_inst/key_gen[1].sb2/round_stages[8].pipe_state[8][113]_i_2/O
+                         net (fo=2, routed)           1.177    43.651    aes_inst/key_inst/key_gen[1].sb2/full_keys[1137]
+    SLICE_X34Y43         LUT2 (Prop_lut2_I0_O)        0.121    43.772 r  aes_inst/key_inst/key_gen[1].sb2/g0_b0__182_i_10/O
+                         net (fo=4, routed)           1.593    45.365    aes_inst/key_inst/key_gen[1].sb2/full_keys[1105]
+    SLICE_X15Y35         LUT2 (Prop_lut2_I0_O)        0.286    45.651 r  aes_inst/key_inst/key_gen[1].sb2/g0_b0__178_i_8/O
+                         net (fo=4, routed)           0.884    46.535    aes_inst/key_inst/key_gen[1].sb2/key_reg_reg[127]_0[3]
+    SLICE_X9Y29          LUT2 (Prop_lut2_I0_O)        0.107    46.642 r  aes_inst/key_inst/key_gen[1].sb2/g0_b0__178_i_2/O
+                         net (fo=33, routed)          2.188    48.831    aes_inst/key_inst/key_gen[1].sb2/full_keys[1041]
+    SLICE_X39Y22         LUT6 (Prop_lut6_I1_O)        0.274    49.105 r  aes_inst/key_inst/key_gen[1].sb2/g1_b2__178/O
+                         net (fo=1, routed)           0.651    49.756    aes_inst/key_inst/key_gen[9].sb0/round_stages[9].pipe_state[9][122]_i_8_1
+    SLICE_X38Y22         LUT6 (Prop_lut6_I3_O)        0.105    49.861 r  aes_inst/key_inst/key_gen[9].sb0/g0_b0__179_i_31/O
+                         net (fo=4, routed)           1.382    51.243    aes_inst/key_inst/key_gen[1].sb2/key_gen[9].sub_word[10]
+    SLICE_X35Y45         LUT6 (Prop_lut6_I2_O)        0.105    51.348 r  aes_inst/key_inst/key_gen[1].sb2/g0_b0__179_i_11/O
+                         net (fo=3, routed)           0.501    51.849    aes_inst/key_inst/key_gen[1].sb1/round_stages[9].pipe_state_reg[9][26]
+    SLICE_X34Y43         LUT6 (Prop_lut6_I0_O)        0.105    51.954 r  aes_inst/key_inst/key_gen[1].sb1/g0_b0__179_i_3/O
+                         net (fo=33, routed)          2.491    54.445    aes_inst/key_inst/key_gen[1].sb1/full_keys[1178]
+    SLICE_X11Y46         LUT6 (Prop_lut6_I2_O)        0.105    54.550 r  aes_inst/key_inst/key_gen[1].sb1/g1_b5__179/O
+                         net (fo=1, routed)           0.000    54.550    aes_inst/key_inst/key_gen[10].sb3/pipe_state[10][101]_i_4_0
+    SLICE_X11Y46         MUXF7 (Prop_muxf7_I1_O)      0.182    54.732 r  aes_inst/key_inst/key_gen[10].sb3/pipe_state_reg[10][101]_i_11/O
+                         net (fo=2, routed)           0.701    55.433    aes_inst/key_inst/key_gen[1].sb1/pipe_state_reg[10][69]_0
+    SLICE_X12Y46         LUT6 (Prop_lut6_I5_O)        0.252    55.685 r  aes_inst/key_inst/key_gen[1].sb1/pipe_state[10][101]_i_4/O
+                         net (fo=3, routed)           0.678    56.363    aes_inst/final_inst/pipe_state_reg[10][69]
+    SLICE_X14Y47         LUT6 (Prop_lut6_I2_O)        0.105    56.468 r  aes_inst/final_inst/pipe_state[10][69]_i_1/O
+                         net (fo=1, routed)           0.000    56.468    aes_inst/final_out[69]
+    SLICE_X14Y47         FDRE                                         r  aes_inst/pipe_state_reg[10][69]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 key_reg_reg[20]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            aes_inst/pipe_state_reg[10][1]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        56.451ns  (logic 8.340ns (14.774%)  route 48.111ns (85.226%))
+  Logic Levels:           52  (FDCE=1 LUT2=15 LUT3=2 LUT4=1 LUT5=1 LUT6=20 MUXF7=6 MUXF8=6)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y81          FDCE                         0.000     0.000 r  key_reg_reg[20]/C
+    SLICE_X0Y81          FDCE (Prop_fdce_C_Q)         0.379     0.379 r  key_reg_reg[20]/Q
+                         net (fo=36, routed)          2.924     3.303    aes_inst/Q[20]
+    SLICE_X6Y58          LUT6 (Prop_lut6_I4_O)        0.105     3.408 r  aes_inst/g1_b4__146/O
+                         net (fo=1, routed)           0.000     3.408    aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_11_1
+    SLICE_X6Y58          MUXF7 (Prop_muxf7_I1_O)      0.206     3.614 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_21/O
+                         net (fo=1, routed)           0.000     3.614    aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_21_n_0
+    SLICE_X6Y58          MUXF8 (Prop_muxf8_I0_O)      0.082     3.696 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_11/O
+                         net (fo=19, routed)          1.012     4.708    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[23]_3
+    SLICE_X5Y68          LUT5 (Prop_lut5_I2_O)        0.259     4.967 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_5/O
+                         net (fo=33, routed)          1.548     6.515    aes_inst/key_inst/key_gen[1].sb0/full_keys[156]
+    SLICE_X10Y65         LUT6 (Prop_lut6_I4_O)        0.105     6.620 r  aes_inst/key_inst/key_gen[1].sb0/g2_b7__147/O
+                         net (fo=2, routed)           0.717     7.337    aes_inst/key_inst/key_gen[2].sb3/round_stages[2].pipe_state[2][39]_i_2_0
+    SLICE_X11Y65         LUT6 (Prop_lut6_I1_O)        0.105     7.442 r  aes_inst/key_inst/key_gen[2].sb3/round_stages[7].pipe_state[7][103]_i_7/O
+                         net (fo=7, routed)           1.313     8.755    aes_inst/key_inst/key_gen[1].sb0/key_gen[2].sub_word[7]
+    SLICE_X28Y63         LUT3 (Prop_lut3_I0_O)        0.105     8.860 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[2].pipe_state[2][7]_i_2/O
+                         net (fo=11, routed)          0.819     9.679    aes_inst/key_inst/key_gen[3].sb2/round_stages[3].pipe_state[3][47]_i_2[1]
+    SLICE_X14Y61         MUXF8 (Prop_muxf8_S_O)       0.232     9.911 r  aes_inst/key_inst/key_gen[3].sb2/g0_b0__157_i_14/O
+                         net (fo=9, routed)           1.084    10.995    aes_inst/key_inst/key_gen[1].sb0/key_gen[3].sub_word[9]
+    SLICE_X29Y60         LUT4 (Prop_lut4_I0_O)        0.259    11.254 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__157_i_8/O
+                         net (fo=3, routed)           0.801    12.055    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][23]
+    SLICE_X32Y70         LUT2 (Prop_lut2_I0_O)        0.105    12.160 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__157_i_2/O
+                         net (fo=34, routed)          1.600    13.760    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][15]
+    SLICE_X32Y72         LUT6 (Prop_lut6_I1_O)        0.105    13.865 r  aes_inst/key_inst/key_gen[1].sb0/g0_b5__157/O
+                         net (fo=1, routed)           0.000    13.865    aes_inst/key_inst/key_gen[4].sb1/pipe_state_reg[10][117]_i_8_0
+    SLICE_X32Y72         MUXF7 (Prop_muxf7_I0_O)      0.199    14.064 r  aes_inst/key_inst/key_gen[4].sb1/pipe_state_reg[10][117]_i_16/O
+                         net (fo=1, routed)           0.000    14.064    aes_inst/key_inst/key_gen[4].sb1/pipe_state_reg[10][117]_i_16_n_0
+    SLICE_X32Y72         MUXF8 (Prop_muxf8_I0_O)      0.085    14.149 r  aes_inst/key_inst/key_gen[4].sb1/pipe_state_reg[10][117]_i_8/O
+                         net (fo=5, routed)           1.237    15.386    aes_inst/key_inst/key_gen[1].sb0/key_gen[4].sub_word[14]
+    SLICE_X30Y59         LUT3 (Prop_lut3_I0_O)        0.285    15.671 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[4].pipe_state[4][85]_i_2/O
+                         net (fo=3, routed)           1.348    17.019    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][52]
+    SLICE_X41Y63         LUT2 (Prop_lut2_I0_O)        0.283    17.302 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__162_i_12/O
+                         net (fo=3, routed)           0.719    18.020    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][45]
+    SLICE_X45Y67         LUT2 (Prop_lut2_I0_O)        0.105    18.125 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__162_i_6/O
+                         net (fo=34, routed)          2.390    20.516    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][37]
+    SLICE_X38Y59         LUT6 (Prop_lut6_I5_O)        0.105    20.621 r  aes_inst/key_inst/key_gen[1].sb0/g0_b2__162/O
+                         net (fo=1, routed)           0.000    20.621    aes_inst/key_inst/key_gen[5].sb0/pipe_state_reg[10][122]_i_9_0
+    SLICE_X38Y59         MUXF7 (Prop_muxf7_I0_O)      0.201    20.822 r  aes_inst/key_inst/key_gen[5].sb0/pipe_state_reg[10][122]_i_18/O
+                         net (fo=1, routed)           0.000    20.822    aes_inst/key_inst/key_gen[5].sb0/pipe_state_reg[10][122]_i_18_n_0
+    SLICE_X38Y59         MUXF8 (Prop_muxf8_I0_O)      0.082    20.904 r  aes_inst/key_inst/key_gen[5].sb0/pipe_state_reg[10][122]_i_9/O
+                         net (fo=4, routed)           0.615    21.519    aes_inst/key_inst/key_gen[1].sb0/key_gen[5].sub_word[16]
+    SLICE_X35Y60         LUT6 (Prop_lut6_I2_O)        0.259    21.778 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[5].pipe_state[5][122]_i_2/O
+                         net (fo=2, routed)           0.929    22.707    aes_inst/key_inst/key_gen[1].sb0/full_keys[762]
+    SLICE_X41Y60         LUT2 (Prop_lut2_I0_O)        0.105    22.812 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[5].pipe_state[5][90]_i_2/O
+                         net (fo=3, routed)           0.893    23.704    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][74]
+    SLICE_X48Y60         LUT2 (Prop_lut2_I0_O)        0.105    23.809 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__163_i_9/O
+                         net (fo=3, routed)           0.990    24.799    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][66]
+    SLICE_X50Y55         LUT2 (Prop_lut2_I0_O)        0.119    24.918 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__163_i_3/O
+                         net (fo=34, routed)          2.290    27.209    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][58]
+    SLICE_X36Y48         LUT6 (Prop_lut6_I2_O)        0.268    27.477 r  aes_inst/key_inst/key_gen[1].sb0/g1_b0__163/O
+                         net (fo=1, routed)           0.000    27.477    aes_inst/key_inst/key_gen[6].sb3/pipe_state_reg[10][96]_i_7_3
+    SLICE_X36Y48         MUXF7 (Prop_muxf7_I1_O)      0.206    27.683 r  aes_inst/key_inst/key_gen[6].sb3/pipe_state_reg[10][96]_i_14/O
+                         net (fo=1, routed)           0.000    27.683    aes_inst/key_inst/key_gen[6].sb3/pipe_state_reg[10][96]_i_14_n_0
+    SLICE_X36Y48         MUXF8 (Prop_muxf8_I0_O)      0.085    27.768 r  aes_inst/key_inst/key_gen[6].sb3/pipe_state_reg[10][96]_i_7/O
+                         net (fo=4, routed)           0.492    28.260    aes_inst/key_inst/key_gen[1].sb0/key_gen[6].sub_word[0]
+    SLICE_X34Y50         LUT6 (Prop_lut6_I3_O)        0.264    28.524 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[6].pipe_state[6][96]_i_2/O
+                         net (fo=2, routed)           0.805    29.329    aes_inst/key_inst/key_gen[1].sb0/full_keys[864]
+    SLICE_X43Y50         LUT2 (Prop_lut2_I0_O)        0.105    29.434 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[6].pipe_state[6][64]_i_2/O
+                         net (fo=3, routed)           0.450    29.884    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][97]
+    SLICE_X43Y49         LUT2 (Prop_lut2_I0_O)        0.105    29.989 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__168_i_7/O
+                         net (fo=3, routed)           0.537    30.526    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][89]
+    SLICE_X43Y49         LUT2 (Prop_lut2_I0_O)        0.105    30.631 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__168_i_1/O
+                         net (fo=35, routed)          2.246    32.877    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][81]
+    SLICE_X28Y54         LUT6 (Prop_lut6_I0_O)        0.105    32.982 r  aes_inst/key_inst/key_gen[1].sb0/g1_b0__168/O
+                         net (fo=1, routed)           0.000    32.982    aes_inst/key_inst/key_gen[7].sb2/g0_b0__181_i_22_3
+    SLICE_X28Y54         MUXF7 (Prop_muxf7_I1_O)      0.206    33.188 r  aes_inst/key_inst/key_gen[7].sb2/g0_b0__181_i_49/O
+                         net (fo=1, routed)           0.000    33.188    aes_inst/key_inst/key_gen[7].sb2/g0_b0__181_i_49_n_0
+    SLICE_X28Y54         MUXF8 (Prop_muxf8_I0_O)      0.085    33.273 r  aes_inst/key_inst/key_gen[7].sb2/g0_b0__181_i_22/O
+                         net (fo=4, routed)           0.701    33.974    aes_inst/key_inst/key_gen[1].sb0/key_gen[7].sub_word[8]
+    SLICE_X28Y55         LUT6 (Prop_lut6_I3_O)        0.264    34.238 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[7].pipe_state[7][104]_i_2/O
+                         net (fo=2, routed)           0.981    35.219    aes_inst/key_inst/key_gen[1].sb0/full_keys[1000]
+    SLICE_X41Y46         LUT2 (Prop_lut2_I0_O)        0.127    35.346 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[7].pipe_state[7][72]_i_2/O
+                         net (fo=3, routed)           0.583    35.929    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][115]
+    SLICE_X41Y46         LUT2 (Prop_lut2_I0_O)        0.268    36.197 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__173_i_7/O
+                         net (fo=5, routed)           0.762    36.959    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][108]
+    SLICE_X37Y40         LUT2 (Prop_lut2_I0_O)        0.105    37.064 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__173_i_1/O
+                         net (fo=35, routed)          3.330    40.393    aes_inst/key_inst/key_gen[1].sb0/g0_b0__169_i_1
+    SLICE_X5Y29          LUT6 (Prop_lut6_I0_O)        0.105    40.498 r  aes_inst/key_inst/key_gen[1].sb0/g2_b1__173/O
+                         net (fo=1, routed)           0.346    40.844    aes_inst/key_inst/key_gen[8].sb1/pipe_state[10][17]_i_4_0
+    SLICE_X5Y29          LUT6 (Prop_lut6_I1_O)        0.105    40.949 r  aes_inst/key_inst/key_gen[8].sb1/g0_b0__182_i_28/O
+                         net (fo=5, routed)           1.420    42.369    aes_inst/key_inst/key_gen[1].sb2/key_gen[8].sub_word[9]
+    SLICE_X28Y53         LUT6 (Prop_lut6_I3_O)        0.105    42.474 r  aes_inst/key_inst/key_gen[1].sb2/round_stages[8].pipe_state[8][113]_i_2/O
+                         net (fo=2, routed)           1.177    43.651    aes_inst/key_inst/key_gen[1].sb2/full_keys[1137]
+    SLICE_X34Y43         LUT2 (Prop_lut2_I0_O)        0.121    43.772 r  aes_inst/key_inst/key_gen[1].sb2/g0_b0__182_i_10/O
+                         net (fo=4, routed)           1.593    45.365    aes_inst/key_inst/key_gen[1].sb2/full_keys[1105]
+    SLICE_X15Y35         LUT2 (Prop_lut2_I0_O)        0.286    45.651 r  aes_inst/key_inst/key_gen[1].sb2/g0_b0__178_i_8/O
+                         net (fo=4, routed)           0.884    46.535    aes_inst/key_inst/key_gen[1].sb2/key_reg_reg[127]_0[3]
+    SLICE_X9Y29          LUT2 (Prop_lut2_I0_O)        0.107    46.642 r  aes_inst/key_inst/key_gen[1].sb2/g0_b0__178_i_2/O
+                         net (fo=33, routed)          2.188    48.831    aes_inst/key_inst/key_gen[1].sb2/full_keys[1041]
+    SLICE_X39Y22         LUT6 (Prop_lut6_I1_O)        0.274    49.105 r  aes_inst/key_inst/key_gen[1].sb2/g1_b2__178/O
+                         net (fo=1, routed)           0.651    49.756    aes_inst/key_inst/key_gen[9].sb0/round_stages[9].pipe_state[9][122]_i_8_1
+    SLICE_X38Y22         LUT6 (Prop_lut6_I3_O)        0.105    49.861 r  aes_inst/key_inst/key_gen[9].sb0/g0_b0__179_i_31/O
+                         net (fo=4, routed)           1.382    51.243    aes_inst/key_inst/key_gen[1].sb2/key_gen[9].sub_word[10]
+    SLICE_X35Y45         LUT6 (Prop_lut6_I2_O)        0.105    51.348 r  aes_inst/key_inst/key_gen[1].sb2/g0_b0__179_i_11/O
+                         net (fo=3, routed)           0.501    51.849    aes_inst/key_inst/key_gen[1].sb1/round_stages[9].pipe_state_reg[9][26]
+    SLICE_X34Y43         LUT6 (Prop_lut6_I0_O)        0.105    51.954 r  aes_inst/key_inst/key_gen[1].sb1/g0_b0__179_i_3/O
+                         net (fo=33, routed)          2.358    54.312    aes_inst/key_inst/key_gen[1].sb1/full_keys[1178]
+    SLICE_X9Y46          LUT6 (Prop_lut6_I2_O)        0.105    54.417 r  aes_inst/key_inst/key_gen[1].sb1/g1_b1__179/O
+                         net (fo=1, routed)           0.000    54.417    aes_inst/key_inst/key_gen[10].sb3/pipe_state[10][97]_i_4_0
+    SLICE_X9Y46          MUXF7 (Prop_muxf7_I1_O)      0.182    54.599 r  aes_inst/key_inst/key_gen[10].sb3/pipe_state_reg[10][97]_i_11/O
+                         net (fo=2, routed)           0.812    55.411    aes_inst/key_inst/key_gen[1].sb2/pipe_state_reg[10][1]
+    SLICE_X11Y44         LUT6 (Prop_lut6_I1_O)        0.252    55.663 r  aes_inst/key_inst/key_gen[1].sb2/pipe_state[10][1]_i_2/O
+                         net (fo=1, routed)           0.683    56.346    aes_inst/final_inst/pipe_state_reg[10][1]_0
+    SLICE_X11Y45         LUT6 (Prop_lut6_I4_O)        0.105    56.451 r  aes_inst/final_inst/pipe_state[10][1]_i_1/O
+                         net (fo=1, routed)           0.000    56.451    aes_inst/final_out[1]
+    SLICE_X11Y45         FDRE                                         r  aes_inst/pipe_state_reg[10][1]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 key_reg_reg[20]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            aes_inst/pipe_state_reg[10][33]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        56.440ns  (logic 8.340ns (14.777%)  route 48.100ns (85.223%))
+  Logic Levels:           52  (FDCE=1 LUT2=15 LUT3=2 LUT4=1 LUT5=2 LUT6=19 MUXF7=6 MUXF8=6)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y81          FDCE                         0.000     0.000 r  key_reg_reg[20]/C
+    SLICE_X0Y81          FDCE (Prop_fdce_C_Q)         0.379     0.379 r  key_reg_reg[20]/Q
+                         net (fo=36, routed)          2.924     3.303    aes_inst/Q[20]
+    SLICE_X6Y58          LUT6 (Prop_lut6_I4_O)        0.105     3.408 r  aes_inst/g1_b4__146/O
+                         net (fo=1, routed)           0.000     3.408    aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_11_1
+    SLICE_X6Y58          MUXF7 (Prop_muxf7_I1_O)      0.206     3.614 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_21/O
+                         net (fo=1, routed)           0.000     3.614    aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_21_n_0
+    SLICE_X6Y58          MUXF8 (Prop_muxf8_I0_O)      0.082     3.696 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_11/O
+                         net (fo=19, routed)          1.012     4.708    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[23]_3
+    SLICE_X5Y68          LUT5 (Prop_lut5_I2_O)        0.259     4.967 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_5/O
+                         net (fo=33, routed)          1.548     6.515    aes_inst/key_inst/key_gen[1].sb0/full_keys[156]
+    SLICE_X10Y65         LUT6 (Prop_lut6_I4_O)        0.105     6.620 r  aes_inst/key_inst/key_gen[1].sb0/g2_b7__147/O
+                         net (fo=2, routed)           0.717     7.337    aes_inst/key_inst/key_gen[2].sb3/round_stages[2].pipe_state[2][39]_i_2_0
+    SLICE_X11Y65         LUT6 (Prop_lut6_I1_O)        0.105     7.442 r  aes_inst/key_inst/key_gen[2].sb3/round_stages[7].pipe_state[7][103]_i_7/O
+                         net (fo=7, routed)           1.313     8.755    aes_inst/key_inst/key_gen[1].sb0/key_gen[2].sub_word[7]
+    SLICE_X28Y63         LUT3 (Prop_lut3_I0_O)        0.105     8.860 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[2].pipe_state[2][7]_i_2/O
+                         net (fo=11, routed)          0.819     9.679    aes_inst/key_inst/key_gen[3].sb2/round_stages[3].pipe_state[3][47]_i_2[1]
+    SLICE_X14Y61         MUXF8 (Prop_muxf8_S_O)       0.232     9.911 r  aes_inst/key_inst/key_gen[3].sb2/g0_b0__157_i_14/O
+                         net (fo=9, routed)           1.084    10.995    aes_inst/key_inst/key_gen[1].sb0/key_gen[3].sub_word[9]
+    SLICE_X29Y60         LUT4 (Prop_lut4_I0_O)        0.259    11.254 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__157_i_8/O
+                         net (fo=3, routed)           0.801    12.055    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][23]
+    SLICE_X32Y70         LUT2 (Prop_lut2_I0_O)        0.105    12.160 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__157_i_2/O
+                         net (fo=34, routed)          1.600    13.760    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][15]
+    SLICE_X32Y72         LUT6 (Prop_lut6_I1_O)        0.105    13.865 r  aes_inst/key_inst/key_gen[1].sb0/g0_b5__157/O
+                         net (fo=1, routed)           0.000    13.865    aes_inst/key_inst/key_gen[4].sb1/pipe_state_reg[10][117]_i_8_0
+    SLICE_X32Y72         MUXF7 (Prop_muxf7_I0_O)      0.199    14.064 r  aes_inst/key_inst/key_gen[4].sb1/pipe_state_reg[10][117]_i_16/O
+                         net (fo=1, routed)           0.000    14.064    aes_inst/key_inst/key_gen[4].sb1/pipe_state_reg[10][117]_i_16_n_0
+    SLICE_X32Y72         MUXF8 (Prop_muxf8_I0_O)      0.085    14.149 r  aes_inst/key_inst/key_gen[4].sb1/pipe_state_reg[10][117]_i_8/O
+                         net (fo=5, routed)           1.237    15.386    aes_inst/key_inst/key_gen[1].sb0/key_gen[4].sub_word[14]
+    SLICE_X30Y59         LUT3 (Prop_lut3_I0_O)        0.285    15.671 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[4].pipe_state[4][85]_i_2/O
+                         net (fo=3, routed)           1.348    17.019    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][52]
+    SLICE_X41Y63         LUT2 (Prop_lut2_I0_O)        0.283    17.302 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__162_i_12/O
+                         net (fo=3, routed)           0.719    18.020    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][45]
+    SLICE_X45Y67         LUT2 (Prop_lut2_I0_O)        0.105    18.125 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__162_i_6/O
+                         net (fo=34, routed)          2.390    20.516    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][37]
+    SLICE_X38Y59         LUT6 (Prop_lut6_I5_O)        0.105    20.621 r  aes_inst/key_inst/key_gen[1].sb0/g0_b2__162/O
+                         net (fo=1, routed)           0.000    20.621    aes_inst/key_inst/key_gen[5].sb0/pipe_state_reg[10][122]_i_9_0
+    SLICE_X38Y59         MUXF7 (Prop_muxf7_I0_O)      0.201    20.822 r  aes_inst/key_inst/key_gen[5].sb0/pipe_state_reg[10][122]_i_18/O
+                         net (fo=1, routed)           0.000    20.822    aes_inst/key_inst/key_gen[5].sb0/pipe_state_reg[10][122]_i_18_n_0
+    SLICE_X38Y59         MUXF8 (Prop_muxf8_I0_O)      0.082    20.904 r  aes_inst/key_inst/key_gen[5].sb0/pipe_state_reg[10][122]_i_9/O
+                         net (fo=4, routed)           0.615    21.519    aes_inst/key_inst/key_gen[1].sb0/key_gen[5].sub_word[16]
+    SLICE_X35Y60         LUT6 (Prop_lut6_I2_O)        0.259    21.778 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[5].pipe_state[5][122]_i_2/O
+                         net (fo=2, routed)           0.929    22.707    aes_inst/key_inst/key_gen[1].sb0/full_keys[762]
+    SLICE_X41Y60         LUT2 (Prop_lut2_I0_O)        0.105    22.812 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[5].pipe_state[5][90]_i_2/O
+                         net (fo=3, routed)           0.893    23.704    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][74]
+    SLICE_X48Y60         LUT2 (Prop_lut2_I0_O)        0.105    23.809 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__163_i_9/O
+                         net (fo=3, routed)           0.990    24.799    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][66]
+    SLICE_X50Y55         LUT2 (Prop_lut2_I0_O)        0.119    24.918 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__163_i_3/O
+                         net (fo=34, routed)          2.290    27.209    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][58]
+    SLICE_X36Y48         LUT6 (Prop_lut6_I2_O)        0.268    27.477 r  aes_inst/key_inst/key_gen[1].sb0/g1_b0__163/O
+                         net (fo=1, routed)           0.000    27.477    aes_inst/key_inst/key_gen[6].sb3/pipe_state_reg[10][96]_i_7_3
+    SLICE_X36Y48         MUXF7 (Prop_muxf7_I1_O)      0.206    27.683 r  aes_inst/key_inst/key_gen[6].sb3/pipe_state_reg[10][96]_i_14/O
+                         net (fo=1, routed)           0.000    27.683    aes_inst/key_inst/key_gen[6].sb3/pipe_state_reg[10][96]_i_14_n_0
+    SLICE_X36Y48         MUXF8 (Prop_muxf8_I0_O)      0.085    27.768 r  aes_inst/key_inst/key_gen[6].sb3/pipe_state_reg[10][96]_i_7/O
+                         net (fo=4, routed)           0.492    28.260    aes_inst/key_inst/key_gen[1].sb0/key_gen[6].sub_word[0]
+    SLICE_X34Y50         LUT6 (Prop_lut6_I3_O)        0.264    28.524 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[6].pipe_state[6][96]_i_2/O
+                         net (fo=2, routed)           0.805    29.329    aes_inst/key_inst/key_gen[1].sb0/full_keys[864]
+    SLICE_X43Y50         LUT2 (Prop_lut2_I0_O)        0.105    29.434 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[6].pipe_state[6][64]_i_2/O
+                         net (fo=3, routed)           0.450    29.884    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][97]
+    SLICE_X43Y49         LUT2 (Prop_lut2_I0_O)        0.105    29.989 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__168_i_7/O
+                         net (fo=3, routed)           0.537    30.526    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][89]
+    SLICE_X43Y49         LUT2 (Prop_lut2_I0_O)        0.105    30.631 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__168_i_1/O
+                         net (fo=35, routed)          2.246    32.877    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][81]
+    SLICE_X28Y54         LUT6 (Prop_lut6_I0_O)        0.105    32.982 r  aes_inst/key_inst/key_gen[1].sb0/g1_b0__168/O
+                         net (fo=1, routed)           0.000    32.982    aes_inst/key_inst/key_gen[7].sb2/g0_b0__181_i_22_3
+    SLICE_X28Y54         MUXF7 (Prop_muxf7_I1_O)      0.206    33.188 r  aes_inst/key_inst/key_gen[7].sb2/g0_b0__181_i_49/O
+                         net (fo=1, routed)           0.000    33.188    aes_inst/key_inst/key_gen[7].sb2/g0_b0__181_i_49_n_0
+    SLICE_X28Y54         MUXF8 (Prop_muxf8_I0_O)      0.085    33.273 r  aes_inst/key_inst/key_gen[7].sb2/g0_b0__181_i_22/O
+                         net (fo=4, routed)           0.701    33.974    aes_inst/key_inst/key_gen[1].sb0/key_gen[7].sub_word[8]
+    SLICE_X28Y55         LUT6 (Prop_lut6_I3_O)        0.264    34.238 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[7].pipe_state[7][104]_i_2/O
+                         net (fo=2, routed)           0.981    35.219    aes_inst/key_inst/key_gen[1].sb0/full_keys[1000]
+    SLICE_X41Y46         LUT2 (Prop_lut2_I0_O)        0.127    35.346 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[7].pipe_state[7][72]_i_2/O
+                         net (fo=3, routed)           0.583    35.929    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][115]
+    SLICE_X41Y46         LUT2 (Prop_lut2_I0_O)        0.268    36.197 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__173_i_7/O
+                         net (fo=5, routed)           0.762    36.959    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][108]
+    SLICE_X37Y40         LUT2 (Prop_lut2_I0_O)        0.105    37.064 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__173_i_1/O
+                         net (fo=35, routed)          3.330    40.393    aes_inst/key_inst/key_gen[1].sb0/g0_b0__169_i_1
+    SLICE_X5Y29          LUT6 (Prop_lut6_I0_O)        0.105    40.498 r  aes_inst/key_inst/key_gen[1].sb0/g2_b1__173/O
+                         net (fo=1, routed)           0.346    40.844    aes_inst/key_inst/key_gen[8].sb1/pipe_state[10][17]_i_4_0
+    SLICE_X5Y29          LUT6 (Prop_lut6_I1_O)        0.105    40.949 r  aes_inst/key_inst/key_gen[8].sb1/g0_b0__182_i_28/O
+                         net (fo=5, routed)           1.420    42.369    aes_inst/key_inst/key_gen[1].sb2/key_gen[8].sub_word[9]
+    SLICE_X28Y53         LUT6 (Prop_lut6_I3_O)        0.105    42.474 r  aes_inst/key_inst/key_gen[1].sb2/round_stages[8].pipe_state[8][113]_i_2/O
+                         net (fo=2, routed)           1.177    43.651    aes_inst/key_inst/key_gen[1].sb2/full_keys[1137]
+    SLICE_X34Y43         LUT2 (Prop_lut2_I0_O)        0.121    43.772 r  aes_inst/key_inst/key_gen[1].sb2/g0_b0__182_i_10/O
+                         net (fo=4, routed)           1.593    45.365    aes_inst/key_inst/key_gen[1].sb2/full_keys[1105]
+    SLICE_X15Y35         LUT2 (Prop_lut2_I0_O)        0.286    45.651 r  aes_inst/key_inst/key_gen[1].sb2/g0_b0__178_i_8/O
+                         net (fo=4, routed)           0.884    46.535    aes_inst/key_inst/key_gen[1].sb2/key_reg_reg[127]_0[3]
+    SLICE_X9Y29          LUT2 (Prop_lut2_I0_O)        0.107    46.642 r  aes_inst/key_inst/key_gen[1].sb2/g0_b0__178_i_2/O
+                         net (fo=33, routed)          2.188    48.831    aes_inst/key_inst/key_gen[1].sb2/full_keys[1041]
+    SLICE_X39Y22         LUT6 (Prop_lut6_I1_O)        0.274    49.105 r  aes_inst/key_inst/key_gen[1].sb2/g1_b2__178/O
+                         net (fo=1, routed)           0.651    49.756    aes_inst/key_inst/key_gen[9].sb0/round_stages[9].pipe_state[9][122]_i_8_1
+    SLICE_X38Y22         LUT6 (Prop_lut6_I3_O)        0.105    49.861 r  aes_inst/key_inst/key_gen[9].sb0/g0_b0__179_i_31/O
+                         net (fo=4, routed)           1.382    51.243    aes_inst/key_inst/key_gen[1].sb2/key_gen[9].sub_word[10]
+    SLICE_X35Y45         LUT6 (Prop_lut6_I2_O)        0.105    51.348 r  aes_inst/key_inst/key_gen[1].sb2/g0_b0__179_i_11/O
+                         net (fo=3, routed)           0.501    51.849    aes_inst/key_inst/key_gen[1].sb1/round_stages[9].pipe_state_reg[9][26]
+    SLICE_X34Y43         LUT6 (Prop_lut6_I0_O)        0.105    51.954 r  aes_inst/key_inst/key_gen[1].sb1/g0_b0__179_i_3/O
+                         net (fo=33, routed)          2.358    54.312    aes_inst/key_inst/key_gen[1].sb1/full_keys[1178]
+    SLICE_X9Y46          LUT6 (Prop_lut6_I2_O)        0.105    54.417 r  aes_inst/key_inst/key_gen[1].sb1/g1_b1__179/O
+                         net (fo=1, routed)           0.000    54.417    aes_inst/key_inst/key_gen[10].sb3/pipe_state[10][97]_i_4_0
+    SLICE_X9Y46          MUXF7 (Prop_muxf7_I1_O)      0.182    54.599 r  aes_inst/key_inst/key_gen[10].sb3/pipe_state_reg[10][97]_i_11/O
+                         net (fo=2, routed)           0.812    55.411    aes_inst/key_inst/key_gen[1].sb1/pipe_state_reg[10][65]_0
+    SLICE_X11Y44         LUT6 (Prop_lut6_I5_O)        0.252    55.663 r  aes_inst/key_inst/key_gen[1].sb1/pipe_state[10][97]_i_4/O
+                         net (fo=3, routed)           0.672    56.335    aes_inst/final_inst/pipe_state_reg[10][65]
+    SLICE_X11Y45         LUT5 (Prop_lut5_I2_O)        0.105    56.440 r  aes_inst/final_inst/pipe_state[10][33]_i_1/O
+                         net (fo=1, routed)           0.000    56.440    aes_inst/final_out[33]
+    SLICE_X11Y45         FDRE                                         r  aes_inst/pipe_state_reg[10][33]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 key_reg_reg[20]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            aes_inst/pipe_state_reg[10][5]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        56.424ns  (logic 8.340ns (14.781%)  route 48.084ns (85.219%))
+  Logic Levels:           52  (FDCE=1 LUT2=15 LUT3=2 LUT4=1 LUT5=1 LUT6=20 MUXF7=6 MUXF8=6)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y81          FDCE                         0.000     0.000 r  key_reg_reg[20]/C
+    SLICE_X0Y81          FDCE (Prop_fdce_C_Q)         0.379     0.379 r  key_reg_reg[20]/Q
+                         net (fo=36, routed)          2.924     3.303    aes_inst/Q[20]
+    SLICE_X6Y58          LUT6 (Prop_lut6_I4_O)        0.105     3.408 r  aes_inst/g1_b4__146/O
+                         net (fo=1, routed)           0.000     3.408    aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_11_1
+    SLICE_X6Y58          MUXF7 (Prop_muxf7_I1_O)      0.206     3.614 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_21/O
+                         net (fo=1, routed)           0.000     3.614    aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_21_n_0
+    SLICE_X6Y58          MUXF8 (Prop_muxf8_I0_O)      0.082     3.696 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_11/O
+                         net (fo=19, routed)          1.012     4.708    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[23]_3
+    SLICE_X5Y68          LUT5 (Prop_lut5_I2_O)        0.259     4.967 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_5/O
+                         net (fo=33, routed)          1.548     6.515    aes_inst/key_inst/key_gen[1].sb0/full_keys[156]
+    SLICE_X10Y65         LUT6 (Prop_lut6_I4_O)        0.105     6.620 r  aes_inst/key_inst/key_gen[1].sb0/g2_b7__147/O
+                         net (fo=2, routed)           0.717     7.337    aes_inst/key_inst/key_gen[2].sb3/round_stages[2].pipe_state[2][39]_i_2_0
+    SLICE_X11Y65         LUT6 (Prop_lut6_I1_O)        0.105     7.442 r  aes_inst/key_inst/key_gen[2].sb3/round_stages[7].pipe_state[7][103]_i_7/O
+                         net (fo=7, routed)           1.313     8.755    aes_inst/key_inst/key_gen[1].sb0/key_gen[2].sub_word[7]
+    SLICE_X28Y63         LUT3 (Prop_lut3_I0_O)        0.105     8.860 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[2].pipe_state[2][7]_i_2/O
+                         net (fo=11, routed)          0.819     9.679    aes_inst/key_inst/key_gen[3].sb2/round_stages[3].pipe_state[3][47]_i_2[1]
+    SLICE_X14Y61         MUXF8 (Prop_muxf8_S_O)       0.232     9.911 r  aes_inst/key_inst/key_gen[3].sb2/g0_b0__157_i_14/O
+                         net (fo=9, routed)           1.084    10.995    aes_inst/key_inst/key_gen[1].sb0/key_gen[3].sub_word[9]
+    SLICE_X29Y60         LUT4 (Prop_lut4_I0_O)        0.259    11.254 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__157_i_8/O
+                         net (fo=3, routed)           0.801    12.055    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][23]
+    SLICE_X32Y70         LUT2 (Prop_lut2_I0_O)        0.105    12.160 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__157_i_2/O
+                         net (fo=34, routed)          1.600    13.760    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][15]
+    SLICE_X32Y72         LUT6 (Prop_lut6_I1_O)        0.105    13.865 r  aes_inst/key_inst/key_gen[1].sb0/g0_b5__157/O
+                         net (fo=1, routed)           0.000    13.865    aes_inst/key_inst/key_gen[4].sb1/pipe_state_reg[10][117]_i_8_0
+    SLICE_X32Y72         MUXF7 (Prop_muxf7_I0_O)      0.199    14.064 r  aes_inst/key_inst/key_gen[4].sb1/pipe_state_reg[10][117]_i_16/O
+                         net (fo=1, routed)           0.000    14.064    aes_inst/key_inst/key_gen[4].sb1/pipe_state_reg[10][117]_i_16_n_0
+    SLICE_X32Y72         MUXF8 (Prop_muxf8_I0_O)      0.085    14.149 r  aes_inst/key_inst/key_gen[4].sb1/pipe_state_reg[10][117]_i_8/O
+                         net (fo=5, routed)           1.237    15.386    aes_inst/key_inst/key_gen[1].sb0/key_gen[4].sub_word[14]
+    SLICE_X30Y59         LUT3 (Prop_lut3_I0_O)        0.285    15.671 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[4].pipe_state[4][85]_i_2/O
+                         net (fo=3, routed)           1.348    17.019    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][52]
+    SLICE_X41Y63         LUT2 (Prop_lut2_I0_O)        0.283    17.302 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__162_i_12/O
+                         net (fo=3, routed)           0.719    18.020    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][45]
+    SLICE_X45Y67         LUT2 (Prop_lut2_I0_O)        0.105    18.125 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__162_i_6/O
+                         net (fo=34, routed)          2.390    20.516    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][37]
+    SLICE_X38Y59         LUT6 (Prop_lut6_I5_O)        0.105    20.621 r  aes_inst/key_inst/key_gen[1].sb0/g0_b2__162/O
+                         net (fo=1, routed)           0.000    20.621    aes_inst/key_inst/key_gen[5].sb0/pipe_state_reg[10][122]_i_9_0
+    SLICE_X38Y59         MUXF7 (Prop_muxf7_I0_O)      0.201    20.822 r  aes_inst/key_inst/key_gen[5].sb0/pipe_state_reg[10][122]_i_18/O
+                         net (fo=1, routed)           0.000    20.822    aes_inst/key_inst/key_gen[5].sb0/pipe_state_reg[10][122]_i_18_n_0
+    SLICE_X38Y59         MUXF8 (Prop_muxf8_I0_O)      0.082    20.904 r  aes_inst/key_inst/key_gen[5].sb0/pipe_state_reg[10][122]_i_9/O
+                         net (fo=4, routed)           0.615    21.519    aes_inst/key_inst/key_gen[1].sb0/key_gen[5].sub_word[16]
+    SLICE_X35Y60         LUT6 (Prop_lut6_I2_O)        0.259    21.778 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[5].pipe_state[5][122]_i_2/O
+                         net (fo=2, routed)           0.929    22.707    aes_inst/key_inst/key_gen[1].sb0/full_keys[762]
+    SLICE_X41Y60         LUT2 (Prop_lut2_I0_O)        0.105    22.812 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[5].pipe_state[5][90]_i_2/O
+                         net (fo=3, routed)           0.893    23.704    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][74]
+    SLICE_X48Y60         LUT2 (Prop_lut2_I0_O)        0.105    23.809 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__163_i_9/O
+                         net (fo=3, routed)           0.990    24.799    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][66]
+    SLICE_X50Y55         LUT2 (Prop_lut2_I0_O)        0.119    24.918 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__163_i_3/O
+                         net (fo=34, routed)          2.290    27.209    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][58]
+    SLICE_X36Y48         LUT6 (Prop_lut6_I2_O)        0.268    27.477 r  aes_inst/key_inst/key_gen[1].sb0/g1_b0__163/O
+                         net (fo=1, routed)           0.000    27.477    aes_inst/key_inst/key_gen[6].sb3/pipe_state_reg[10][96]_i_7_3
+    SLICE_X36Y48         MUXF7 (Prop_muxf7_I1_O)      0.206    27.683 r  aes_inst/key_inst/key_gen[6].sb3/pipe_state_reg[10][96]_i_14/O
+                         net (fo=1, routed)           0.000    27.683    aes_inst/key_inst/key_gen[6].sb3/pipe_state_reg[10][96]_i_14_n_0
+    SLICE_X36Y48         MUXF8 (Prop_muxf8_I0_O)      0.085    27.768 r  aes_inst/key_inst/key_gen[6].sb3/pipe_state_reg[10][96]_i_7/O
+                         net (fo=4, routed)           0.492    28.260    aes_inst/key_inst/key_gen[1].sb0/key_gen[6].sub_word[0]
+    SLICE_X34Y50         LUT6 (Prop_lut6_I3_O)        0.264    28.524 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[6].pipe_state[6][96]_i_2/O
+                         net (fo=2, routed)           0.805    29.329    aes_inst/key_inst/key_gen[1].sb0/full_keys[864]
+    SLICE_X43Y50         LUT2 (Prop_lut2_I0_O)        0.105    29.434 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[6].pipe_state[6][64]_i_2/O
+                         net (fo=3, routed)           0.450    29.884    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][97]
+    SLICE_X43Y49         LUT2 (Prop_lut2_I0_O)        0.105    29.989 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__168_i_7/O
+                         net (fo=3, routed)           0.537    30.526    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][89]
+    SLICE_X43Y49         LUT2 (Prop_lut2_I0_O)        0.105    30.631 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__168_i_1/O
+                         net (fo=35, routed)          2.246    32.877    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][81]
+    SLICE_X28Y54         LUT6 (Prop_lut6_I0_O)        0.105    32.982 r  aes_inst/key_inst/key_gen[1].sb0/g1_b0__168/O
+                         net (fo=1, routed)           0.000    32.982    aes_inst/key_inst/key_gen[7].sb2/g0_b0__181_i_22_3
+    SLICE_X28Y54         MUXF7 (Prop_muxf7_I1_O)      0.206    33.188 r  aes_inst/key_inst/key_gen[7].sb2/g0_b0__181_i_49/O
+                         net (fo=1, routed)           0.000    33.188    aes_inst/key_inst/key_gen[7].sb2/g0_b0__181_i_49_n_0
+    SLICE_X28Y54         MUXF8 (Prop_muxf8_I0_O)      0.085    33.273 r  aes_inst/key_inst/key_gen[7].sb2/g0_b0__181_i_22/O
+                         net (fo=4, routed)           0.701    33.974    aes_inst/key_inst/key_gen[1].sb0/key_gen[7].sub_word[8]
+    SLICE_X28Y55         LUT6 (Prop_lut6_I3_O)        0.264    34.238 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[7].pipe_state[7][104]_i_2/O
+                         net (fo=2, routed)           0.981    35.219    aes_inst/key_inst/key_gen[1].sb0/full_keys[1000]
+    SLICE_X41Y46         LUT2 (Prop_lut2_I0_O)        0.127    35.346 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[7].pipe_state[7][72]_i_2/O
+                         net (fo=3, routed)           0.583    35.929    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][115]
+    SLICE_X41Y46         LUT2 (Prop_lut2_I0_O)        0.268    36.197 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__173_i_7/O
+                         net (fo=5, routed)           0.762    36.959    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][108]
+    SLICE_X37Y40         LUT2 (Prop_lut2_I0_O)        0.105    37.064 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__173_i_1/O
+                         net (fo=35, routed)          3.330    40.393    aes_inst/key_inst/key_gen[1].sb0/g0_b0__169_i_1
+    SLICE_X5Y29          LUT6 (Prop_lut6_I0_O)        0.105    40.498 r  aes_inst/key_inst/key_gen[1].sb0/g2_b1__173/O
+                         net (fo=1, routed)           0.346    40.844    aes_inst/key_inst/key_gen[8].sb1/pipe_state[10][17]_i_4_0
+    SLICE_X5Y29          LUT6 (Prop_lut6_I1_O)        0.105    40.949 r  aes_inst/key_inst/key_gen[8].sb1/g0_b0__182_i_28/O
+                         net (fo=5, routed)           1.420    42.369    aes_inst/key_inst/key_gen[1].sb2/key_gen[8].sub_word[9]
+    SLICE_X28Y53         LUT6 (Prop_lut6_I3_O)        0.105    42.474 r  aes_inst/key_inst/key_gen[1].sb2/round_stages[8].pipe_state[8][113]_i_2/O
+                         net (fo=2, routed)           1.177    43.651    aes_inst/key_inst/key_gen[1].sb2/full_keys[1137]
+    SLICE_X34Y43         LUT2 (Prop_lut2_I0_O)        0.121    43.772 r  aes_inst/key_inst/key_gen[1].sb2/g0_b0__182_i_10/O
+                         net (fo=4, routed)           1.593    45.365    aes_inst/key_inst/key_gen[1].sb2/full_keys[1105]
+    SLICE_X15Y35         LUT2 (Prop_lut2_I0_O)        0.286    45.651 r  aes_inst/key_inst/key_gen[1].sb2/g0_b0__178_i_8/O
+                         net (fo=4, routed)           0.884    46.535    aes_inst/key_inst/key_gen[1].sb2/key_reg_reg[127]_0[3]
+    SLICE_X9Y29          LUT2 (Prop_lut2_I0_O)        0.107    46.642 r  aes_inst/key_inst/key_gen[1].sb2/g0_b0__178_i_2/O
+                         net (fo=33, routed)          2.188    48.831    aes_inst/key_inst/key_gen[1].sb2/full_keys[1041]
+    SLICE_X39Y22         LUT6 (Prop_lut6_I1_O)        0.274    49.105 r  aes_inst/key_inst/key_gen[1].sb2/g1_b2__178/O
+                         net (fo=1, routed)           0.651    49.756    aes_inst/key_inst/key_gen[9].sb0/round_stages[9].pipe_state[9][122]_i_8_1
+    SLICE_X38Y22         LUT6 (Prop_lut6_I3_O)        0.105    49.861 r  aes_inst/key_inst/key_gen[9].sb0/g0_b0__179_i_31/O
+                         net (fo=4, routed)           1.382    51.243    aes_inst/key_inst/key_gen[1].sb2/key_gen[9].sub_word[10]
+    SLICE_X35Y45         LUT6 (Prop_lut6_I2_O)        0.105    51.348 r  aes_inst/key_inst/key_gen[1].sb2/g0_b0__179_i_11/O
+                         net (fo=3, routed)           0.501    51.849    aes_inst/key_inst/key_gen[1].sb1/round_stages[9].pipe_state_reg[9][26]
+    SLICE_X34Y43         LUT6 (Prop_lut6_I0_O)        0.105    51.954 r  aes_inst/key_inst/key_gen[1].sb1/g0_b0__179_i_3/O
+                         net (fo=33, routed)          2.491    54.445    aes_inst/key_inst/key_gen[1].sb1/full_keys[1178]
+    SLICE_X11Y46         LUT6 (Prop_lut6_I2_O)        0.105    54.550 r  aes_inst/key_inst/key_gen[1].sb1/g1_b5__179/O
+                         net (fo=1, routed)           0.000    54.550    aes_inst/key_inst/key_gen[10].sb3/pipe_state[10][101]_i_4_0
+    SLICE_X11Y46         MUXF7 (Prop_muxf7_I1_O)      0.182    54.732 r  aes_inst/key_inst/key_gen[10].sb3/pipe_state_reg[10][101]_i_11/O
+                         net (fo=2, routed)           0.684    55.416    aes_inst/key_inst/key_gen[1].sb2/pipe_state_reg[10][5]
+    SLICE_X12Y46         LUT6 (Prop_lut6_I1_O)        0.252    55.668 r  aes_inst/key_inst/key_gen[1].sb2/pipe_state[10][5]_i_2/O
+                         net (fo=1, routed)           0.651    56.319    aes_inst/final_inst/pipe_state_reg[10][5]_0
+    SLICE_X14Y46         LUT6 (Prop_lut6_I4_O)        0.105    56.424 r  aes_inst/final_inst/pipe_state[10][5]_i_1/O
+                         net (fo=1, routed)           0.000    56.424    aes_inst/final_out[5]
+    SLICE_X14Y46         FDRE                                         r  aes_inst/pipe_state_reg[10][5]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 key_reg_reg[20]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            aes_inst/pipe_state_reg[10][97]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        56.415ns  (logic 8.340ns (14.783%)  route 48.075ns (85.217%))
+  Logic Levels:           52  (FDCE=1 LUT2=15 LUT3=2 LUT4=1 LUT5=1 LUT6=20 MUXF7=6 MUXF8=6)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y81          FDCE                         0.000     0.000 r  key_reg_reg[20]/C
+    SLICE_X0Y81          FDCE (Prop_fdce_C_Q)         0.379     0.379 r  key_reg_reg[20]/Q
+                         net (fo=36, routed)          2.924     3.303    aes_inst/Q[20]
+    SLICE_X6Y58          LUT6 (Prop_lut6_I4_O)        0.105     3.408 r  aes_inst/g1_b4__146/O
+                         net (fo=1, routed)           0.000     3.408    aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_11_1
+    SLICE_X6Y58          MUXF7 (Prop_muxf7_I1_O)      0.206     3.614 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_21/O
+                         net (fo=1, routed)           0.000     3.614    aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_21_n_0
+    SLICE_X6Y58          MUXF8 (Prop_muxf8_I0_O)      0.082     3.696 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_11/O
+                         net (fo=19, routed)          1.012     4.708    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[23]_3
+    SLICE_X5Y68          LUT5 (Prop_lut5_I2_O)        0.259     4.967 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_5/O
+                         net (fo=33, routed)          1.548     6.515    aes_inst/key_inst/key_gen[1].sb0/full_keys[156]
+    SLICE_X10Y65         LUT6 (Prop_lut6_I4_O)        0.105     6.620 r  aes_inst/key_inst/key_gen[1].sb0/g2_b7__147/O
+                         net (fo=2, routed)           0.717     7.337    aes_inst/key_inst/key_gen[2].sb3/round_stages[2].pipe_state[2][39]_i_2_0
+    SLICE_X11Y65         LUT6 (Prop_lut6_I1_O)        0.105     7.442 r  aes_inst/key_inst/key_gen[2].sb3/round_stages[7].pipe_state[7][103]_i_7/O
+                         net (fo=7, routed)           1.313     8.755    aes_inst/key_inst/key_gen[1].sb0/key_gen[2].sub_word[7]
+    SLICE_X28Y63         LUT3 (Prop_lut3_I0_O)        0.105     8.860 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[2].pipe_state[2][7]_i_2/O
+                         net (fo=11, routed)          0.819     9.679    aes_inst/key_inst/key_gen[3].sb2/round_stages[3].pipe_state[3][47]_i_2[1]
+    SLICE_X14Y61         MUXF8 (Prop_muxf8_S_O)       0.232     9.911 r  aes_inst/key_inst/key_gen[3].sb2/g0_b0__157_i_14/O
+                         net (fo=9, routed)           1.084    10.995    aes_inst/key_inst/key_gen[1].sb0/key_gen[3].sub_word[9]
+    SLICE_X29Y60         LUT4 (Prop_lut4_I0_O)        0.259    11.254 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__157_i_8/O
+                         net (fo=3, routed)           0.801    12.055    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][23]
+    SLICE_X32Y70         LUT2 (Prop_lut2_I0_O)        0.105    12.160 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__157_i_2/O
+                         net (fo=34, routed)          1.600    13.760    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][15]
+    SLICE_X32Y72         LUT6 (Prop_lut6_I1_O)        0.105    13.865 r  aes_inst/key_inst/key_gen[1].sb0/g0_b5__157/O
+                         net (fo=1, routed)           0.000    13.865    aes_inst/key_inst/key_gen[4].sb1/pipe_state_reg[10][117]_i_8_0
+    SLICE_X32Y72         MUXF7 (Prop_muxf7_I0_O)      0.199    14.064 r  aes_inst/key_inst/key_gen[4].sb1/pipe_state_reg[10][117]_i_16/O
+                         net (fo=1, routed)           0.000    14.064    aes_inst/key_inst/key_gen[4].sb1/pipe_state_reg[10][117]_i_16_n_0
+    SLICE_X32Y72         MUXF8 (Prop_muxf8_I0_O)      0.085    14.149 r  aes_inst/key_inst/key_gen[4].sb1/pipe_state_reg[10][117]_i_8/O
+                         net (fo=5, routed)           1.237    15.386    aes_inst/key_inst/key_gen[1].sb0/key_gen[4].sub_word[14]
+    SLICE_X30Y59         LUT3 (Prop_lut3_I0_O)        0.285    15.671 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[4].pipe_state[4][85]_i_2/O
+                         net (fo=3, routed)           1.348    17.019    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][52]
+    SLICE_X41Y63         LUT2 (Prop_lut2_I0_O)        0.283    17.302 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__162_i_12/O
+                         net (fo=3, routed)           0.719    18.020    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][45]
+    SLICE_X45Y67         LUT2 (Prop_lut2_I0_O)        0.105    18.125 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__162_i_6/O
+                         net (fo=34, routed)          2.390    20.516    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][37]
+    SLICE_X38Y59         LUT6 (Prop_lut6_I5_O)        0.105    20.621 r  aes_inst/key_inst/key_gen[1].sb0/g0_b2__162/O
+                         net (fo=1, routed)           0.000    20.621    aes_inst/key_inst/key_gen[5].sb0/pipe_state_reg[10][122]_i_9_0
+    SLICE_X38Y59         MUXF7 (Prop_muxf7_I0_O)      0.201    20.822 r  aes_inst/key_inst/key_gen[5].sb0/pipe_state_reg[10][122]_i_18/O
+                         net (fo=1, routed)           0.000    20.822    aes_inst/key_inst/key_gen[5].sb0/pipe_state_reg[10][122]_i_18_n_0
+    SLICE_X38Y59         MUXF8 (Prop_muxf8_I0_O)      0.082    20.904 r  aes_inst/key_inst/key_gen[5].sb0/pipe_state_reg[10][122]_i_9/O
+                         net (fo=4, routed)           0.615    21.519    aes_inst/key_inst/key_gen[1].sb0/key_gen[5].sub_word[16]
+    SLICE_X35Y60         LUT6 (Prop_lut6_I2_O)        0.259    21.778 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[5].pipe_state[5][122]_i_2/O
+                         net (fo=2, routed)           0.929    22.707    aes_inst/key_inst/key_gen[1].sb0/full_keys[762]
+    SLICE_X41Y60         LUT2 (Prop_lut2_I0_O)        0.105    22.812 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[5].pipe_state[5][90]_i_2/O
+                         net (fo=3, routed)           0.893    23.704    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][74]
+    SLICE_X48Y60         LUT2 (Prop_lut2_I0_O)        0.105    23.809 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__163_i_9/O
+                         net (fo=3, routed)           0.990    24.799    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][66]
+    SLICE_X50Y55         LUT2 (Prop_lut2_I0_O)        0.119    24.918 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__163_i_3/O
+                         net (fo=34, routed)          2.290    27.209    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][58]
+    SLICE_X36Y48         LUT6 (Prop_lut6_I2_O)        0.268    27.477 r  aes_inst/key_inst/key_gen[1].sb0/g1_b0__163/O
+                         net (fo=1, routed)           0.000    27.477    aes_inst/key_inst/key_gen[6].sb3/pipe_state_reg[10][96]_i_7_3
+    SLICE_X36Y48         MUXF7 (Prop_muxf7_I1_O)      0.206    27.683 r  aes_inst/key_inst/key_gen[6].sb3/pipe_state_reg[10][96]_i_14/O
+                         net (fo=1, routed)           0.000    27.683    aes_inst/key_inst/key_gen[6].sb3/pipe_state_reg[10][96]_i_14_n_0
+    SLICE_X36Y48         MUXF8 (Prop_muxf8_I0_O)      0.085    27.768 r  aes_inst/key_inst/key_gen[6].sb3/pipe_state_reg[10][96]_i_7/O
+                         net (fo=4, routed)           0.492    28.260    aes_inst/key_inst/key_gen[1].sb0/key_gen[6].sub_word[0]
+    SLICE_X34Y50         LUT6 (Prop_lut6_I3_O)        0.264    28.524 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[6].pipe_state[6][96]_i_2/O
+                         net (fo=2, routed)           0.805    29.329    aes_inst/key_inst/key_gen[1].sb0/full_keys[864]
+    SLICE_X43Y50         LUT2 (Prop_lut2_I0_O)        0.105    29.434 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[6].pipe_state[6][64]_i_2/O
+                         net (fo=3, routed)           0.450    29.884    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][97]
+    SLICE_X43Y49         LUT2 (Prop_lut2_I0_O)        0.105    29.989 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__168_i_7/O
+                         net (fo=3, routed)           0.537    30.526    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][89]
+    SLICE_X43Y49         LUT2 (Prop_lut2_I0_O)        0.105    30.631 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__168_i_1/O
+                         net (fo=35, routed)          2.246    32.877    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][81]
+    SLICE_X28Y54         LUT6 (Prop_lut6_I0_O)        0.105    32.982 r  aes_inst/key_inst/key_gen[1].sb0/g1_b0__168/O
+                         net (fo=1, routed)           0.000    32.982    aes_inst/key_inst/key_gen[7].sb2/g0_b0__181_i_22_3
+    SLICE_X28Y54         MUXF7 (Prop_muxf7_I1_O)      0.206    33.188 r  aes_inst/key_inst/key_gen[7].sb2/g0_b0__181_i_49/O
+                         net (fo=1, routed)           0.000    33.188    aes_inst/key_inst/key_gen[7].sb2/g0_b0__181_i_49_n_0
+    SLICE_X28Y54         MUXF8 (Prop_muxf8_I0_O)      0.085    33.273 r  aes_inst/key_inst/key_gen[7].sb2/g0_b0__181_i_22/O
+                         net (fo=4, routed)           0.701    33.974    aes_inst/key_inst/key_gen[1].sb0/key_gen[7].sub_word[8]
+    SLICE_X28Y55         LUT6 (Prop_lut6_I3_O)        0.264    34.238 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[7].pipe_state[7][104]_i_2/O
+                         net (fo=2, routed)           0.981    35.219    aes_inst/key_inst/key_gen[1].sb0/full_keys[1000]
+    SLICE_X41Y46         LUT2 (Prop_lut2_I0_O)        0.127    35.346 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[7].pipe_state[7][72]_i_2/O
+                         net (fo=3, routed)           0.583    35.929    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][115]
+    SLICE_X41Y46         LUT2 (Prop_lut2_I0_O)        0.268    36.197 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__173_i_7/O
+                         net (fo=5, routed)           0.762    36.959    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][108]
+    SLICE_X37Y40         LUT2 (Prop_lut2_I0_O)        0.105    37.064 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__173_i_1/O
+                         net (fo=35, routed)          3.330    40.393    aes_inst/key_inst/key_gen[1].sb0/g0_b0__169_i_1
+    SLICE_X5Y29          LUT6 (Prop_lut6_I0_O)        0.105    40.498 r  aes_inst/key_inst/key_gen[1].sb0/g2_b1__173/O
+                         net (fo=1, routed)           0.346    40.844    aes_inst/key_inst/key_gen[8].sb1/pipe_state[10][17]_i_4_0
+    SLICE_X5Y29          LUT6 (Prop_lut6_I1_O)        0.105    40.949 r  aes_inst/key_inst/key_gen[8].sb1/g0_b0__182_i_28/O
+                         net (fo=5, routed)           1.420    42.369    aes_inst/key_inst/key_gen[1].sb2/key_gen[8].sub_word[9]
+    SLICE_X28Y53         LUT6 (Prop_lut6_I3_O)        0.105    42.474 r  aes_inst/key_inst/key_gen[1].sb2/round_stages[8].pipe_state[8][113]_i_2/O
+                         net (fo=2, routed)           1.177    43.651    aes_inst/key_inst/key_gen[1].sb2/full_keys[1137]
+    SLICE_X34Y43         LUT2 (Prop_lut2_I0_O)        0.121    43.772 r  aes_inst/key_inst/key_gen[1].sb2/g0_b0__182_i_10/O
+                         net (fo=4, routed)           1.593    45.365    aes_inst/key_inst/key_gen[1].sb2/full_keys[1105]
+    SLICE_X15Y35         LUT2 (Prop_lut2_I0_O)        0.286    45.651 r  aes_inst/key_inst/key_gen[1].sb2/g0_b0__178_i_8/O
+                         net (fo=4, routed)           0.884    46.535    aes_inst/key_inst/key_gen[1].sb2/key_reg_reg[127]_0[3]
+    SLICE_X9Y29          LUT2 (Prop_lut2_I0_O)        0.107    46.642 r  aes_inst/key_inst/key_gen[1].sb2/g0_b0__178_i_2/O
+                         net (fo=33, routed)          2.188    48.831    aes_inst/key_inst/key_gen[1].sb2/full_keys[1041]
+    SLICE_X39Y22         LUT6 (Prop_lut6_I1_O)        0.274    49.105 r  aes_inst/key_inst/key_gen[1].sb2/g1_b2__178/O
+                         net (fo=1, routed)           0.651    49.756    aes_inst/key_inst/key_gen[9].sb0/round_stages[9].pipe_state[9][122]_i_8_1
+    SLICE_X38Y22         LUT6 (Prop_lut6_I3_O)        0.105    49.861 r  aes_inst/key_inst/key_gen[9].sb0/g0_b0__179_i_31/O
+                         net (fo=4, routed)           1.382    51.243    aes_inst/key_inst/key_gen[1].sb2/key_gen[9].sub_word[10]
+    SLICE_X35Y45         LUT6 (Prop_lut6_I2_O)        0.105    51.348 r  aes_inst/key_inst/key_gen[1].sb2/g0_b0__179_i_11/O
+                         net (fo=3, routed)           0.501    51.849    aes_inst/key_inst/key_gen[1].sb1/round_stages[9].pipe_state_reg[9][26]
+    SLICE_X34Y43         LUT6 (Prop_lut6_I0_O)        0.105    51.954 r  aes_inst/key_inst/key_gen[1].sb1/g0_b0__179_i_3/O
+                         net (fo=33, routed)          2.358    54.312    aes_inst/key_inst/key_gen[1].sb1/full_keys[1178]
+    SLICE_X9Y46          LUT6 (Prop_lut6_I2_O)        0.105    54.417 r  aes_inst/key_inst/key_gen[1].sb1/g1_b1__179/O
+                         net (fo=1, routed)           0.000    54.417    aes_inst/key_inst/key_gen[10].sb3/pipe_state[10][97]_i_4_0
+    SLICE_X9Y46          MUXF7 (Prop_muxf7_I1_O)      0.182    54.599 r  aes_inst/key_inst/key_gen[10].sb3/pipe_state_reg[10][97]_i_11/O
+                         net (fo=2, routed)           0.812    55.411    aes_inst/key_inst/key_gen[1].sb1/pipe_state_reg[10][65]_0
+    SLICE_X11Y44         LUT6 (Prop_lut6_I5_O)        0.252    55.663 r  aes_inst/key_inst/key_gen[1].sb1/pipe_state[10][97]_i_4/O
+                         net (fo=3, routed)           0.646    56.310    aes_inst/final_inst/pipe_state_reg[10][65]
+    SLICE_X11Y47         LUT6 (Prop_lut6_I2_O)        0.105    56.415 r  aes_inst/final_inst/pipe_state[10][97]_i_1/O
+                         net (fo=1, routed)           0.000    56.415    aes_inst/final_out[97]
+    SLICE_X11Y47         FDRE                                         r  aes_inst/pipe_state_reg[10][97]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 key_reg_reg[20]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            aes_inst/pipe_state_reg[10][65]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        56.411ns  (logic 8.340ns (14.784%)  route 48.071ns (85.216%))
+  Logic Levels:           52  (FDCE=1 LUT2=15 LUT3=2 LUT4=1 LUT5=1 LUT6=20 MUXF7=6 MUXF8=6)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y81          FDCE                         0.000     0.000 r  key_reg_reg[20]/C
+    SLICE_X0Y81          FDCE (Prop_fdce_C_Q)         0.379     0.379 r  key_reg_reg[20]/Q
+                         net (fo=36, routed)          2.924     3.303    aes_inst/Q[20]
+    SLICE_X6Y58          LUT6 (Prop_lut6_I4_O)        0.105     3.408 r  aes_inst/g1_b4__146/O
+                         net (fo=1, routed)           0.000     3.408    aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_11_1
+    SLICE_X6Y58          MUXF7 (Prop_muxf7_I1_O)      0.206     3.614 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_21/O
+                         net (fo=1, routed)           0.000     3.614    aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_21_n_0
+    SLICE_X6Y58          MUXF8 (Prop_muxf8_I0_O)      0.082     3.696 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_11/O
+                         net (fo=19, routed)          1.012     4.708    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[23]_3
+    SLICE_X5Y68          LUT5 (Prop_lut5_I2_O)        0.259     4.967 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_5/O
+                         net (fo=33, routed)          1.548     6.515    aes_inst/key_inst/key_gen[1].sb0/full_keys[156]
+    SLICE_X10Y65         LUT6 (Prop_lut6_I4_O)        0.105     6.620 r  aes_inst/key_inst/key_gen[1].sb0/g2_b7__147/O
+                         net (fo=2, routed)           0.717     7.337    aes_inst/key_inst/key_gen[2].sb3/round_stages[2].pipe_state[2][39]_i_2_0
+    SLICE_X11Y65         LUT6 (Prop_lut6_I1_O)        0.105     7.442 r  aes_inst/key_inst/key_gen[2].sb3/round_stages[7].pipe_state[7][103]_i_7/O
+                         net (fo=7, routed)           1.313     8.755    aes_inst/key_inst/key_gen[1].sb0/key_gen[2].sub_word[7]
+    SLICE_X28Y63         LUT3 (Prop_lut3_I0_O)        0.105     8.860 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[2].pipe_state[2][7]_i_2/O
+                         net (fo=11, routed)          0.819     9.679    aes_inst/key_inst/key_gen[3].sb2/round_stages[3].pipe_state[3][47]_i_2[1]
+    SLICE_X14Y61         MUXF8 (Prop_muxf8_S_O)       0.232     9.911 r  aes_inst/key_inst/key_gen[3].sb2/g0_b0__157_i_14/O
+                         net (fo=9, routed)           1.084    10.995    aes_inst/key_inst/key_gen[1].sb0/key_gen[3].sub_word[9]
+    SLICE_X29Y60         LUT4 (Prop_lut4_I0_O)        0.259    11.254 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__157_i_8/O
+                         net (fo=3, routed)           0.801    12.055    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][23]
+    SLICE_X32Y70         LUT2 (Prop_lut2_I0_O)        0.105    12.160 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__157_i_2/O
+                         net (fo=34, routed)          1.600    13.760    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][15]
+    SLICE_X32Y72         LUT6 (Prop_lut6_I1_O)        0.105    13.865 r  aes_inst/key_inst/key_gen[1].sb0/g0_b5__157/O
+                         net (fo=1, routed)           0.000    13.865    aes_inst/key_inst/key_gen[4].sb1/pipe_state_reg[10][117]_i_8_0
+    SLICE_X32Y72         MUXF7 (Prop_muxf7_I0_O)      0.199    14.064 r  aes_inst/key_inst/key_gen[4].sb1/pipe_state_reg[10][117]_i_16/O
+                         net (fo=1, routed)           0.000    14.064    aes_inst/key_inst/key_gen[4].sb1/pipe_state_reg[10][117]_i_16_n_0
+    SLICE_X32Y72         MUXF8 (Prop_muxf8_I0_O)      0.085    14.149 r  aes_inst/key_inst/key_gen[4].sb1/pipe_state_reg[10][117]_i_8/O
+                         net (fo=5, routed)           1.237    15.386    aes_inst/key_inst/key_gen[1].sb0/key_gen[4].sub_word[14]
+    SLICE_X30Y59         LUT3 (Prop_lut3_I0_O)        0.285    15.671 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[4].pipe_state[4][85]_i_2/O
+                         net (fo=3, routed)           1.348    17.019    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][52]
+    SLICE_X41Y63         LUT2 (Prop_lut2_I0_O)        0.283    17.302 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__162_i_12/O
+                         net (fo=3, routed)           0.719    18.020    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][45]
+    SLICE_X45Y67         LUT2 (Prop_lut2_I0_O)        0.105    18.125 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__162_i_6/O
+                         net (fo=34, routed)          2.390    20.516    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][37]
+    SLICE_X38Y59         LUT6 (Prop_lut6_I5_O)        0.105    20.621 r  aes_inst/key_inst/key_gen[1].sb0/g0_b2__162/O
+                         net (fo=1, routed)           0.000    20.621    aes_inst/key_inst/key_gen[5].sb0/pipe_state_reg[10][122]_i_9_0
+    SLICE_X38Y59         MUXF7 (Prop_muxf7_I0_O)      0.201    20.822 r  aes_inst/key_inst/key_gen[5].sb0/pipe_state_reg[10][122]_i_18/O
+                         net (fo=1, routed)           0.000    20.822    aes_inst/key_inst/key_gen[5].sb0/pipe_state_reg[10][122]_i_18_n_0
+    SLICE_X38Y59         MUXF8 (Prop_muxf8_I0_O)      0.082    20.904 r  aes_inst/key_inst/key_gen[5].sb0/pipe_state_reg[10][122]_i_9/O
+                         net (fo=4, routed)           0.615    21.519    aes_inst/key_inst/key_gen[1].sb0/key_gen[5].sub_word[16]
+    SLICE_X35Y60         LUT6 (Prop_lut6_I2_O)        0.259    21.778 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[5].pipe_state[5][122]_i_2/O
+                         net (fo=2, routed)           0.929    22.707    aes_inst/key_inst/key_gen[1].sb0/full_keys[762]
+    SLICE_X41Y60         LUT2 (Prop_lut2_I0_O)        0.105    22.812 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[5].pipe_state[5][90]_i_2/O
+                         net (fo=3, routed)           0.893    23.704    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][74]
+    SLICE_X48Y60         LUT2 (Prop_lut2_I0_O)        0.105    23.809 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__163_i_9/O
+                         net (fo=3, routed)           0.990    24.799    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][66]
+    SLICE_X50Y55         LUT2 (Prop_lut2_I0_O)        0.119    24.918 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__163_i_3/O
+                         net (fo=34, routed)          2.290    27.209    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][58]
+    SLICE_X36Y48         LUT6 (Prop_lut6_I2_O)        0.268    27.477 r  aes_inst/key_inst/key_gen[1].sb0/g1_b0__163/O
+                         net (fo=1, routed)           0.000    27.477    aes_inst/key_inst/key_gen[6].sb3/pipe_state_reg[10][96]_i_7_3
+    SLICE_X36Y48         MUXF7 (Prop_muxf7_I1_O)      0.206    27.683 r  aes_inst/key_inst/key_gen[6].sb3/pipe_state_reg[10][96]_i_14/O
+                         net (fo=1, routed)           0.000    27.683    aes_inst/key_inst/key_gen[6].sb3/pipe_state_reg[10][96]_i_14_n_0
+    SLICE_X36Y48         MUXF8 (Prop_muxf8_I0_O)      0.085    27.768 r  aes_inst/key_inst/key_gen[6].sb3/pipe_state_reg[10][96]_i_7/O
+                         net (fo=4, routed)           0.492    28.260    aes_inst/key_inst/key_gen[1].sb0/key_gen[6].sub_word[0]
+    SLICE_X34Y50         LUT6 (Prop_lut6_I3_O)        0.264    28.524 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[6].pipe_state[6][96]_i_2/O
+                         net (fo=2, routed)           0.805    29.329    aes_inst/key_inst/key_gen[1].sb0/full_keys[864]
+    SLICE_X43Y50         LUT2 (Prop_lut2_I0_O)        0.105    29.434 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[6].pipe_state[6][64]_i_2/O
+                         net (fo=3, routed)           0.450    29.884    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][97]
+    SLICE_X43Y49         LUT2 (Prop_lut2_I0_O)        0.105    29.989 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__168_i_7/O
+                         net (fo=3, routed)           0.537    30.526    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][89]
+    SLICE_X43Y49         LUT2 (Prop_lut2_I0_O)        0.105    30.631 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__168_i_1/O
+                         net (fo=35, routed)          2.246    32.877    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][81]
+    SLICE_X28Y54         LUT6 (Prop_lut6_I0_O)        0.105    32.982 r  aes_inst/key_inst/key_gen[1].sb0/g1_b0__168/O
+                         net (fo=1, routed)           0.000    32.982    aes_inst/key_inst/key_gen[7].sb2/g0_b0__181_i_22_3
+    SLICE_X28Y54         MUXF7 (Prop_muxf7_I1_O)      0.206    33.188 r  aes_inst/key_inst/key_gen[7].sb2/g0_b0__181_i_49/O
+                         net (fo=1, routed)           0.000    33.188    aes_inst/key_inst/key_gen[7].sb2/g0_b0__181_i_49_n_0
+    SLICE_X28Y54         MUXF8 (Prop_muxf8_I0_O)      0.085    33.273 r  aes_inst/key_inst/key_gen[7].sb2/g0_b0__181_i_22/O
+                         net (fo=4, routed)           0.701    33.974    aes_inst/key_inst/key_gen[1].sb0/key_gen[7].sub_word[8]
+    SLICE_X28Y55         LUT6 (Prop_lut6_I3_O)        0.264    34.238 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[7].pipe_state[7][104]_i_2/O
+                         net (fo=2, routed)           0.981    35.219    aes_inst/key_inst/key_gen[1].sb0/full_keys[1000]
+    SLICE_X41Y46         LUT2 (Prop_lut2_I0_O)        0.127    35.346 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[7].pipe_state[7][72]_i_2/O
+                         net (fo=3, routed)           0.583    35.929    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][115]
+    SLICE_X41Y46         LUT2 (Prop_lut2_I0_O)        0.268    36.197 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__173_i_7/O
+                         net (fo=5, routed)           0.762    36.959    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][108]
+    SLICE_X37Y40         LUT2 (Prop_lut2_I0_O)        0.105    37.064 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__173_i_1/O
+                         net (fo=35, routed)          3.330    40.393    aes_inst/key_inst/key_gen[1].sb0/g0_b0__169_i_1
+    SLICE_X5Y29          LUT6 (Prop_lut6_I0_O)        0.105    40.498 r  aes_inst/key_inst/key_gen[1].sb0/g2_b1__173/O
+                         net (fo=1, routed)           0.346    40.844    aes_inst/key_inst/key_gen[8].sb1/pipe_state[10][17]_i_4_0
+    SLICE_X5Y29          LUT6 (Prop_lut6_I1_O)        0.105    40.949 r  aes_inst/key_inst/key_gen[8].sb1/g0_b0__182_i_28/O
+                         net (fo=5, routed)           1.420    42.369    aes_inst/key_inst/key_gen[1].sb2/key_gen[8].sub_word[9]
+    SLICE_X28Y53         LUT6 (Prop_lut6_I3_O)        0.105    42.474 r  aes_inst/key_inst/key_gen[1].sb2/round_stages[8].pipe_state[8][113]_i_2/O
+                         net (fo=2, routed)           1.177    43.651    aes_inst/key_inst/key_gen[1].sb2/full_keys[1137]
+    SLICE_X34Y43         LUT2 (Prop_lut2_I0_O)        0.121    43.772 r  aes_inst/key_inst/key_gen[1].sb2/g0_b0__182_i_10/O
+                         net (fo=4, routed)           1.593    45.365    aes_inst/key_inst/key_gen[1].sb2/full_keys[1105]
+    SLICE_X15Y35         LUT2 (Prop_lut2_I0_O)        0.286    45.651 r  aes_inst/key_inst/key_gen[1].sb2/g0_b0__178_i_8/O
+                         net (fo=4, routed)           0.884    46.535    aes_inst/key_inst/key_gen[1].sb2/key_reg_reg[127]_0[3]
+    SLICE_X9Y29          LUT2 (Prop_lut2_I0_O)        0.107    46.642 r  aes_inst/key_inst/key_gen[1].sb2/g0_b0__178_i_2/O
+                         net (fo=33, routed)          2.188    48.831    aes_inst/key_inst/key_gen[1].sb2/full_keys[1041]
+    SLICE_X39Y22         LUT6 (Prop_lut6_I1_O)        0.274    49.105 r  aes_inst/key_inst/key_gen[1].sb2/g1_b2__178/O
+                         net (fo=1, routed)           0.651    49.756    aes_inst/key_inst/key_gen[9].sb0/round_stages[9].pipe_state[9][122]_i_8_1
+    SLICE_X38Y22         LUT6 (Prop_lut6_I3_O)        0.105    49.861 r  aes_inst/key_inst/key_gen[9].sb0/g0_b0__179_i_31/O
+                         net (fo=4, routed)           1.382    51.243    aes_inst/key_inst/key_gen[1].sb2/key_gen[9].sub_word[10]
+    SLICE_X35Y45         LUT6 (Prop_lut6_I2_O)        0.105    51.348 r  aes_inst/key_inst/key_gen[1].sb2/g0_b0__179_i_11/O
+                         net (fo=3, routed)           0.501    51.849    aes_inst/key_inst/key_gen[1].sb1/round_stages[9].pipe_state_reg[9][26]
+    SLICE_X34Y43         LUT6 (Prop_lut6_I0_O)        0.105    51.954 r  aes_inst/key_inst/key_gen[1].sb1/g0_b0__179_i_3/O
+                         net (fo=33, routed)          2.358    54.312    aes_inst/key_inst/key_gen[1].sb1/full_keys[1178]
+    SLICE_X9Y46          LUT6 (Prop_lut6_I2_O)        0.105    54.417 r  aes_inst/key_inst/key_gen[1].sb1/g1_b1__179/O
+                         net (fo=1, routed)           0.000    54.417    aes_inst/key_inst/key_gen[10].sb3/pipe_state[10][97]_i_4_0
+    SLICE_X9Y46          MUXF7 (Prop_muxf7_I1_O)      0.182    54.599 r  aes_inst/key_inst/key_gen[10].sb3/pipe_state_reg[10][97]_i_11/O
+                         net (fo=2, routed)           0.812    55.411    aes_inst/key_inst/key_gen[1].sb1/pipe_state_reg[10][65]_0
+    SLICE_X11Y44         LUT6 (Prop_lut6_I5_O)        0.252    55.663 r  aes_inst/key_inst/key_gen[1].sb1/pipe_state[10][97]_i_4/O
+                         net (fo=3, routed)           0.642    56.306    aes_inst/final_inst/pipe_state_reg[10][65]
+    SLICE_X11Y47         LUT6 (Prop_lut6_I2_O)        0.105    56.411 r  aes_inst/final_inst/pipe_state[10][65]_i_1/O
+                         net (fo=1, routed)           0.000    56.411    aes_inst/final_out[65]
+    SLICE_X11Y47         FDRE                                         r  aes_inst/pipe_state_reg[10][65]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 key_reg_reg[20]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            aes_inst/pipe_state_reg[10][71]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        56.394ns  (logic 8.362ns (14.828%)  route 48.032ns (85.172%))
+  Logic Levels:           52  (FDCE=1 LUT2=15 LUT3=2 LUT4=1 LUT5=1 LUT6=20 MUXF7=6 MUXF8=6)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y81          FDCE                         0.000     0.000 r  key_reg_reg[20]/C
+    SLICE_X0Y81          FDCE (Prop_fdce_C_Q)         0.379     0.379 r  key_reg_reg[20]/Q
+                         net (fo=36, routed)          2.924     3.303    aes_inst/Q[20]
+    SLICE_X6Y58          LUT6 (Prop_lut6_I4_O)        0.105     3.408 r  aes_inst/g1_b4__146/O
+                         net (fo=1, routed)           0.000     3.408    aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_11_1
+    SLICE_X6Y58          MUXF7 (Prop_muxf7_I1_O)      0.206     3.614 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_21/O
+                         net (fo=1, routed)           0.000     3.614    aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_21_n_0
+    SLICE_X6Y58          MUXF8 (Prop_muxf8_I0_O)      0.082     3.696 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_11/O
+                         net (fo=19, routed)          1.012     4.708    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[23]_3
+    SLICE_X5Y68          LUT5 (Prop_lut5_I2_O)        0.259     4.967 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_5/O
+                         net (fo=33, routed)          1.548     6.515    aes_inst/key_inst/key_gen[1].sb0/full_keys[156]
+    SLICE_X10Y65         LUT6 (Prop_lut6_I4_O)        0.105     6.620 r  aes_inst/key_inst/key_gen[1].sb0/g2_b7__147/O
+                         net (fo=2, routed)           0.717     7.337    aes_inst/key_inst/key_gen[2].sb3/round_stages[2].pipe_state[2][39]_i_2_0
+    SLICE_X11Y65         LUT6 (Prop_lut6_I1_O)        0.105     7.442 r  aes_inst/key_inst/key_gen[2].sb3/round_stages[7].pipe_state[7][103]_i_7/O
+                         net (fo=7, routed)           1.313     8.755    aes_inst/key_inst/key_gen[1].sb0/key_gen[2].sub_word[7]
+    SLICE_X28Y63         LUT3 (Prop_lut3_I0_O)        0.105     8.860 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[2].pipe_state[2][7]_i_2/O
+                         net (fo=11, routed)          0.819     9.679    aes_inst/key_inst/key_gen[3].sb2/round_stages[3].pipe_state[3][47]_i_2[1]
+    SLICE_X14Y61         MUXF8 (Prop_muxf8_S_O)       0.232     9.911 r  aes_inst/key_inst/key_gen[3].sb2/g0_b0__157_i_14/O
+                         net (fo=9, routed)           1.084    10.995    aes_inst/key_inst/key_gen[1].sb0/key_gen[3].sub_word[9]
+    SLICE_X29Y60         LUT4 (Prop_lut4_I0_O)        0.259    11.254 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__157_i_8/O
+                         net (fo=3, routed)           0.801    12.055    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][23]
+    SLICE_X32Y70         LUT2 (Prop_lut2_I0_O)        0.105    12.160 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__157_i_2/O
+                         net (fo=34, routed)          1.600    13.760    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][15]
+    SLICE_X32Y72         LUT6 (Prop_lut6_I1_O)        0.105    13.865 r  aes_inst/key_inst/key_gen[1].sb0/g0_b5__157/O
+                         net (fo=1, routed)           0.000    13.865    aes_inst/key_inst/key_gen[4].sb1/pipe_state_reg[10][117]_i_8_0
+    SLICE_X32Y72         MUXF7 (Prop_muxf7_I0_O)      0.199    14.064 r  aes_inst/key_inst/key_gen[4].sb1/pipe_state_reg[10][117]_i_16/O
+                         net (fo=1, routed)           0.000    14.064    aes_inst/key_inst/key_gen[4].sb1/pipe_state_reg[10][117]_i_16_n_0
+    SLICE_X32Y72         MUXF8 (Prop_muxf8_I0_O)      0.085    14.149 r  aes_inst/key_inst/key_gen[4].sb1/pipe_state_reg[10][117]_i_8/O
+                         net (fo=5, routed)           1.237    15.386    aes_inst/key_inst/key_gen[1].sb0/key_gen[4].sub_word[14]
+    SLICE_X30Y59         LUT3 (Prop_lut3_I0_O)        0.285    15.671 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[4].pipe_state[4][85]_i_2/O
+                         net (fo=3, routed)           1.348    17.019    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][52]
+    SLICE_X41Y63         LUT2 (Prop_lut2_I0_O)        0.283    17.302 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__162_i_12/O
+                         net (fo=3, routed)           0.719    18.020    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][45]
+    SLICE_X45Y67         LUT2 (Prop_lut2_I0_O)        0.105    18.125 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__162_i_6/O
+                         net (fo=34, routed)          2.390    20.516    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][37]
+    SLICE_X38Y59         LUT6 (Prop_lut6_I5_O)        0.105    20.621 r  aes_inst/key_inst/key_gen[1].sb0/g0_b2__162/O
+                         net (fo=1, routed)           0.000    20.621    aes_inst/key_inst/key_gen[5].sb0/pipe_state_reg[10][122]_i_9_0
+    SLICE_X38Y59         MUXF7 (Prop_muxf7_I0_O)      0.201    20.822 r  aes_inst/key_inst/key_gen[5].sb0/pipe_state_reg[10][122]_i_18/O
+                         net (fo=1, routed)           0.000    20.822    aes_inst/key_inst/key_gen[5].sb0/pipe_state_reg[10][122]_i_18_n_0
+    SLICE_X38Y59         MUXF8 (Prop_muxf8_I0_O)      0.082    20.904 r  aes_inst/key_inst/key_gen[5].sb0/pipe_state_reg[10][122]_i_9/O
+                         net (fo=4, routed)           0.615    21.519    aes_inst/key_inst/key_gen[1].sb0/key_gen[5].sub_word[16]
+    SLICE_X35Y60         LUT6 (Prop_lut6_I2_O)        0.259    21.778 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[5].pipe_state[5][122]_i_2/O
+                         net (fo=2, routed)           0.929    22.707    aes_inst/key_inst/key_gen[1].sb0/full_keys[762]
+    SLICE_X41Y60         LUT2 (Prop_lut2_I0_O)        0.105    22.812 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[5].pipe_state[5][90]_i_2/O
+                         net (fo=3, routed)           0.893    23.704    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][74]
+    SLICE_X48Y60         LUT2 (Prop_lut2_I0_O)        0.105    23.809 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__163_i_9/O
+                         net (fo=3, routed)           0.990    24.799    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][66]
+    SLICE_X50Y55         LUT2 (Prop_lut2_I0_O)        0.119    24.918 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__163_i_3/O
+                         net (fo=34, routed)          2.290    27.209    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][58]
+    SLICE_X36Y48         LUT6 (Prop_lut6_I2_O)        0.268    27.477 r  aes_inst/key_inst/key_gen[1].sb0/g1_b0__163/O
+                         net (fo=1, routed)           0.000    27.477    aes_inst/key_inst/key_gen[6].sb3/pipe_state_reg[10][96]_i_7_3
+    SLICE_X36Y48         MUXF7 (Prop_muxf7_I1_O)      0.206    27.683 r  aes_inst/key_inst/key_gen[6].sb3/pipe_state_reg[10][96]_i_14/O
+                         net (fo=1, routed)           0.000    27.683    aes_inst/key_inst/key_gen[6].sb3/pipe_state_reg[10][96]_i_14_n_0
+    SLICE_X36Y48         MUXF8 (Prop_muxf8_I0_O)      0.085    27.768 r  aes_inst/key_inst/key_gen[6].sb3/pipe_state_reg[10][96]_i_7/O
+                         net (fo=4, routed)           0.492    28.260    aes_inst/key_inst/key_gen[1].sb0/key_gen[6].sub_word[0]
+    SLICE_X34Y50         LUT6 (Prop_lut6_I3_O)        0.264    28.524 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[6].pipe_state[6][96]_i_2/O
+                         net (fo=2, routed)           0.805    29.329    aes_inst/key_inst/key_gen[1].sb0/full_keys[864]
+    SLICE_X43Y50         LUT2 (Prop_lut2_I0_O)        0.105    29.434 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[6].pipe_state[6][64]_i_2/O
+                         net (fo=3, routed)           0.450    29.884    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][97]
+    SLICE_X43Y49         LUT2 (Prop_lut2_I0_O)        0.105    29.989 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__168_i_7/O
+                         net (fo=3, routed)           0.537    30.526    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][89]
+    SLICE_X43Y49         LUT2 (Prop_lut2_I0_O)        0.105    30.631 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__168_i_1/O
+                         net (fo=35, routed)          2.246    32.877    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][81]
+    SLICE_X28Y54         LUT6 (Prop_lut6_I0_O)        0.105    32.982 r  aes_inst/key_inst/key_gen[1].sb0/g1_b0__168/O
+                         net (fo=1, routed)           0.000    32.982    aes_inst/key_inst/key_gen[7].sb2/g0_b0__181_i_22_3
+    SLICE_X28Y54         MUXF7 (Prop_muxf7_I1_O)      0.206    33.188 r  aes_inst/key_inst/key_gen[7].sb2/g0_b0__181_i_49/O
+                         net (fo=1, routed)           0.000    33.188    aes_inst/key_inst/key_gen[7].sb2/g0_b0__181_i_49_n_0
+    SLICE_X28Y54         MUXF8 (Prop_muxf8_I0_O)      0.085    33.273 r  aes_inst/key_inst/key_gen[7].sb2/g0_b0__181_i_22/O
+                         net (fo=4, routed)           0.701    33.974    aes_inst/key_inst/key_gen[1].sb0/key_gen[7].sub_word[8]
+    SLICE_X28Y55         LUT6 (Prop_lut6_I3_O)        0.264    34.238 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[7].pipe_state[7][104]_i_2/O
+                         net (fo=2, routed)           0.981    35.219    aes_inst/key_inst/key_gen[1].sb0/full_keys[1000]
+    SLICE_X41Y46         LUT2 (Prop_lut2_I0_O)        0.127    35.346 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[7].pipe_state[7][72]_i_2/O
+                         net (fo=3, routed)           0.583    35.929    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][115]
+    SLICE_X41Y46         LUT2 (Prop_lut2_I0_O)        0.268    36.197 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__173_i_7/O
+                         net (fo=5, routed)           0.762    36.959    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][108]
+    SLICE_X37Y40         LUT2 (Prop_lut2_I0_O)        0.105    37.064 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__173_i_1/O
+                         net (fo=35, routed)          3.330    40.393    aes_inst/key_inst/key_gen[1].sb0/g0_b0__169_i_1
+    SLICE_X5Y29          LUT6 (Prop_lut6_I0_O)        0.105    40.498 r  aes_inst/key_inst/key_gen[1].sb0/g2_b1__173/O
+                         net (fo=1, routed)           0.346    40.844    aes_inst/key_inst/key_gen[8].sb1/pipe_state[10][17]_i_4_0
+    SLICE_X5Y29          LUT6 (Prop_lut6_I1_O)        0.105    40.949 r  aes_inst/key_inst/key_gen[8].sb1/g0_b0__182_i_28/O
+                         net (fo=5, routed)           1.420    42.369    aes_inst/key_inst/key_gen[1].sb2/key_gen[8].sub_word[9]
+    SLICE_X28Y53         LUT6 (Prop_lut6_I3_O)        0.105    42.474 r  aes_inst/key_inst/key_gen[1].sb2/round_stages[8].pipe_state[8][113]_i_2/O
+                         net (fo=2, routed)           1.177    43.651    aes_inst/key_inst/key_gen[1].sb2/full_keys[1137]
+    SLICE_X34Y43         LUT2 (Prop_lut2_I0_O)        0.121    43.772 r  aes_inst/key_inst/key_gen[1].sb2/g0_b0__182_i_10/O
+                         net (fo=4, routed)           1.593    45.365    aes_inst/key_inst/key_gen[1].sb2/full_keys[1105]
+    SLICE_X15Y35         LUT2 (Prop_lut2_I0_O)        0.286    45.651 r  aes_inst/key_inst/key_gen[1].sb2/g0_b0__178_i_8/O
+                         net (fo=4, routed)           0.884    46.535    aes_inst/key_inst/key_gen[1].sb2/key_reg_reg[127]_0[3]
+    SLICE_X9Y29          LUT2 (Prop_lut2_I0_O)        0.107    46.642 r  aes_inst/key_inst/key_gen[1].sb2/g0_b0__178_i_2/O
+                         net (fo=33, routed)          2.188    48.831    aes_inst/key_inst/key_gen[1].sb2/full_keys[1041]
+    SLICE_X39Y22         LUT6 (Prop_lut6_I1_O)        0.274    49.105 r  aes_inst/key_inst/key_gen[1].sb2/g1_b2__178/O
+                         net (fo=1, routed)           0.651    49.756    aes_inst/key_inst/key_gen[9].sb0/round_stages[9].pipe_state[9][122]_i_8_1
+    SLICE_X38Y22         LUT6 (Prop_lut6_I3_O)        0.105    49.861 r  aes_inst/key_inst/key_gen[9].sb0/g0_b0__179_i_31/O
+                         net (fo=4, routed)           1.382    51.243    aes_inst/key_inst/key_gen[1].sb2/key_gen[9].sub_word[10]
+    SLICE_X35Y45         LUT6 (Prop_lut6_I2_O)        0.105    51.348 r  aes_inst/key_inst/key_gen[1].sb2/g0_b0__179_i_11/O
+                         net (fo=3, routed)           0.501    51.849    aes_inst/key_inst/key_gen[1].sb1/round_stages[9].pipe_state_reg[9][26]
+    SLICE_X34Y43         LUT6 (Prop_lut6_I0_O)        0.105    51.954 r  aes_inst/key_inst/key_gen[1].sb1/g0_b0__179_i_3/O
+                         net (fo=33, routed)          2.218    54.172    aes_inst/key_inst/key_gen[1].sb1/full_keys[1178]
+    SLICE_X15Y49         LUT6 (Prop_lut6_I2_O)        0.105    54.277 r  aes_inst/key_inst/key_gen[1].sb1/g3_b7__179/O
+                         net (fo=1, routed)           0.000    54.277    aes_inst/key_inst/key_gen[10].sb3/pipe_state[10][103]_i_4_2
+    SLICE_X15Y49         MUXF7 (Prop_muxf7_I1_O)      0.206    54.483 r  aes_inst/key_inst/key_gen[10].sb3/pipe_state_reg[10][103]_i_11/O
+                         net (fo=2, routed)           0.880    55.364    aes_inst/key_inst/key_gen[1].sb1/pipe_state_reg[10][103]
+    SLICE_X15Y46         LUT6 (Prop_lut6_I3_O)        0.250    55.614 r  aes_inst/key_inst/key_gen[1].sb1/pipe_state[10][103]_i_4/O
+                         net (fo=3, routed)           0.676    56.289    aes_inst/final_inst/pipe_state_reg[10][103]_1
+    SLICE_X14Y48         LUT6 (Prop_lut6_I2_O)        0.105    56.394 r  aes_inst/final_inst/pipe_state[10][71]_i_1/O
+                         net (fo=1, routed)           0.000    56.394    aes_inst/final_out[71]
+    SLICE_X14Y48         FDRE                                         r  aes_inst/pipe_state_reg[10][71]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 key_reg_reg[20]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            aes_inst/pipe_state_reg[10][103]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        56.387ns  (logic 8.362ns (14.830%)  route 48.025ns (85.170%))
+  Logic Levels:           52  (FDCE=1 LUT2=15 LUT3=2 LUT4=1 LUT5=1 LUT6=20 MUXF7=6 MUXF8=6)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y81          FDCE                         0.000     0.000 r  key_reg_reg[20]/C
+    SLICE_X0Y81          FDCE (Prop_fdce_C_Q)         0.379     0.379 r  key_reg_reg[20]/Q
+                         net (fo=36, routed)          2.924     3.303    aes_inst/Q[20]
+    SLICE_X6Y58          LUT6 (Prop_lut6_I4_O)        0.105     3.408 r  aes_inst/g1_b4__146/O
+                         net (fo=1, routed)           0.000     3.408    aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_11_1
+    SLICE_X6Y58          MUXF7 (Prop_muxf7_I1_O)      0.206     3.614 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_21/O
+                         net (fo=1, routed)           0.000     3.614    aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_21_n_0
+    SLICE_X6Y58          MUXF8 (Prop_muxf8_I0_O)      0.082     3.696 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_11/O
+                         net (fo=19, routed)          1.012     4.708    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[23]_3
+    SLICE_X5Y68          LUT5 (Prop_lut5_I2_O)        0.259     4.967 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_5/O
+                         net (fo=33, routed)          1.548     6.515    aes_inst/key_inst/key_gen[1].sb0/full_keys[156]
+    SLICE_X10Y65         LUT6 (Prop_lut6_I4_O)        0.105     6.620 r  aes_inst/key_inst/key_gen[1].sb0/g2_b7__147/O
+                         net (fo=2, routed)           0.717     7.337    aes_inst/key_inst/key_gen[2].sb3/round_stages[2].pipe_state[2][39]_i_2_0
+    SLICE_X11Y65         LUT6 (Prop_lut6_I1_O)        0.105     7.442 r  aes_inst/key_inst/key_gen[2].sb3/round_stages[7].pipe_state[7][103]_i_7/O
+                         net (fo=7, routed)           1.313     8.755    aes_inst/key_inst/key_gen[1].sb0/key_gen[2].sub_word[7]
+    SLICE_X28Y63         LUT3 (Prop_lut3_I0_O)        0.105     8.860 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[2].pipe_state[2][7]_i_2/O
+                         net (fo=11, routed)          0.819     9.679    aes_inst/key_inst/key_gen[3].sb2/round_stages[3].pipe_state[3][47]_i_2[1]
+    SLICE_X14Y61         MUXF8 (Prop_muxf8_S_O)       0.232     9.911 r  aes_inst/key_inst/key_gen[3].sb2/g0_b0__157_i_14/O
+                         net (fo=9, routed)           1.084    10.995    aes_inst/key_inst/key_gen[1].sb0/key_gen[3].sub_word[9]
+    SLICE_X29Y60         LUT4 (Prop_lut4_I0_O)        0.259    11.254 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__157_i_8/O
+                         net (fo=3, routed)           0.801    12.055    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][23]
+    SLICE_X32Y70         LUT2 (Prop_lut2_I0_O)        0.105    12.160 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__157_i_2/O
+                         net (fo=34, routed)          1.600    13.760    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][15]
+    SLICE_X32Y72         LUT6 (Prop_lut6_I1_O)        0.105    13.865 r  aes_inst/key_inst/key_gen[1].sb0/g0_b5__157/O
+                         net (fo=1, routed)           0.000    13.865    aes_inst/key_inst/key_gen[4].sb1/pipe_state_reg[10][117]_i_8_0
+    SLICE_X32Y72         MUXF7 (Prop_muxf7_I0_O)      0.199    14.064 r  aes_inst/key_inst/key_gen[4].sb1/pipe_state_reg[10][117]_i_16/O
+                         net (fo=1, routed)           0.000    14.064    aes_inst/key_inst/key_gen[4].sb1/pipe_state_reg[10][117]_i_16_n_0
+    SLICE_X32Y72         MUXF8 (Prop_muxf8_I0_O)      0.085    14.149 r  aes_inst/key_inst/key_gen[4].sb1/pipe_state_reg[10][117]_i_8/O
+                         net (fo=5, routed)           1.237    15.386    aes_inst/key_inst/key_gen[1].sb0/key_gen[4].sub_word[14]
+    SLICE_X30Y59         LUT3 (Prop_lut3_I0_O)        0.285    15.671 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[4].pipe_state[4][85]_i_2/O
+                         net (fo=3, routed)           1.348    17.019    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][52]
+    SLICE_X41Y63         LUT2 (Prop_lut2_I0_O)        0.283    17.302 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__162_i_12/O
+                         net (fo=3, routed)           0.719    18.020    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][45]
+    SLICE_X45Y67         LUT2 (Prop_lut2_I0_O)        0.105    18.125 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__162_i_6/O
+                         net (fo=34, routed)          2.390    20.516    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][37]
+    SLICE_X38Y59         LUT6 (Prop_lut6_I5_O)        0.105    20.621 r  aes_inst/key_inst/key_gen[1].sb0/g0_b2__162/O
+                         net (fo=1, routed)           0.000    20.621    aes_inst/key_inst/key_gen[5].sb0/pipe_state_reg[10][122]_i_9_0
+    SLICE_X38Y59         MUXF7 (Prop_muxf7_I0_O)      0.201    20.822 r  aes_inst/key_inst/key_gen[5].sb0/pipe_state_reg[10][122]_i_18/O
+                         net (fo=1, routed)           0.000    20.822    aes_inst/key_inst/key_gen[5].sb0/pipe_state_reg[10][122]_i_18_n_0
+    SLICE_X38Y59         MUXF8 (Prop_muxf8_I0_O)      0.082    20.904 r  aes_inst/key_inst/key_gen[5].sb0/pipe_state_reg[10][122]_i_9/O
+                         net (fo=4, routed)           0.615    21.519    aes_inst/key_inst/key_gen[1].sb0/key_gen[5].sub_word[16]
+    SLICE_X35Y60         LUT6 (Prop_lut6_I2_O)        0.259    21.778 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[5].pipe_state[5][122]_i_2/O
+                         net (fo=2, routed)           0.929    22.707    aes_inst/key_inst/key_gen[1].sb0/full_keys[762]
+    SLICE_X41Y60         LUT2 (Prop_lut2_I0_O)        0.105    22.812 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[5].pipe_state[5][90]_i_2/O
+                         net (fo=3, routed)           0.893    23.704    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][74]
+    SLICE_X48Y60         LUT2 (Prop_lut2_I0_O)        0.105    23.809 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__163_i_9/O
+                         net (fo=3, routed)           0.990    24.799    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][66]
+    SLICE_X50Y55         LUT2 (Prop_lut2_I0_O)        0.119    24.918 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__163_i_3/O
+                         net (fo=34, routed)          2.290    27.209    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][58]
+    SLICE_X36Y48         LUT6 (Prop_lut6_I2_O)        0.268    27.477 r  aes_inst/key_inst/key_gen[1].sb0/g1_b0__163/O
+                         net (fo=1, routed)           0.000    27.477    aes_inst/key_inst/key_gen[6].sb3/pipe_state_reg[10][96]_i_7_3
+    SLICE_X36Y48         MUXF7 (Prop_muxf7_I1_O)      0.206    27.683 r  aes_inst/key_inst/key_gen[6].sb3/pipe_state_reg[10][96]_i_14/O
+                         net (fo=1, routed)           0.000    27.683    aes_inst/key_inst/key_gen[6].sb3/pipe_state_reg[10][96]_i_14_n_0
+    SLICE_X36Y48         MUXF8 (Prop_muxf8_I0_O)      0.085    27.768 r  aes_inst/key_inst/key_gen[6].sb3/pipe_state_reg[10][96]_i_7/O
+                         net (fo=4, routed)           0.492    28.260    aes_inst/key_inst/key_gen[1].sb0/key_gen[6].sub_word[0]
+    SLICE_X34Y50         LUT6 (Prop_lut6_I3_O)        0.264    28.524 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[6].pipe_state[6][96]_i_2/O
+                         net (fo=2, routed)           0.805    29.329    aes_inst/key_inst/key_gen[1].sb0/full_keys[864]
+    SLICE_X43Y50         LUT2 (Prop_lut2_I0_O)        0.105    29.434 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[6].pipe_state[6][64]_i_2/O
+                         net (fo=3, routed)           0.450    29.884    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][97]
+    SLICE_X43Y49         LUT2 (Prop_lut2_I0_O)        0.105    29.989 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__168_i_7/O
+                         net (fo=3, routed)           0.537    30.526    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][89]
+    SLICE_X43Y49         LUT2 (Prop_lut2_I0_O)        0.105    30.631 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__168_i_1/O
+                         net (fo=35, routed)          2.246    32.877    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][81]
+    SLICE_X28Y54         LUT6 (Prop_lut6_I0_O)        0.105    32.982 r  aes_inst/key_inst/key_gen[1].sb0/g1_b0__168/O
+                         net (fo=1, routed)           0.000    32.982    aes_inst/key_inst/key_gen[7].sb2/g0_b0__181_i_22_3
+    SLICE_X28Y54         MUXF7 (Prop_muxf7_I1_O)      0.206    33.188 r  aes_inst/key_inst/key_gen[7].sb2/g0_b0__181_i_49/O
+                         net (fo=1, routed)           0.000    33.188    aes_inst/key_inst/key_gen[7].sb2/g0_b0__181_i_49_n_0
+    SLICE_X28Y54         MUXF8 (Prop_muxf8_I0_O)      0.085    33.273 r  aes_inst/key_inst/key_gen[7].sb2/g0_b0__181_i_22/O
+                         net (fo=4, routed)           0.701    33.974    aes_inst/key_inst/key_gen[1].sb0/key_gen[7].sub_word[8]
+    SLICE_X28Y55         LUT6 (Prop_lut6_I3_O)        0.264    34.238 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[7].pipe_state[7][104]_i_2/O
+                         net (fo=2, routed)           0.981    35.219    aes_inst/key_inst/key_gen[1].sb0/full_keys[1000]
+    SLICE_X41Y46         LUT2 (Prop_lut2_I0_O)        0.127    35.346 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[7].pipe_state[7][72]_i_2/O
+                         net (fo=3, routed)           0.583    35.929    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][115]
+    SLICE_X41Y46         LUT2 (Prop_lut2_I0_O)        0.268    36.197 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__173_i_7/O
+                         net (fo=5, routed)           0.762    36.959    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][108]
+    SLICE_X37Y40         LUT2 (Prop_lut2_I0_O)        0.105    37.064 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__173_i_1/O
+                         net (fo=35, routed)          3.330    40.393    aes_inst/key_inst/key_gen[1].sb0/g0_b0__169_i_1
+    SLICE_X5Y29          LUT6 (Prop_lut6_I0_O)        0.105    40.498 r  aes_inst/key_inst/key_gen[1].sb0/g2_b1__173/O
+                         net (fo=1, routed)           0.346    40.844    aes_inst/key_inst/key_gen[8].sb1/pipe_state[10][17]_i_4_0
+    SLICE_X5Y29          LUT6 (Prop_lut6_I1_O)        0.105    40.949 r  aes_inst/key_inst/key_gen[8].sb1/g0_b0__182_i_28/O
+                         net (fo=5, routed)           1.420    42.369    aes_inst/key_inst/key_gen[1].sb2/key_gen[8].sub_word[9]
+    SLICE_X28Y53         LUT6 (Prop_lut6_I3_O)        0.105    42.474 r  aes_inst/key_inst/key_gen[1].sb2/round_stages[8].pipe_state[8][113]_i_2/O
+                         net (fo=2, routed)           1.177    43.651    aes_inst/key_inst/key_gen[1].sb2/full_keys[1137]
+    SLICE_X34Y43         LUT2 (Prop_lut2_I0_O)        0.121    43.772 r  aes_inst/key_inst/key_gen[1].sb2/g0_b0__182_i_10/O
+                         net (fo=4, routed)           1.593    45.365    aes_inst/key_inst/key_gen[1].sb2/full_keys[1105]
+    SLICE_X15Y35         LUT2 (Prop_lut2_I0_O)        0.286    45.651 r  aes_inst/key_inst/key_gen[1].sb2/g0_b0__178_i_8/O
+                         net (fo=4, routed)           0.884    46.535    aes_inst/key_inst/key_gen[1].sb2/key_reg_reg[127]_0[3]
+    SLICE_X9Y29          LUT2 (Prop_lut2_I0_O)        0.107    46.642 r  aes_inst/key_inst/key_gen[1].sb2/g0_b0__178_i_2/O
+                         net (fo=33, routed)          2.188    48.831    aes_inst/key_inst/key_gen[1].sb2/full_keys[1041]
+    SLICE_X39Y22         LUT6 (Prop_lut6_I1_O)        0.274    49.105 r  aes_inst/key_inst/key_gen[1].sb2/g1_b2__178/O
+                         net (fo=1, routed)           0.651    49.756    aes_inst/key_inst/key_gen[9].sb0/round_stages[9].pipe_state[9][122]_i_8_1
+    SLICE_X38Y22         LUT6 (Prop_lut6_I3_O)        0.105    49.861 r  aes_inst/key_inst/key_gen[9].sb0/g0_b0__179_i_31/O
+                         net (fo=4, routed)           1.382    51.243    aes_inst/key_inst/key_gen[1].sb2/key_gen[9].sub_word[10]
+    SLICE_X35Y45         LUT6 (Prop_lut6_I2_O)        0.105    51.348 r  aes_inst/key_inst/key_gen[1].sb2/g0_b0__179_i_11/O
+                         net (fo=3, routed)           0.501    51.849    aes_inst/key_inst/key_gen[1].sb1/round_stages[9].pipe_state_reg[9][26]
+    SLICE_X34Y43         LUT6 (Prop_lut6_I0_O)        0.105    51.954 r  aes_inst/key_inst/key_gen[1].sb1/g0_b0__179_i_3/O
+                         net (fo=33, routed)          2.218    54.172    aes_inst/key_inst/key_gen[1].sb1/full_keys[1178]
+    SLICE_X15Y49         LUT6 (Prop_lut6_I2_O)        0.105    54.277 r  aes_inst/key_inst/key_gen[1].sb1/g3_b7__179/O
+                         net (fo=1, routed)           0.000    54.277    aes_inst/key_inst/key_gen[10].sb3/pipe_state[10][103]_i_4_2
+    SLICE_X15Y49         MUXF7 (Prop_muxf7_I1_O)      0.206    54.483 r  aes_inst/key_inst/key_gen[10].sb3/pipe_state_reg[10][103]_i_11/O
+                         net (fo=2, routed)           0.880    55.364    aes_inst/key_inst/key_gen[1].sb1/pipe_state_reg[10][103]
+    SLICE_X15Y46         LUT6 (Prop_lut6_I3_O)        0.250    55.614 r  aes_inst/key_inst/key_gen[1].sb1/pipe_state[10][103]_i_4/O
+                         net (fo=3, routed)           0.669    56.282    aes_inst/final_inst/pipe_state_reg[10][103]_1
+    SLICE_X14Y48         LUT6 (Prop_lut6_I2_O)        0.105    56.387 r  aes_inst/final_inst/pipe_state[10][103]_i_1/O
+                         net (fo=1, routed)           0.000    56.387    aes_inst/final_out[103]
+    SLICE_X14Y48         FDRE                                         r  aes_inst/pipe_state_reg[10][103]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 key_reg_reg[20]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            aes_inst/pipe_state_reg[10][101]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        56.289ns  (logic 8.340ns (14.816%)  route 47.949ns (85.184%))
+  Logic Levels:           52  (FDCE=1 LUT2=15 LUT3=2 LUT4=1 LUT5=1 LUT6=20 MUXF7=6 MUXF8=6)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y81          FDCE                         0.000     0.000 r  key_reg_reg[20]/C
+    SLICE_X0Y81          FDCE (Prop_fdce_C_Q)         0.379     0.379 r  key_reg_reg[20]/Q
+                         net (fo=36, routed)          2.924     3.303    aes_inst/Q[20]
+    SLICE_X6Y58          LUT6 (Prop_lut6_I4_O)        0.105     3.408 r  aes_inst/g1_b4__146/O
+                         net (fo=1, routed)           0.000     3.408    aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_11_1
+    SLICE_X6Y58          MUXF7 (Prop_muxf7_I1_O)      0.206     3.614 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_21/O
+                         net (fo=1, routed)           0.000     3.614    aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_21_n_0
+    SLICE_X6Y58          MUXF8 (Prop_muxf8_I0_O)      0.082     3.696 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_11/O
+                         net (fo=19, routed)          1.012     4.708    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[23]_3
+    SLICE_X5Y68          LUT5 (Prop_lut5_I2_O)        0.259     4.967 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_5/O
+                         net (fo=33, routed)          1.548     6.515    aes_inst/key_inst/key_gen[1].sb0/full_keys[156]
+    SLICE_X10Y65         LUT6 (Prop_lut6_I4_O)        0.105     6.620 r  aes_inst/key_inst/key_gen[1].sb0/g2_b7__147/O
+                         net (fo=2, routed)           0.717     7.337    aes_inst/key_inst/key_gen[2].sb3/round_stages[2].pipe_state[2][39]_i_2_0
+    SLICE_X11Y65         LUT6 (Prop_lut6_I1_O)        0.105     7.442 r  aes_inst/key_inst/key_gen[2].sb3/round_stages[7].pipe_state[7][103]_i_7/O
+                         net (fo=7, routed)           1.313     8.755    aes_inst/key_inst/key_gen[1].sb0/key_gen[2].sub_word[7]
+    SLICE_X28Y63         LUT3 (Prop_lut3_I0_O)        0.105     8.860 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[2].pipe_state[2][7]_i_2/O
+                         net (fo=11, routed)          0.819     9.679    aes_inst/key_inst/key_gen[3].sb2/round_stages[3].pipe_state[3][47]_i_2[1]
+    SLICE_X14Y61         MUXF8 (Prop_muxf8_S_O)       0.232     9.911 r  aes_inst/key_inst/key_gen[3].sb2/g0_b0__157_i_14/O
+                         net (fo=9, routed)           1.084    10.995    aes_inst/key_inst/key_gen[1].sb0/key_gen[3].sub_word[9]
+    SLICE_X29Y60         LUT4 (Prop_lut4_I0_O)        0.259    11.254 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__157_i_8/O
+                         net (fo=3, routed)           0.801    12.055    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][23]
+    SLICE_X32Y70         LUT2 (Prop_lut2_I0_O)        0.105    12.160 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__157_i_2/O
+                         net (fo=34, routed)          1.600    13.760    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][15]
+    SLICE_X32Y72         LUT6 (Prop_lut6_I1_O)        0.105    13.865 r  aes_inst/key_inst/key_gen[1].sb0/g0_b5__157/O
+                         net (fo=1, routed)           0.000    13.865    aes_inst/key_inst/key_gen[4].sb1/pipe_state_reg[10][117]_i_8_0
+    SLICE_X32Y72         MUXF7 (Prop_muxf7_I0_O)      0.199    14.064 r  aes_inst/key_inst/key_gen[4].sb1/pipe_state_reg[10][117]_i_16/O
+                         net (fo=1, routed)           0.000    14.064    aes_inst/key_inst/key_gen[4].sb1/pipe_state_reg[10][117]_i_16_n_0
+    SLICE_X32Y72         MUXF8 (Prop_muxf8_I0_O)      0.085    14.149 r  aes_inst/key_inst/key_gen[4].sb1/pipe_state_reg[10][117]_i_8/O
+                         net (fo=5, routed)           1.237    15.386    aes_inst/key_inst/key_gen[1].sb0/key_gen[4].sub_word[14]
+    SLICE_X30Y59         LUT3 (Prop_lut3_I0_O)        0.285    15.671 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[4].pipe_state[4][85]_i_2/O
+                         net (fo=3, routed)           1.348    17.019    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][52]
+    SLICE_X41Y63         LUT2 (Prop_lut2_I0_O)        0.283    17.302 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__162_i_12/O
+                         net (fo=3, routed)           0.719    18.020    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][45]
+    SLICE_X45Y67         LUT2 (Prop_lut2_I0_O)        0.105    18.125 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__162_i_6/O
+                         net (fo=34, routed)          2.390    20.516    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][37]
+    SLICE_X38Y59         LUT6 (Prop_lut6_I5_O)        0.105    20.621 r  aes_inst/key_inst/key_gen[1].sb0/g0_b2__162/O
+                         net (fo=1, routed)           0.000    20.621    aes_inst/key_inst/key_gen[5].sb0/pipe_state_reg[10][122]_i_9_0
+    SLICE_X38Y59         MUXF7 (Prop_muxf7_I0_O)      0.201    20.822 r  aes_inst/key_inst/key_gen[5].sb0/pipe_state_reg[10][122]_i_18/O
+                         net (fo=1, routed)           0.000    20.822    aes_inst/key_inst/key_gen[5].sb0/pipe_state_reg[10][122]_i_18_n_0
+    SLICE_X38Y59         MUXF8 (Prop_muxf8_I0_O)      0.082    20.904 r  aes_inst/key_inst/key_gen[5].sb0/pipe_state_reg[10][122]_i_9/O
+                         net (fo=4, routed)           0.615    21.519    aes_inst/key_inst/key_gen[1].sb0/key_gen[5].sub_word[16]
+    SLICE_X35Y60         LUT6 (Prop_lut6_I2_O)        0.259    21.778 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[5].pipe_state[5][122]_i_2/O
+                         net (fo=2, routed)           0.929    22.707    aes_inst/key_inst/key_gen[1].sb0/full_keys[762]
+    SLICE_X41Y60         LUT2 (Prop_lut2_I0_O)        0.105    22.812 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[5].pipe_state[5][90]_i_2/O
+                         net (fo=3, routed)           0.893    23.704    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][74]
+    SLICE_X48Y60         LUT2 (Prop_lut2_I0_O)        0.105    23.809 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__163_i_9/O
+                         net (fo=3, routed)           0.990    24.799    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][66]
+    SLICE_X50Y55         LUT2 (Prop_lut2_I0_O)        0.119    24.918 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__163_i_3/O
+                         net (fo=34, routed)          2.290    27.209    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][58]
+    SLICE_X36Y48         LUT6 (Prop_lut6_I2_O)        0.268    27.477 r  aes_inst/key_inst/key_gen[1].sb0/g1_b0__163/O
+                         net (fo=1, routed)           0.000    27.477    aes_inst/key_inst/key_gen[6].sb3/pipe_state_reg[10][96]_i_7_3
+    SLICE_X36Y48         MUXF7 (Prop_muxf7_I1_O)      0.206    27.683 r  aes_inst/key_inst/key_gen[6].sb3/pipe_state_reg[10][96]_i_14/O
+                         net (fo=1, routed)           0.000    27.683    aes_inst/key_inst/key_gen[6].sb3/pipe_state_reg[10][96]_i_14_n_0
+    SLICE_X36Y48         MUXF8 (Prop_muxf8_I0_O)      0.085    27.768 r  aes_inst/key_inst/key_gen[6].sb3/pipe_state_reg[10][96]_i_7/O
+                         net (fo=4, routed)           0.492    28.260    aes_inst/key_inst/key_gen[1].sb0/key_gen[6].sub_word[0]
+    SLICE_X34Y50         LUT6 (Prop_lut6_I3_O)        0.264    28.524 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[6].pipe_state[6][96]_i_2/O
+                         net (fo=2, routed)           0.805    29.329    aes_inst/key_inst/key_gen[1].sb0/full_keys[864]
+    SLICE_X43Y50         LUT2 (Prop_lut2_I0_O)        0.105    29.434 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[6].pipe_state[6][64]_i_2/O
+                         net (fo=3, routed)           0.450    29.884    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][97]
+    SLICE_X43Y49         LUT2 (Prop_lut2_I0_O)        0.105    29.989 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__168_i_7/O
+                         net (fo=3, routed)           0.537    30.526    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][89]
+    SLICE_X43Y49         LUT2 (Prop_lut2_I0_O)        0.105    30.631 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__168_i_1/O
+                         net (fo=35, routed)          2.246    32.877    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][81]
+    SLICE_X28Y54         LUT6 (Prop_lut6_I0_O)        0.105    32.982 r  aes_inst/key_inst/key_gen[1].sb0/g1_b0__168/O
+                         net (fo=1, routed)           0.000    32.982    aes_inst/key_inst/key_gen[7].sb2/g0_b0__181_i_22_3
+    SLICE_X28Y54         MUXF7 (Prop_muxf7_I1_O)      0.206    33.188 r  aes_inst/key_inst/key_gen[7].sb2/g0_b0__181_i_49/O
+                         net (fo=1, routed)           0.000    33.188    aes_inst/key_inst/key_gen[7].sb2/g0_b0__181_i_49_n_0
+    SLICE_X28Y54         MUXF8 (Prop_muxf8_I0_O)      0.085    33.273 r  aes_inst/key_inst/key_gen[7].sb2/g0_b0__181_i_22/O
+                         net (fo=4, routed)           0.701    33.974    aes_inst/key_inst/key_gen[1].sb0/key_gen[7].sub_word[8]
+    SLICE_X28Y55         LUT6 (Prop_lut6_I3_O)        0.264    34.238 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[7].pipe_state[7][104]_i_2/O
+                         net (fo=2, routed)           0.981    35.219    aes_inst/key_inst/key_gen[1].sb0/full_keys[1000]
+    SLICE_X41Y46         LUT2 (Prop_lut2_I0_O)        0.127    35.346 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[7].pipe_state[7][72]_i_2/O
+                         net (fo=3, routed)           0.583    35.929    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][115]
+    SLICE_X41Y46         LUT2 (Prop_lut2_I0_O)        0.268    36.197 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__173_i_7/O
+                         net (fo=5, routed)           0.762    36.959    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][108]
+    SLICE_X37Y40         LUT2 (Prop_lut2_I0_O)        0.105    37.064 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__173_i_1/O
+                         net (fo=35, routed)          3.330    40.393    aes_inst/key_inst/key_gen[1].sb0/g0_b0__169_i_1
+    SLICE_X5Y29          LUT6 (Prop_lut6_I0_O)        0.105    40.498 r  aes_inst/key_inst/key_gen[1].sb0/g2_b1__173/O
+                         net (fo=1, routed)           0.346    40.844    aes_inst/key_inst/key_gen[8].sb1/pipe_state[10][17]_i_4_0
+    SLICE_X5Y29          LUT6 (Prop_lut6_I1_O)        0.105    40.949 r  aes_inst/key_inst/key_gen[8].sb1/g0_b0__182_i_28/O
+                         net (fo=5, routed)           1.420    42.369    aes_inst/key_inst/key_gen[1].sb2/key_gen[8].sub_word[9]
+    SLICE_X28Y53         LUT6 (Prop_lut6_I3_O)        0.105    42.474 r  aes_inst/key_inst/key_gen[1].sb2/round_stages[8].pipe_state[8][113]_i_2/O
+                         net (fo=2, routed)           1.177    43.651    aes_inst/key_inst/key_gen[1].sb2/full_keys[1137]
+    SLICE_X34Y43         LUT2 (Prop_lut2_I0_O)        0.121    43.772 r  aes_inst/key_inst/key_gen[1].sb2/g0_b0__182_i_10/O
+                         net (fo=4, routed)           1.593    45.365    aes_inst/key_inst/key_gen[1].sb2/full_keys[1105]
+    SLICE_X15Y35         LUT2 (Prop_lut2_I0_O)        0.286    45.651 r  aes_inst/key_inst/key_gen[1].sb2/g0_b0__178_i_8/O
+                         net (fo=4, routed)           0.884    46.535    aes_inst/key_inst/key_gen[1].sb2/key_reg_reg[127]_0[3]
+    SLICE_X9Y29          LUT2 (Prop_lut2_I0_O)        0.107    46.642 r  aes_inst/key_inst/key_gen[1].sb2/g0_b0__178_i_2/O
+                         net (fo=33, routed)          2.188    48.831    aes_inst/key_inst/key_gen[1].sb2/full_keys[1041]
+    SLICE_X39Y22         LUT6 (Prop_lut6_I1_O)        0.274    49.105 r  aes_inst/key_inst/key_gen[1].sb2/g1_b2__178/O
+                         net (fo=1, routed)           0.651    49.756    aes_inst/key_inst/key_gen[9].sb0/round_stages[9].pipe_state[9][122]_i_8_1
+    SLICE_X38Y22         LUT6 (Prop_lut6_I3_O)        0.105    49.861 r  aes_inst/key_inst/key_gen[9].sb0/g0_b0__179_i_31/O
+                         net (fo=4, routed)           1.382    51.243    aes_inst/key_inst/key_gen[1].sb2/key_gen[9].sub_word[10]
+    SLICE_X35Y45         LUT6 (Prop_lut6_I2_O)        0.105    51.348 r  aes_inst/key_inst/key_gen[1].sb2/g0_b0__179_i_11/O
+                         net (fo=3, routed)           0.501    51.849    aes_inst/key_inst/key_gen[1].sb1/round_stages[9].pipe_state_reg[9][26]
+    SLICE_X34Y43         LUT6 (Prop_lut6_I0_O)        0.105    51.954 r  aes_inst/key_inst/key_gen[1].sb1/g0_b0__179_i_3/O
+                         net (fo=33, routed)          2.491    54.445    aes_inst/key_inst/key_gen[1].sb1/full_keys[1178]
+    SLICE_X11Y46         LUT6 (Prop_lut6_I2_O)        0.105    54.550 r  aes_inst/key_inst/key_gen[1].sb1/g1_b5__179/O
+                         net (fo=1, routed)           0.000    54.550    aes_inst/key_inst/key_gen[10].sb3/pipe_state[10][101]_i_4_0
+    SLICE_X11Y46         MUXF7 (Prop_muxf7_I1_O)      0.182    54.732 r  aes_inst/key_inst/key_gen[10].sb3/pipe_state_reg[10][101]_i_11/O
+                         net (fo=2, routed)           0.701    55.433    aes_inst/key_inst/key_gen[1].sb1/pipe_state_reg[10][69]_0
+    SLICE_X12Y46         LUT6 (Prop_lut6_I5_O)        0.252    55.685 r  aes_inst/key_inst/key_gen[1].sb1/pipe_state[10][101]_i_4/O
+                         net (fo=3, routed)           0.499    56.184    aes_inst/final_inst/pipe_state_reg[10][69]
+    SLICE_X14Y47         LUT6 (Prop_lut6_I2_O)        0.105    56.289 r  aes_inst/final_inst/pipe_state[10][101]_i_1/O
+                         net (fo=1, routed)           0.000    56.289    aes_inst/final_out[101]
+    SLICE_X14Y47         FDRE                                         r  aes_inst/pipe_state_reg[10][101]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 key_reg_reg[20]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            aes_inst/pipe_state_reg[10][2]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        56.274ns  (logic 8.340ns (14.820%)  route 47.934ns (85.180%))
+  Logic Levels:           52  (FDCE=1 LUT2=15 LUT3=2 LUT4=1 LUT5=1 LUT6=20 MUXF7=6 MUXF8=6)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y81          FDCE                         0.000     0.000 r  key_reg_reg[20]/C
+    SLICE_X0Y81          FDCE (Prop_fdce_C_Q)         0.379     0.379 r  key_reg_reg[20]/Q
+                         net (fo=36, routed)          2.924     3.303    aes_inst/Q[20]
+    SLICE_X6Y58          LUT6 (Prop_lut6_I4_O)        0.105     3.408 r  aes_inst/g1_b4__146/O
+                         net (fo=1, routed)           0.000     3.408    aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_11_1
+    SLICE_X6Y58          MUXF7 (Prop_muxf7_I1_O)      0.206     3.614 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_21/O
+                         net (fo=1, routed)           0.000     3.614    aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_21_n_0
+    SLICE_X6Y58          MUXF8 (Prop_muxf8_I0_O)      0.082     3.696 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_11/O
+                         net (fo=19, routed)          1.012     4.708    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[23]_3
+    SLICE_X5Y68          LUT5 (Prop_lut5_I2_O)        0.259     4.967 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__147_i_5/O
+                         net (fo=33, routed)          1.548     6.515    aes_inst/key_inst/key_gen[1].sb0/full_keys[156]
+    SLICE_X10Y65         LUT6 (Prop_lut6_I4_O)        0.105     6.620 r  aes_inst/key_inst/key_gen[1].sb0/g2_b7__147/O
+                         net (fo=2, routed)           0.717     7.337    aes_inst/key_inst/key_gen[2].sb3/round_stages[2].pipe_state[2][39]_i_2_0
+    SLICE_X11Y65         LUT6 (Prop_lut6_I1_O)        0.105     7.442 r  aes_inst/key_inst/key_gen[2].sb3/round_stages[7].pipe_state[7][103]_i_7/O
+                         net (fo=7, routed)           1.313     8.755    aes_inst/key_inst/key_gen[1].sb0/key_gen[2].sub_word[7]
+    SLICE_X28Y63         LUT3 (Prop_lut3_I0_O)        0.105     8.860 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[2].pipe_state[2][7]_i_2/O
+                         net (fo=11, routed)          0.819     9.679    aes_inst/key_inst/key_gen[3].sb2/round_stages[3].pipe_state[3][47]_i_2[1]
+    SLICE_X14Y61         MUXF8 (Prop_muxf8_S_O)       0.232     9.911 r  aes_inst/key_inst/key_gen[3].sb2/g0_b0__157_i_14/O
+                         net (fo=9, routed)           1.084    10.995    aes_inst/key_inst/key_gen[1].sb0/key_gen[3].sub_word[9]
+    SLICE_X29Y60         LUT4 (Prop_lut4_I0_O)        0.259    11.254 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__157_i_8/O
+                         net (fo=3, routed)           0.801    12.055    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][23]
+    SLICE_X32Y70         LUT2 (Prop_lut2_I0_O)        0.105    12.160 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__157_i_2/O
+                         net (fo=34, routed)          1.600    13.760    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][15]
+    SLICE_X32Y72         LUT6 (Prop_lut6_I1_O)        0.105    13.865 r  aes_inst/key_inst/key_gen[1].sb0/g0_b5__157/O
+                         net (fo=1, routed)           0.000    13.865    aes_inst/key_inst/key_gen[4].sb1/pipe_state_reg[10][117]_i_8_0
+    SLICE_X32Y72         MUXF7 (Prop_muxf7_I0_O)      0.199    14.064 r  aes_inst/key_inst/key_gen[4].sb1/pipe_state_reg[10][117]_i_16/O
+                         net (fo=1, routed)           0.000    14.064    aes_inst/key_inst/key_gen[4].sb1/pipe_state_reg[10][117]_i_16_n_0
+    SLICE_X32Y72         MUXF8 (Prop_muxf8_I0_O)      0.085    14.149 r  aes_inst/key_inst/key_gen[4].sb1/pipe_state_reg[10][117]_i_8/O
+                         net (fo=5, routed)           1.237    15.386    aes_inst/key_inst/key_gen[1].sb0/key_gen[4].sub_word[14]
+    SLICE_X30Y59         LUT3 (Prop_lut3_I0_O)        0.285    15.671 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[4].pipe_state[4][85]_i_2/O
+                         net (fo=3, routed)           1.348    17.019    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][52]
+    SLICE_X41Y63         LUT2 (Prop_lut2_I0_O)        0.283    17.302 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__162_i_12/O
+                         net (fo=3, routed)           0.719    18.020    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][45]
+    SLICE_X45Y67         LUT2 (Prop_lut2_I0_O)        0.105    18.125 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__162_i_6/O
+                         net (fo=34, routed)          2.390    20.516    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][37]
+    SLICE_X38Y59         LUT6 (Prop_lut6_I5_O)        0.105    20.621 r  aes_inst/key_inst/key_gen[1].sb0/g0_b2__162/O
+                         net (fo=1, routed)           0.000    20.621    aes_inst/key_inst/key_gen[5].sb0/pipe_state_reg[10][122]_i_9_0
+    SLICE_X38Y59         MUXF7 (Prop_muxf7_I0_O)      0.201    20.822 r  aes_inst/key_inst/key_gen[5].sb0/pipe_state_reg[10][122]_i_18/O
+                         net (fo=1, routed)           0.000    20.822    aes_inst/key_inst/key_gen[5].sb0/pipe_state_reg[10][122]_i_18_n_0
+    SLICE_X38Y59         MUXF8 (Prop_muxf8_I0_O)      0.082    20.904 r  aes_inst/key_inst/key_gen[5].sb0/pipe_state_reg[10][122]_i_9/O
+                         net (fo=4, routed)           0.615    21.519    aes_inst/key_inst/key_gen[1].sb0/key_gen[5].sub_word[16]
+    SLICE_X35Y60         LUT6 (Prop_lut6_I2_O)        0.259    21.778 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[5].pipe_state[5][122]_i_2/O
+                         net (fo=2, routed)           0.929    22.707    aes_inst/key_inst/key_gen[1].sb0/full_keys[762]
+    SLICE_X41Y60         LUT2 (Prop_lut2_I0_O)        0.105    22.812 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[5].pipe_state[5][90]_i_2/O
+                         net (fo=3, routed)           0.893    23.704    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][74]
+    SLICE_X48Y60         LUT2 (Prop_lut2_I0_O)        0.105    23.809 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__163_i_9/O
+                         net (fo=3, routed)           0.990    24.799    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][66]
+    SLICE_X50Y55         LUT2 (Prop_lut2_I0_O)        0.119    24.918 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__163_i_3/O
+                         net (fo=34, routed)          2.290    27.209    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][58]
+    SLICE_X36Y48         LUT6 (Prop_lut6_I2_O)        0.268    27.477 r  aes_inst/key_inst/key_gen[1].sb0/g1_b0__163/O
+                         net (fo=1, routed)           0.000    27.477    aes_inst/key_inst/key_gen[6].sb3/pipe_state_reg[10][96]_i_7_3
+    SLICE_X36Y48         MUXF7 (Prop_muxf7_I1_O)      0.206    27.683 r  aes_inst/key_inst/key_gen[6].sb3/pipe_state_reg[10][96]_i_14/O
+                         net (fo=1, routed)           0.000    27.683    aes_inst/key_inst/key_gen[6].sb3/pipe_state_reg[10][96]_i_14_n_0
+    SLICE_X36Y48         MUXF8 (Prop_muxf8_I0_O)      0.085    27.768 r  aes_inst/key_inst/key_gen[6].sb3/pipe_state_reg[10][96]_i_7/O
+                         net (fo=4, routed)           0.492    28.260    aes_inst/key_inst/key_gen[1].sb0/key_gen[6].sub_word[0]
+    SLICE_X34Y50         LUT6 (Prop_lut6_I3_O)        0.264    28.524 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[6].pipe_state[6][96]_i_2/O
+                         net (fo=2, routed)           0.805    29.329    aes_inst/key_inst/key_gen[1].sb0/full_keys[864]
+    SLICE_X43Y50         LUT2 (Prop_lut2_I0_O)        0.105    29.434 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[6].pipe_state[6][64]_i_2/O
+                         net (fo=3, routed)           0.450    29.884    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][97]
+    SLICE_X43Y49         LUT2 (Prop_lut2_I0_O)        0.105    29.989 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__168_i_7/O
+                         net (fo=3, routed)           0.537    30.526    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][89]
+    SLICE_X43Y49         LUT2 (Prop_lut2_I0_O)        0.105    30.631 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__168_i_1/O
+                         net (fo=35, routed)          2.246    32.877    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][81]
+    SLICE_X28Y54         LUT6 (Prop_lut6_I0_O)        0.105    32.982 r  aes_inst/key_inst/key_gen[1].sb0/g1_b0__168/O
+                         net (fo=1, routed)           0.000    32.982    aes_inst/key_inst/key_gen[7].sb2/g0_b0__181_i_22_3
+    SLICE_X28Y54         MUXF7 (Prop_muxf7_I1_O)      0.206    33.188 r  aes_inst/key_inst/key_gen[7].sb2/g0_b0__181_i_49/O
+                         net (fo=1, routed)           0.000    33.188    aes_inst/key_inst/key_gen[7].sb2/g0_b0__181_i_49_n_0
+    SLICE_X28Y54         MUXF8 (Prop_muxf8_I0_O)      0.085    33.273 r  aes_inst/key_inst/key_gen[7].sb2/g0_b0__181_i_22/O
+                         net (fo=4, routed)           0.701    33.974    aes_inst/key_inst/key_gen[1].sb0/key_gen[7].sub_word[8]
+    SLICE_X28Y55         LUT6 (Prop_lut6_I3_O)        0.264    34.238 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[7].pipe_state[7][104]_i_2/O
+                         net (fo=2, routed)           0.981    35.219    aes_inst/key_inst/key_gen[1].sb0/full_keys[1000]
+    SLICE_X41Y46         LUT2 (Prop_lut2_I0_O)        0.127    35.346 r  aes_inst/key_inst/key_gen[1].sb0/round_stages[7].pipe_state[7][72]_i_2/O
+                         net (fo=3, routed)           0.583    35.929    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][115]
+    SLICE_X41Y46         LUT2 (Prop_lut2_I0_O)        0.268    36.197 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__173_i_7/O
+                         net (fo=5, routed)           0.762    36.959    aes_inst/key_inst/key_gen[1].sb0/key_reg_reg[111][108]
+    SLICE_X37Y40         LUT2 (Prop_lut2_I0_O)        0.105    37.064 r  aes_inst/key_inst/key_gen[1].sb0/g0_b0__173_i_1/O
+                         net (fo=35, routed)          3.330    40.393    aes_inst/key_inst/key_gen[1].sb0/g0_b0__169_i_1
+    SLICE_X5Y29          LUT6 (Prop_lut6_I0_O)        0.105    40.498 r  aes_inst/key_inst/key_gen[1].sb0/g2_b1__173/O
+                         net (fo=1, routed)           0.346    40.844    aes_inst/key_inst/key_gen[8].sb1/pipe_state[10][17]_i_4_0
+    SLICE_X5Y29          LUT6 (Prop_lut6_I1_O)        0.105    40.949 r  aes_inst/key_inst/key_gen[8].sb1/g0_b0__182_i_28/O
+                         net (fo=5, routed)           1.420    42.369    aes_inst/key_inst/key_gen[1].sb2/key_gen[8].sub_word[9]
+    SLICE_X28Y53         LUT6 (Prop_lut6_I3_O)        0.105    42.474 r  aes_inst/key_inst/key_gen[1].sb2/round_stages[8].pipe_state[8][113]_i_2/O
+                         net (fo=2, routed)           1.177    43.651    aes_inst/key_inst/key_gen[1].sb2/full_keys[1137]
+    SLICE_X34Y43         LUT2 (Prop_lut2_I0_O)        0.121    43.772 r  aes_inst/key_inst/key_gen[1].sb2/g0_b0__182_i_10/O
+                         net (fo=4, routed)           1.593    45.365    aes_inst/key_inst/key_gen[1].sb2/full_keys[1105]
+    SLICE_X15Y35         LUT2 (Prop_lut2_I0_O)        0.286    45.651 r  aes_inst/key_inst/key_gen[1].sb2/g0_b0__178_i_8/O
+                         net (fo=4, routed)           0.884    46.535    aes_inst/key_inst/key_gen[1].sb2/key_reg_reg[127]_0[3]
+    SLICE_X9Y29          LUT2 (Prop_lut2_I0_O)        0.107    46.642 r  aes_inst/key_inst/key_gen[1].sb2/g0_b0__178_i_2/O
+                         net (fo=33, routed)          2.188    48.831    aes_inst/key_inst/key_gen[1].sb2/full_keys[1041]
+    SLICE_X39Y22         LUT6 (Prop_lut6_I1_O)        0.274    49.105 r  aes_inst/key_inst/key_gen[1].sb2/g1_b2__178/O
+                         net (fo=1, routed)           0.651    49.756    aes_inst/key_inst/key_gen[9].sb0/round_stages[9].pipe_state[9][122]_i_8_1
+    SLICE_X38Y22         LUT6 (Prop_lut6_I3_O)        0.105    49.861 r  aes_inst/key_inst/key_gen[9].sb0/g0_b0__179_i_31/O
+                         net (fo=4, routed)           1.382    51.243    aes_inst/key_inst/key_gen[1].sb2/key_gen[9].sub_word[10]
+    SLICE_X35Y45         LUT6 (Prop_lut6_I2_O)        0.105    51.348 r  aes_inst/key_inst/key_gen[1].sb2/g0_b0__179_i_11/O
+                         net (fo=3, routed)           0.501    51.849    aes_inst/key_inst/key_gen[1].sb1/round_stages[9].pipe_state_reg[9][26]
+    SLICE_X34Y43         LUT6 (Prop_lut6_I0_O)        0.105    51.954 r  aes_inst/key_inst/key_gen[1].sb1/g0_b0__179_i_3/O
+                         net (fo=33, routed)          2.391    54.345    aes_inst/key_inst/key_gen[1].sb1/full_keys[1178]
+    SLICE_X15Y49         LUT6 (Prop_lut6_I2_O)        0.105    54.450 r  aes_inst/key_inst/key_gen[1].sb1/g1_b2__179/O
+                         net (fo=1, routed)           0.000    54.450    aes_inst/key_inst/key_gen[10].sb3/pipe_state[10][98]_i_4_0
+    SLICE_X15Y49         MUXF7 (Prop_muxf7_I1_O)      0.182    54.632 r  aes_inst/key_inst/key_gen[10].sb3/pipe_state_reg[10][98]_i_11/O
+                         net (fo=2, routed)           0.704    55.336    aes_inst/key_inst/key_gen[1].sb2/pipe_state_reg[10][2]
+    SLICE_X15Y50         LUT6 (Prop_lut6_I1_O)        0.252    55.588 r  aes_inst/key_inst/key_gen[1].sb2/pipe_state[10][2]_i_2/O
+                         net (fo=1, routed)           0.581    56.169    aes_inst/final_inst/pipe_state_reg[10][2]_0
+    SLICE_X14Y50         LUT6 (Prop_lut6_I4_O)        0.105    56.274 r  aes_inst/final_inst/pipe_state[10][2]_i_1/O
+                         net (fo=1, routed)           0.000    56.274    aes_inst/final_out[2]
+    SLICE_X14Y50         FDRE                                         r  aes_inst/pipe_state_reg[10][2]/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 plaintext_reg_reg[19]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            aes_inst/pipe_state_reg[0][19]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.251ns  (logic 0.186ns (74.166%)  route 0.065ns (25.834%))
+  Logic Levels:           2  (FDCE=1 LUT2=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X4Y83          FDCE                         0.000     0.000 r  plaintext_reg_reg[19]/C
+    SLICE_X4Y83          FDCE (Prop_fdce_C_Q)         0.141     0.141 r  plaintext_reg_reg[19]/Q
+                         net (fo=2, routed)           0.065     0.206    aes_inst/pipe_state_reg[0][127]_0[19]
+    SLICE_X5Y83          LUT2 (Prop_lut2_I1_O)        0.045     0.251 r  aes_inst/pipe_state[0][19]_i_1/O
+                         net (fo=1, routed)           0.000     0.251    aes_inst/pipe_state[0][19]_i_1_n_0
+    SLICE_X5Y83          FDCE                                         r  aes_inst/pipe_state_reg[0][19]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 plaintext_reg_reg[46]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            aes_inst/pipe_state_reg[0][46]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.254ns  (logic 0.186ns (73.210%)  route 0.068ns (26.790%))
+  Logic Levels:           2  (FDCE=1 LUT2=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y67          FDCE                         0.000     0.000 r  plaintext_reg_reg[46]/C
+    SLICE_X1Y67          FDCE (Prop_fdce_C_Q)         0.141     0.141 r  plaintext_reg_reg[46]/Q
+                         net (fo=2, routed)           0.068     0.209    aes_inst/pipe_state_reg[0][127]_0[46]
+    SLICE_X0Y67          LUT2 (Prop_lut2_I1_O)        0.045     0.254 r  aes_inst/pipe_state[0][46]_i_1/O
+                         net (fo=1, routed)           0.000     0.254    aes_inst/pipe_state[0][46]_i_1_n_0
+    SLICE_X0Y67          FDCE                                         r  aes_inst/pipe_state_reg[0][46]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 aes_inst/valid_pipe_reg[5]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            aes_inst/valid_pipe_reg[6]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.261ns  (logic 0.141ns (54.020%)  route 0.120ns (45.980%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X4Y22          FDCE                         0.000     0.000 r  aes_inst/valid_pipe_reg[5]/C
+    SLICE_X4Y22          FDCE (Prop_fdce_C_Q)         0.141     0.141 r  aes_inst/valid_pipe_reg[5]/Q
+                         net (fo=1, routed)           0.120     0.261    aes_inst/p_0_in[6]
+    SLICE_X4Y24          FDCE                                         r  aes_inst/valid_pipe_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 plaintext_reg_reg[12]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            aes_inst/pipe_state_reg[0][12]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.284ns  (logic 0.186ns (65.467%)  route 0.098ns (34.533%))
+  Logic Levels:           2  (FDCE=1 LUT2=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y63          FDCE                         0.000     0.000 r  plaintext_reg_reg[12]/C
+    SLICE_X3Y63          FDCE (Prop_fdce_C_Q)         0.141     0.141 r  plaintext_reg_reg[12]/Q
+                         net (fo=2, routed)           0.098     0.239    aes_inst/pipe_state_reg[0][127]_0[12]
+    SLICE_X2Y63          LUT2 (Prop_lut2_I1_O)        0.045     0.284 r  aes_inst/pipe_state[0][12]_i_1/O
+                         net (fo=1, routed)           0.000     0.284    aes_inst/pipe_state[0][12]_i_1_n_0
+    SLICE_X2Y63          FDCE                                         r  aes_inst/pipe_state_reg[0][12]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 plaintext_reg_reg[45]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            aes_inst/pipe_state_reg[0][45]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.286ns  (logic 0.186ns (65.028%)  route 0.100ns (34.972%))
+  Logic Levels:           2  (FDCE=1 LUT2=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y72          FDCE                         0.000     0.000 r  plaintext_reg_reg[45]/C
+    SLICE_X3Y72          FDCE (Prop_fdce_C_Q)         0.141     0.141 r  plaintext_reg_reg[45]/Q
+                         net (fo=2, routed)           0.100     0.241    aes_inst/pipe_state_reg[0][127]_0[45]
+    SLICE_X2Y72          LUT2 (Prop_lut2_I1_O)        0.045     0.286 r  aes_inst/pipe_state[0][45]_i_1/O
+                         net (fo=1, routed)           0.000     0.286    aes_inst/pipe_state[0][45]_i_1_n_0
+    SLICE_X2Y72          FDCE                                         r  aes_inst/pipe_state_reg[0][45]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 plaintext_reg_reg[85]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            aes_inst/pipe_state_reg[0][85]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.289ns  (logic 0.186ns (64.357%)  route 0.103ns (35.643%))
+  Logic Levels:           2  (FDCE=1 LUT2=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y85          FDCE                         0.000     0.000 r  plaintext_reg_reg[85]/C
+    SLICE_X3Y85          FDCE (Prop_fdce_C_Q)         0.141     0.141 r  plaintext_reg_reg[85]/Q
+                         net (fo=2, routed)           0.103     0.244    aes_inst/pipe_state_reg[0][127]_0[85]
+    SLICE_X1Y85          LUT2 (Prop_lut2_I1_O)        0.045     0.289 r  aes_inst/pipe_state[0][85]_i_1/O
+                         net (fo=1, routed)           0.000     0.289    aes_inst/pipe_state[0][85]_i_1_n_0
+    SLICE_X1Y85          FDCE                                         r  aes_inst/pipe_state_reg[0][85]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 plaintext_reg_reg[49]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            aes_inst/pipe_state_reg[0][49]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.290ns  (logic 0.186ns (64.113%)  route 0.104ns (35.887%))
+  Logic Levels:           2  (FDCE=1 LUT2=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y86          FDCE                         0.000     0.000 r  plaintext_reg_reg[49]/C
+    SLICE_X1Y86          FDCE (Prop_fdce_C_Q)         0.141     0.141 r  plaintext_reg_reg[49]/Q
+                         net (fo=2, routed)           0.104     0.245    aes_inst/pipe_state_reg[0][127]_0[49]
+    SLICE_X0Y86          LUT2 (Prop_lut2_I1_O)        0.045     0.290 r  aes_inst/pipe_state[0][49]_i_1/O
+                         net (fo=1, routed)           0.000     0.290    aes_inst/pipe_state[0][49]_i_1_n_0
+    SLICE_X0Y86          FDCE                                         r  aes_inst/pipe_state_reg[0][49]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 plaintext_reg_reg[107]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            aes_inst/pipe_state_reg[0][107]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.291ns  (logic 0.186ns (63.884%)  route 0.105ns (36.116%))
+  Logic Levels:           2  (FDCE=1 LUT2=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y75          FDCE                         0.000     0.000 r  plaintext_reg_reg[107]/C
+    SLICE_X1Y75          FDCE (Prop_fdce_C_Q)         0.141     0.141 r  plaintext_reg_reg[107]/Q
+                         net (fo=2, routed)           0.105     0.246    aes_inst/pipe_state_reg[0][127]_0[107]
+    SLICE_X3Y75          LUT2 (Prop_lut2_I1_O)        0.045     0.291 r  aes_inst/pipe_state[0][107]_i_1/O
+                         net (fo=1, routed)           0.000     0.291    aes_inst/pipe_state[0][107]_i_1_n_0
+    SLICE_X3Y75          FDCE                                         r  aes_inst/pipe_state_reg[0][107]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 plaintext_reg_reg[51]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            aes_inst/pipe_state_reg[0][51]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.291ns  (logic 0.186ns (63.825%)  route 0.105ns (36.175%))
+  Logic Levels:           2  (FDCE=1 LUT2=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y83          FDCE                         0.000     0.000 r  plaintext_reg_reg[51]/C
+    SLICE_X1Y83          FDCE (Prop_fdce_C_Q)         0.141     0.141 r  plaintext_reg_reg[51]/Q
+                         net (fo=2, routed)           0.105     0.246    aes_inst/pipe_state_reg[0][127]_0[51]
+    SLICE_X2Y83          LUT2 (Prop_lut2_I1_O)        0.045     0.291 r  aes_inst/pipe_state[0][51]_i_1/O
+                         net (fo=1, routed)           0.000     0.291    aes_inst/pipe_state[0][51]_i_1_n_0
+    SLICE_X2Y83          FDCE                                         r  aes_inst/pipe_state_reg[0][51]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 plaintext_reg_reg[32]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            aes_inst/pipe_state_reg[0][32]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.295ns  (logic 0.186ns (63.048%)  route 0.109ns (36.952%))
+  Logic Levels:           2  (FDCE=1 LUT2=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y62          FDCE                         0.000     0.000 r  plaintext_reg_reg[32]/C
+    SLICE_X1Y62          FDCE (Prop_fdce_C_Q)         0.141     0.141 r  plaintext_reg_reg[32]/Q
+                         net (fo=2, routed)           0.109     0.250    aes_inst/pipe_state_reg[0][127]_0[32]
+    SLICE_X2Y62          LUT2 (Prop_lut2_I1_O)        0.045     0.295 r  aes_inst/pipe_state[0][32]_i_1/O
+                         net (fo=1, routed)           0.000     0.295    aes_inst/pipe_state[0][32]_i_1_n_0
+    SLICE_X2Y62          FDCE                                         r  aes_inst/pipe_state_reg[0][32]/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+

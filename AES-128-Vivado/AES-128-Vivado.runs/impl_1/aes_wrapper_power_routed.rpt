@@ -1,0 +1,356 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date             : Tue Apr  7 14:33:06 2026
+| Host             : AZ-Snake running 64-bit major release  (build 9200)
+| Command          : report_power -file aes_wrapper_power_routed.rpt -pb aes_wrapper_power_summary_routed.pb -rpx aes_wrapper_power_routed.rpx
+| Design           : aes_wrapper
+| Device           : xc7a35tfgg484-2
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+-----------------------------------+
+| Total On-Chip Power (W)  | 665.699 (Junction temp exceeded!) |
+| Design Power Budget (W)  | Unspecified*                      |
+| Power Budget Margin (W)  | NA                                |
+| Dynamic (W)              | 665.214                           |
+| Device Static (W)        | 0.485                             |
+| Effective TJA (C/W)      | 2.8                               |
+| Max Ambient (C)          | 0.0                               |
+| Junction Temperature (C) | 125.0                             |
+| Confidence Level         | Low                               |
+| Setting File             | ---                               |
+| Simulation Activity File | ---                               |
+| Design Nets Matched      | NA                                |
++--------------------------+-----------------------------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++----------------+-----------+----------+-----------+-----------------+
+| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
++----------------+-----------+----------+-----------+-----------------+
+| Slice Logic    |   320.224 |    16312 |       --- |             --- |
+|   LUT as Logic |   307.625 |     9637 |     20800 |           46.33 |
+|   F7/F8 Muxes  |    11.270 |     4488 |     32600 |           13.77 |
+|   Register     |     1.323 |     1675 |     41600 |            4.03 |
+|   BUFG         |     0.006 |        1 |        32 |            3.13 |
+|   Others       |     0.000 |        2 |       --- |             --- |
+| Signals        |   335.079 |     6136 |       --- |             --- |
+| I/O            |     9.911 |       72 |       250 |           28.80 |
+| Static Power   |     0.485 |          |           |                 |
+| Total          |   665.699 |          |           |                 |
++----------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Vccint    |       1.000 |   655.800 |     655.460 |      0.341 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.852 |       0.799 |      0.053 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco18    |       1.800 |     4.622 |       4.621 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.010 |       0.000 |      0.010 |       NA    | Unspecified | NA         |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                             |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                                    |
+| Clock nodes activity        | Low        | User specified less than 75% of clocks                 | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
+| Device models               | High       | Device models are Production                           |                                                                                                                    |
+|                             |            |                                                        |                                                                                                                    |
+| Overall confidence level    | Low        |                                                        |                                                                                                                    |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 2.8                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 4.6                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++--------------------------+-----------+
+| Name                     | Power (W) |
++--------------------------+-----------+
+| aes_wrapper              |   665.214 |
+|   aes_inst               |   654.503 |
+|     final_inst           |    20.567 |
+|       sb[0].sbox_inst    |     0.272 |
+|       sb[10].sbox_inst   |     0.227 |
+|       sb[11].sbox_inst   |     0.214 |
+|       sb[12].sbox_inst   |     0.188 |
+|       sb[13].sbox_inst   |     0.152 |
+|       sb[14].sbox_inst   |     0.144 |
+|       sb[15].sbox_inst   |     0.169 |
+|       sb[1].sbox_inst    |     0.227 |
+|       sb[2].sbox_inst    |     0.263 |
+|       sb[3].sbox_inst    |     0.273 |
+|       sb[4].sbox_inst    |     0.163 |
+|       sb[5].sbox_inst    |     0.176 |
+|       sb[6].sbox_inst    |     0.188 |
+|       sb[7].sbox_inst    |     0.179 |
+|       sb[8].sbox_inst    |     0.188 |
+|       sb[9].sbox_inst    |     0.179 |
+|     key_inst             |   449.994 |
+|       key_gen[10].sb0    |     1.521 |
+|       key_gen[10].sb1    |     1.723 |
+|       key_gen[10].sb2    |     1.493 |
+|       key_gen[10].sb3    |     1.946 |
+|       key_gen[1].sb0     |    97.812 |
+|       key_gen[1].sb1     |    97.330 |
+|       key_gen[1].sb2     |    97.814 |
+|       key_gen[1].sb3     |   100.079 |
+|       key_gen[2].sb0     |     0.068 |
+|       key_gen[2].sb1     |     0.059 |
+|       key_gen[2].sb2     |     0.056 |
+|       key_gen[2].sb3     |     0.066 |
+|       key_gen[3].sb0     |     0.193 |
+|       key_gen[3].sb1     |     0.196 |
+|       key_gen[3].sb2     |     0.164 |
+|       key_gen[3].sb3     |     0.178 |
+|       key_gen[4].sb0     |     0.516 |
+|       key_gen[4].sb1     |     0.542 |
+|       key_gen[4].sb2     |     0.506 |
+|       key_gen[4].sb3     |     0.558 |
+|       key_gen[5].sb0     |     0.846 |
+|       key_gen[5].sb1     |     0.776 |
+|       key_gen[5].sb2     |     0.643 |
+|       key_gen[5].sb3     |     0.835 |
+|       key_gen[6].sb0     |     1.107 |
+|       key_gen[6].sb1     |     1.084 |
+|       key_gen[6].sb2     |     1.083 |
+|       key_gen[6].sb3     |     1.136 |
+|       key_gen[7].sb0     |     1.434 |
+|       key_gen[7].sb1     |     1.562 |
+|       key_gen[7].sb2     |     1.528 |
+|       key_gen[7].sb3     |     1.420 |
+|       key_gen[8].sb0     |     3.663 |
+|       key_gen[8].sb1     |     3.871 |
+|       key_gen[8].sb2     |     3.840 |
+|       key_gen[8].sb3     |     4.163 |
+|       key_gen[9].sb0     |     4.103 |
+|       key_gen[9].sb1     |     4.659 |
+|       key_gen[9].sb2     |     5.007 |
+|       key_gen[9].sb3     |     4.413 |
+|     round_stages[1].inst |     0.092 |
+|       sb[0].sbox_inst    |     0.006 |
+|       sb[10].sbox_inst   |     0.005 |
+|       sb[11].sbox_inst   |     0.006 |
+|       sb[12].sbox_inst   |     0.008 |
+|       sb[13].sbox_inst   |     0.007 |
+|       sb[14].sbox_inst   |     0.005 |
+|       sb[15].sbox_inst   |     0.005 |
+|       sb[1].sbox_inst    |     0.006 |
+|       sb[2].sbox_inst    |     0.004 |
+|       sb[3].sbox_inst    |     0.007 |
+|       sb[4].sbox_inst    |     0.005 |
+|       sb[5].sbox_inst    |     0.006 |
+|       sb[6].sbox_inst    |     0.006 |
+|       sb[7].sbox_inst    |     0.006 |
+|       sb[8].sbox_inst    |     0.006 |
+|       sb[9].sbox_inst    |     0.005 |
+|     round_stages[2].inst |     1.832 |
+|       sb[0].sbox_inst    |     0.103 |
+|       sb[10].sbox_inst   |     0.123 |
+|       sb[11].sbox_inst   |     0.104 |
+|       sb[12].sbox_inst   |     0.094 |
+|       sb[13].sbox_inst   |     0.130 |
+|       sb[14].sbox_inst   |     0.105 |
+|       sb[15].sbox_inst   |     0.131 |
+|       sb[1].sbox_inst    |     0.102 |
+|       sb[2].sbox_inst    |     0.114 |
+|       sb[3].sbox_inst    |     0.101 |
+|       sb[4].sbox_inst    |     0.129 |
+|       sb[5].sbox_inst    |     0.124 |
+|       sb[6].sbox_inst    |     0.115 |
+|       sb[7].sbox_inst    |     0.120 |
+|       sb[8].sbox_inst    |     0.107 |
+|       sb[9].sbox_inst    |     0.132 |
+|     round_stages[3].inst |     5.731 |
+|       sb[0].sbox_inst    |     0.350 |
+|       sb[10].sbox_inst   |     0.383 |
+|       sb[11].sbox_inst   |     0.389 |
+|       sb[12].sbox_inst   |     0.344 |
+|       sb[13].sbox_inst   |     0.380 |
+|       sb[14].sbox_inst   |     0.274 |
+|       sb[15].sbox_inst   |     0.375 |
+|       sb[1].sbox_inst    |     0.378 |
+|       sb[2].sbox_inst    |     0.305 |
+|       sb[3].sbox_inst    |     0.338 |
+|       sb[4].sbox_inst    |     0.367 |
+|       sb[5].sbox_inst    |     0.339 |
+|       sb[6].sbox_inst    |     0.334 |
+|       sb[7].sbox_inst    |     0.350 |
+|       sb[8].sbox_inst    |     0.418 |
+|       sb[9].sbox_inst    |     0.407 |
+|     round_stages[4].inst |     5.995 |
+|       sb[0].sbox_inst    |     0.380 |
+|       sb[10].sbox_inst   |     0.402 |
+|       sb[11].sbox_inst   |     0.558 |
+|       sb[12].sbox_inst   |     0.349 |
+|       sb[13].sbox_inst   |     0.329 |
+|       sb[14].sbox_inst   |     0.272 |
+|       sb[15].sbox_inst   |     0.286 |
+|       sb[1].sbox_inst    |     0.386 |
+|       sb[2].sbox_inst    |     0.378 |
+|       sb[3].sbox_inst    |     0.364 |
+|       sb[4].sbox_inst    |     0.362 |
+|       sb[5].sbox_inst    |     0.368 |
+|       sb[6].sbox_inst    |     0.345 |
+|       sb[7].sbox_inst    |     0.354 |
+|       sb[8].sbox_inst    |     0.459 |
+|       sb[9].sbox_inst    |     0.404 |
+|     round_stages[5].inst |     6.372 |
+|       sb[0].sbox_inst    |     0.429 |
+|       sb[10].sbox_inst   |     0.317 |
+|       sb[11].sbox_inst   |     0.409 |
+|       sb[12].sbox_inst   |     0.538 |
+|       sb[13].sbox_inst   |     0.518 |
+|       sb[14].sbox_inst   |     0.351 |
+|       sb[15].sbox_inst   |     0.371 |
+|       sb[1].sbox_inst    |     0.425 |
+|       sb[2].sbox_inst    |     0.307 |
+|       sb[3].sbox_inst    |     0.388 |
+|       sb[4].sbox_inst    |     0.342 |
+|       sb[5].sbox_inst    |     0.353 |
+|       sb[6].sbox_inst    |     0.469 |
+|       sb[7].sbox_inst    |     0.377 |
+|       sb[8].sbox_inst    |     0.405 |
+|       sb[9].sbox_inst    |     0.374 |
+|     round_stages[6].inst |     5.625 |
+|       sb[0].sbox_inst    |     0.276 |
+|       sb[10].sbox_inst   |     0.330 |
+|       sb[11].sbox_inst   |     0.420 |
+|       sb[12].sbox_inst   |     0.346 |
+|       sb[13].sbox_inst   |     0.347 |
+|       sb[14].sbox_inst   |     0.291 |
+|       sb[15].sbox_inst   |     0.340 |
+|       sb[1].sbox_inst    |     0.332 |
+|       sb[2].sbox_inst    |     0.360 |
+|       sb[3].sbox_inst    |     0.370 |
+|       sb[4].sbox_inst    |     0.338 |
+|       sb[5].sbox_inst    |     0.314 |
+|       sb[6].sbox_inst    |     0.404 |
+|       sb[7].sbox_inst    |     0.416 |
+|       sb[8].sbox_inst    |     0.385 |
+|       sb[9].sbox_inst    |     0.355 |
+|     round_stages[7].inst |     5.284 |
+|       sb[0].sbox_inst    |     0.381 |
+|       sb[10].sbox_inst   |     0.315 |
+|       sb[11].sbox_inst   |     0.300 |
+|       sb[12].sbox_inst   |     0.302 |
+|       sb[13].sbox_inst   |     0.295 |
+|       sb[14].sbox_inst   |     0.236 |
+|       sb[15].sbox_inst   |     0.341 |
+|       sb[1].sbox_inst    |     0.335 |
+|       sb[2].sbox_inst    |     0.351 |
+|       sb[3].sbox_inst    |     0.335 |
+|       sb[4].sbox_inst    |     0.328 |
+|       sb[5].sbox_inst    |     0.399 |
+|       sb[6].sbox_inst    |     0.379 |
+|       sb[7].sbox_inst    |     0.377 |
+|       sb[8].sbox_inst    |     0.328 |
+|       sb[9].sbox_inst    |     0.283 |
+|     round_stages[8].inst |     5.853 |
+|       sb[0].sbox_inst    |     0.397 |
+|       sb[10].sbox_inst   |     0.318 |
+|       sb[11].sbox_inst   |     0.343 |
+|       sb[12].sbox_inst   |     0.321 |
+|       sb[13].sbox_inst   |     0.367 |
+|       sb[14].sbox_inst   |     0.372 |
+|       sb[15].sbox_inst   |     0.339 |
+|       sb[1].sbox_inst    |     0.365 |
+|       sb[2].sbox_inst    |     0.326 |
+|       sb[3].sbox_inst    |     0.416 |
+|       sb[4].sbox_inst    |     0.416 |
+|       sb[5].sbox_inst    |     0.401 |
+|       sb[6].sbox_inst    |     0.309 |
+|       sb[7].sbox_inst    |     0.328 |
+|       sb[8].sbox_inst    |     0.396 |
+|       sb[9].sbox_inst    |     0.439 |
+|     round_stages[9].inst |     6.683 |
+|       sb[0].sbox_inst    |     0.546 |
+|       sb[10].sbox_inst   |     0.389 |
+|       sb[11].sbox_inst   |     0.491 |
+|       sb[12].sbox_inst   |     0.343 |
+|       sb[13].sbox_inst   |     0.360 |
+|       sb[14].sbox_inst   |     0.255 |
+|       sb[15].sbox_inst   |     0.335 |
+|       sb[1].sbox_inst    |     0.551 |
+|       sb[2].sbox_inst    |     0.466 |
+|       sb[3].sbox_inst    |     0.442 |
+|       sb[4].sbox_inst    |     0.358 |
+|       sb[5].sbox_inst    |     0.525 |
+|       sb[6].sbox_inst    |     0.471 |
+|       sb[7].sbox_inst    |     0.448 |
+|       sb[8].sbox_inst    |     0.439 |
+|       sb[9].sbox_inst    |     0.262 |
++--------------------------+-----------+
+
+

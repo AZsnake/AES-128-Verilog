@@ -1,0 +1,20 @@
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/Applications/AMD/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot aes_tb_behav xil_defaultlib.aes_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/Projects/AES-128-Verilog/src/aes_key_expand.v" Line 1. Module aes_key_expand_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "D:/Projects/AES-128-Verilog/src/aes_key_expand.v" Line 1. Module aes_key_expand_default doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.aes_sbox
+Compiling module xil_defaultlib.aes_key_expand_default
+Compiling module xil_defaultlib.aes_round_default
+Compiling module xil_defaultlib.aes_top_default
+Compiling module xil_defaultlib.aes_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot aes_tb_behav
