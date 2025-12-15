@@ -1,0 +1,48 @@
+# --- Vivado / Xilinx (generated; regenerate from project) ---
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+
+# Checkpoint copies pulled into sources by Vivado
+**/utils_1/imports/synth_1/*.dcp
+**/utils_1/imports/impl_1/*.dcp
+
+# Vivado session logs (sometimes at project root)
+vivado.jou
+vivado.log
+*.backup.jou
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Editor / temp ---
+*~
+*.swp
+*.swo
+~$*.xlsx
+
+# --- AI & coding assistants (prompts, rules, tool metadata) ---
+.cursor/
+.cursorrules
+.cursorignore
+.agents/
+GEMINI.md
+AGENTS.md
+CLAUDE.md
+CLAUDE.local.md
+.github/copilot-instructions.md
+.github/instructions/
+.windsurf/
+.aider*
+.aider.chat.history.md
+.continue/
+.kilocode/
+.roo/
+/mcps/
+
+#gitignore
+.gitignore
