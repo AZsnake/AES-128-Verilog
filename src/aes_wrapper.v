@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 module aes_wrapper (
     input  clk,
     input  rst_n,
@@ -14,16 +16,30 @@ module aes_wrapper (
     wire [127:0] ciphertext_out;
     wire done_out;
     reg start_reg;
+    reg core_en;
 
     // Instantiate the AES core
     aes_top aes_inst (
         .clk(clk),
         .rst_n(rst_n),
+        .en_i(core_en),
         .plaintext(plaintext_reg),
         .key(key_reg),
         .ciphertext(ciphertext_out),
         .done(done_out)
     );
+
+    // Control logic for core_en
+    // core_en stays high after start_reg is set until done_out is received
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            core_en <= 1'b0;
+        end else if (start_reg) begin
+            core_en <= 1'b1;
+        end else if (done_out) begin
+            core_en <= 1'b0;
+        end
+    end
 
     // Write logic
     always @(posedge clk or negedge rst_n) begin
@@ -31,22 +47,23 @@ module aes_wrapper (
             plaintext_reg <= 128'b0;
             key_reg <= 128'b0;
             start_reg <= 1'b0;
-        end else if (en && we) begin
-            case (addr)
-                4'h0: plaintext_reg[31:0]   <= data_in;
-                4'h1: plaintext_reg[63:32]  <= data_in;
-                4'h2: plaintext_reg[95:64]  <= data_in;
-                4'h3: plaintext_reg[127:96] <= data_in;
-                4'h4: key_reg[31:0]         <= data_in;
-                4'h5: key_reg[63:32]        <= data_in;
-                4'h6: key_reg[95:64]        <= data_in;
-                4'h7: key_reg[127:96]       <= data_in;
-                4'hC: start_reg             <= data_in[0];
-            endcase
         end else begin
-            // Reset start signal after one cycle if needed, 
-            // but for a pipelined core, we might not need it.
-            // Let's keep it simple for now.
+            // Pulse start_reg for only one cycle
+            start_reg <= 1'b0;
+            
+            if (en && we) begin
+                case (addr)
+                    4'h0: plaintext_reg[31:0]   <= data_in;
+                    4'h1: plaintext_reg[63:32]  <= data_in;
+                    4'h2: plaintext_reg[95:64]  <= data_in;
+                    4'h3: plaintext_reg[127:96] <= data_in;
+                    4'h4: key_reg[31:0]         <= data_in;
+                    4'h5: key_reg[63:32]        <= data_in;
+                    4'h6: key_reg[95:64]        <= data_in;
+                    4'h7: key_reg[127:96]       <= data_in;
+                    4'hC: start_reg             <= data_in[0];
+                endcase
+            end
         end
     end
 
@@ -66,7 +83,7 @@ module aes_wrapper (
                 4'h9: data_out = ciphertext_out[63:32];
                 4'hA: data_out = ciphertext_out[95:64];
                 4'hB: data_out = ciphertext_out[127:96];
-                4'hC: data_out = {31'b0, done_out};
+                4'hC: data_out = {30'b0, core_en, done_out};
                 default: data_out = 32'h0;
             endcase
         end else begin

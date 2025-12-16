@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 module aes_key_expand (
     input  [127:0] key,
     output [1407:0] full_keys // 128 * 11 bits
